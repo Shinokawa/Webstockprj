@@ -1,0 +1,5 @@
+D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=D:/Learning/CLion/bin/ninja/win/x64/ninja.exe -G Ninja -S D:\Code\C\LoginWidget -B D:\Code\C\LoginWidget\cmake-build-debug-qt
+-- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
+-- Configuring done (1.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: D:/Code/C/LoginWidget/cmake-build-debug-qt

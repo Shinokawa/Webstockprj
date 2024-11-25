@@ -1,0 +1,25 @@
+{
+	"BUILD_DIR" : "D:/Code/C/LoginWidget/cmake-build-debug-qt/LoginWidget_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Code/C/LoginWidget/cmake-build-debug-qt",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Code/C/LoginWidget/cmake-build-debug-qt",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Code/C/LoginWidget",
+	"CMAKE_SOURCE_DIR" : "D:/Code/C/LoginWidget",
+	"GENERATOR" : "Ninja",
+	"INCLUDE_DIR" : "D:/Code/C/LoginWidget/cmake-build-debug-qt/LoginWidget_autogen/include",
+	"INPUTS" : 
+	[
+		"D:/Code/C/LoginWidget/resources/images/password-icon.png",
+		"D:/Code/C/LoginWidget/resources/images/user-icon.png",
+		"D:/Code/C/LoginWidget/resources/images/bg-4.png"
+	],
+	"LOCK_FILE" : "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "D:/Qt/6.5.3/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Used.txt",
+	"SOURCE" : "D:/Code/C/LoginWidget/resources.qrc",
+	"VERBOSITY" : 0
+}
