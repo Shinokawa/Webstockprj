@@ -8,6 +8,7 @@ using namespace std;
 
 class loginWindow;
 class signupWindow;
+class userWindow;
 class QVBoxLayout;
 class dataManager;
 class QStackedWidget;
@@ -23,18 +24,22 @@ public:
 private:
     loginWindow *loginWindow;
     signupWindow *signupWindow;
+    userWindow *userWindow;
     QStackedWidget *stackWidget;
     dataManager *dataManager;
+
+public:
+    static void popErrorMessage(const std::string& title, const std::string& message);
+
+    static void popInfoMessage(const string &title, const string &message);
 
 private slots:
     void doSignupButton() const;
     void doLoginButton();
 
-    void popErrorMessage(const std::string& title, const std::string& message);
-
     void doLogCancelButton();
 
-    void doOKButton();
+    void doOKButton() const;
     void doSignCancelButton() const;
 };
 #endif // MAINWINDOW_H

@@ -1,26 +1,36 @@
 LoginWidget_autogen/timestamp: \
-	D:/Code/C/LoginWidget/CMakeLists.txt \
-	D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
-	D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake \
-	D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake \
-	D:/Code/C/LoginWidget/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
-	D:/Code/C/LoginWidget/dataManager.cpp \
-	D:/Code/C/LoginWidget/dataManager.h \
-	D:/Code/C/LoginWidget/loginWIindow.cpp \
-	D:/Code/C/LoginWidget/loginWindow.h \
-	D:/Code/C/LoginWidget/main.cpp \
-	D:/Code/C/LoginWidget/mainwindow.cpp \
-	D:/Code/C/LoginWidget/mainwindow.h \
-	D:/Code/C/LoginWidget/resources.qrc \
-	D:/Code/C/LoginWidget/signupWindow.cpp \
-	D:/Code/C/LoginWidget/signupWindow.h \
-	D:/Code/C/LoginWidget/userManager.cpp \
-	D:/Code/C/LoginWidget/userManager.h \
-	D:/Code/C/LoginWidget/userWindow.cpp \
-	D:/Code/C/LoginWidget/userWindow.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/CMakeLists.txt \
+	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
+	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake \
+	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake \
+	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/dataManager.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/dataManager.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/loginWIindow.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/loginWindow.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/main.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/resources.qrc \
+	D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userManager.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.h \
+	D:/Code/C/Webstockprj/Webstockprj/client/userWindow.cpp \
+	D:/Code/C/Webstockprj/Webstockprj/client/userWindow.h \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
+	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeExtraGeneratorDetermineCompilerMacrosAndIncludeDirs.cmake \
+	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeFindCodeBlocks.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake \
@@ -50,6 +60,7 @@ LoginWidget_autogen/timestamp: \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake \
+	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \

@@ -1,0 +1,1 @@
+-I"D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/include" -isystem D:/Qt/6.5.3/mingw_64/include/QtCore -isystem D:/Qt/6.5.3/mingw_64/include -isystem "D:/Qt/6.5.3/mingw_64/mkspecs/win32-g++" -isystem D:/Qt/6.5.3/mingw_64/include/QtWidgets -isystem D:/Qt/6.5.3/mingw_64/include/QtGui

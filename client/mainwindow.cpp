@@ -18,6 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     loginWindow = new class loginWindow();
     signupWindow = new class signupWindow();
+    userWindow = nullptr;
 
     this->stackWidget = new QStackedWidget();
     this->stackWidget->addWidget(loginWindow);
@@ -30,12 +31,18 @@ MainWindow::MainWindow(QWidget *parent)
     connect(loginWindow->cancelButton,&QPushButton::clicked,this,&MainWindow::doLogCancelButton);
     connect(signupWindow->okButton,&QPushButton::clicked,this,&MainWindow::doOKButton);
     connect(signupWindow->cancelButton,&QPushButton::clicked,this,&MainWindow::doSignCancelButton);
+
 }
 
 MainWindow::~MainWindow() = default;
 
 void MainWindow::popErrorMessage(const string& title, const string& message) {
-    QMessageBox::critical(this, tr(title.c_str()),  tr(message.c_str()),
+    QMessageBox::critical(nullptr, tr(title.c_str()),  tr(message.c_str()),
+                                   QMessageBox::Ok);
+}
+
+void MainWindow::popInfoMessage(const string& title, const string& message) {
+    QMessageBox::information(nullptr,tr(title.c_str()),  tr(message.c_str()),
                                    QMessageBox::Ok);
 }
 
@@ -53,7 +60,7 @@ void MainWindow::doLoginButton() {
         if(user.getUserName() == inputUserName) {
             isFind = true;
             if(user.getPassword() == inputPassword) {
-                auto userWindow = new class userWindow(&user);
+                this->userWindow = new class userWindow(user);
                 this->stackWidget->addWidget(userWindow);
                 this->stackWidget->setCurrentWidget(userWindow);
             }
@@ -71,7 +78,7 @@ void MainWindow::doLogCancelButton() {
     close();
 }
 
-void MainWindow::doOKButton() {    //注册事件
+void MainWindow::doOKButton() const {    //注册事件
     const string inputUserName = signupWindow->usernameLineEdit->text().toStdString();
     const string inputPassword = signupWindow->passwordLineEdit->text().toStdString();
     const string inputConfirm = signupWindow->confirmLineEdit->text().toStdString();
@@ -96,3 +103,5 @@ void MainWindow::doOKButton() {    //注册事件
 void MainWindow::doSignCancelButton() const {
     this->stackWidget->setCurrentWidget(this->loginWindow);
 }
+
+

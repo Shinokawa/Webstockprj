@@ -28,7 +28,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
       
       The CXX compiler identification is GNU, found in:
-        D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/3.28.1/CompilerIdCXX/a.exe
+        D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CompilerIdCXX/a.exe
       
   -
     kind: "try_compile-v1"
@@ -39,8 +39,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-a06xpp"
-      binary: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-a06xpp"
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -49,10 +49,13 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-a06xpp'
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72'
         
-        Run Build Command(s): D:/Learning/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_94f10
-        [1/2] D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_9f680/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9f680.dir\\build.make CMakeFiles/cmTC_9f680.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72'
+        Building CXX object CMakeFiles/cmTC_9f680.dir/CMakeCXXCompilerABI.cpp.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe
         Target: x86_64-w64-mingw32
@@ -60,8 +63,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/'
-         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_94f10.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\cc6k5wGN.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\'
+         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_9f680.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\ccguFNRw.s
         GNU C++17 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
         
@@ -88,13 +91,17 @@ events:
         
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
         Compiler executable checksum: d7afaace9697386afb994a04753f738f
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/'
-         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\16640\\AppData\\Local\\Temp\\cc6k5wGN.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\'
+         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\16640\\AppData\\Local\\Temp\\ccguFNRw.s
         GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
         COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
-        LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../\x0d
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.'\x0d
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -v CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_94f10.exe -Wl,--out-implib,libcmTC_94f10.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_9f680.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_9f680.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_9f680.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_9f680.dir/objects.a @CMakeFiles\\cmTC_9f680.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_9f680.dir/objects.a -Wl,--no-whole-archive -o cmTC_9f680.exe -Wl,--out-implib,libcmTC_9f680.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
         Using built-in specs.
         COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe
         COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -105,9 +112,10 @@ events:
         gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
         COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
         LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_94f10.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_94f10.'
-         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccoOln00.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_94f10.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_94f10.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o\x0d
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_94f10.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_94f10.'\x0d
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f680.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_9f680.'
+         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\cc0T004j.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_9f680.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_9f680.dir/objects.a --no-whole-archive --out-implib libcmTC_9f680.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f680.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_9f680.'
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72'
         
       exitCode: 0
   -
@@ -145,10 +153,13 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: 'D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-a06xpp']
+        ignore line: [Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72']
         ignore line: []
-        ignore line: [Run Build Command(s): D:/Learning/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_94f10]
-        ignore line: [[1/2] D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj -c D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_9f680/fast]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9f680.dir\\build.make CMakeFiles/cmTC_9f680.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-wt3l72']
+        ignore line: [Building CXX object CMakeFiles/cmTC_9f680.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj -c D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -156,8 +167,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 11.2.0 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/']
-        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_94f10.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\cc6k5wGN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\\cmTC_9f680.dir\\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=core2 -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\ccguFNRw.s]
         ignore line: [GNU C++17 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
         ignore line: []
@@ -184,8 +195,8 @@ events:
         ignore line: []
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
         ignore line: [Compiler executable checksum: d7afaace9697386afb994a04753f738f]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/']
-        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\16640\\AppData\\Local\\Temp\\cc6k5wGN.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj C:\\Users\\16640\\AppData\\Local\\Temp\\ccguFNRw.s]
         ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
         ignore line: [COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/]
@@ -195,9 +206,13 @@ events:
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
-        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../\x0d]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.'\x0d]
-        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -v CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_94f10.exe -Wl --out-implib libcmTC_94f10.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_9f680.dir\\CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_9f680.exe]
+        ignore line: [D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_9f680.dir\\link.txt --verbose=1]
+        ignore line: [D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_9f680.dir/objects.a]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_9f680.dir/objects.a @CMakeFiles\\cmTC_9f680.dir\\objects1.rsp]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_9f680.dir/objects.a -Wl --no-whole-archive -o cmTC_9f680.exe -Wl --out-implib libcmTC_9f680.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe]
         ignore line: [COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -215,13 +230,13 @@ events:
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_94f10.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_94f10.']
-        link line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccoOln00.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_94f10.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_94f10.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o\x0d]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_9f680.exe' '-shared-libgcc' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_9f680.']
+        link line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\cc0T004j.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_9f680.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_9f680.dir/objects.a --no-whole-archive --out-implib libcmTC_9f680.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
           arg [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
           arg [-plugin] ==> ignore
           arg [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll] ==> ignore
           arg [-plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe] ==> ignore
-          arg [-plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccoOln00.res] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\cc0T004j.res] ==> ignore
           arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
           arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
@@ -247,7 +262,7 @@ events:
           arg [i386pep] ==> ignore
           arg [-Bdynamic] ==> search dynamic
           arg [-o] ==> ignore
-          arg [cmTC_94f10.exe] ==> ignore
+          arg [cmTC_9f680.exe] ==> ignore
           arg [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
           arg [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
           arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
@@ -256,9 +271,11 @@ events:
           arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
           arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
           arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
-          arg [CMakeFiles/cmTC_94f10.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_9f680.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
           arg [--out-implib] ==> ignore
-          arg [libcmTC_94f10.dll.a] ==> ignore
+          arg [libcmTC_9f680.dll.a] ==> ignore
           arg [--major-image-version] ==> ignore
           arg [0] ==> ignore
           arg [--minor-image-version] ==> ignore
@@ -317,8 +334,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-xhcxm6"
-      binary: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-xhcxm6"
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-1laknc"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-1laknc"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -328,11 +345,19 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-xhcxm6'
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-1laknc'
         
-        Run Build Command(s): D:/Learning/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_79b3d
-        [1/2] D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_79b3d.dir/src.cxx.obj -c D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-xhcxm6/src.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   CMakeFiles/cmTC_79b3d.dir/src.cxx.obj -o cmTC_79b3d.exe -Wl,--out-implib,libcmTC_79b3d.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_671ef/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_671ef.dir\\build.make CMakeFiles/cmTC_671ef.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-1laknc'
+        Building CXX object CMakeFiles/cmTC_671ef.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\cmTC_671ef.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-1laknc\\src.cxx
+        Linking CXX executable cmTC_671ef.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_671ef.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_671ef.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_671ef.dir/objects.a @CMakeFiles\\cmTC_671ef.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -Wl,--whole-archive CMakeFiles\\cmTC_671ef.dir/objects.a -Wl,--no-whole-archive -o cmTC_671ef.exe -Wl,--out-implib,libcmTC_671ef.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_671ef.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-1laknc'
         
       exitCode: 0
   -
@@ -354,8 +379,8 @@ events:
     checks:
       - "Performing Test HAVE_STDATOMIC"
     directories:
-      source: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-bc579s"
-      binary: "D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-bc579s"
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-dax533"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-dax533"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -365,11 +390,1375 @@ events:
       variable: "HAVE_STDATOMIC"
       cached: true
       stdout: |
-        Change Dir: 'D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-bc579s'
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-dax533'
         
-        Run Build Command(s): D:/Learning/CLion/bin/ninja/win/x64/ninja.exe -v cmTC_0c590
-        [1/2] D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DHAVE_STDATOMIC  -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles/cmTC_0c590.dir/src.cxx.obj -c D:/Code/C/LoginWidget/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-bc579s/src.cxx
-        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   CMakeFiles/cmTC_0c590.dir/src.cxx.obj -o cmTC_0c590.exe -Wl,--out-implib,libcmTC_0c590.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_6f4de/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_6f4de.dir\\build.make CMakeFiles/cmTC_6f4de.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-dax533'
+        Building CXX object CMakeFiles/cmTC_6f4de.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DHAVE_STDATOMIC  -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\cmTC_6f4de.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-dax533\\src.cxx
+        Linking CXX executable cmTC_6f4de.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_6f4de.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_6f4de.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_6f4de.dir/objects.a @CMakeFiles\\cmTC_6f4de.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -Wl,--whole-archive CMakeFiles\\cmTC_6f4de.dir/objects.a -Wl,--no-whole-archive -o cmTC_6f4de.exe -Wl,--out-implib,libcmTC_6f4de.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_6f4de.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-dax533'
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/cmake/sanitizer.cmake:12 (check_cxx_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/CMakeLists.txt:87 (include)"
+    checks:
+      - "Performing Test THREAD_SANITIZER_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-mebhey"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-mebhey"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "THREAD_SANITIZER_AVAILABLE_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-mebhey'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_61600/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_61600.dir\\build.make CMakeFiles/cmTC_61600.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-mebhey'
+        Building CXX object CMakeFiles/cmTC_61600.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DTHREAD_SANITIZER_AVAILABLE  -fsanitize=thread -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\cmTC_61600.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-mebhey\\src.cxx
+        Linking CXX executable cmTC_61600.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_61600.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_61600.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_61600.dir/objects.a @CMakeFiles\\cmTC_61600.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -fsanitize=thread -Wl,--whole-archive CMakeFiles\\cmTC_61600.dir/objects.a -Wl,--no-whole-archive -o cmTC_61600.exe -Wl,--out-implib,libcmTC_61600.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_61600.dir\\linkLibs.rsp
+        D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -ltsan
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_61600.dir\\build.make:100: cmTC_61600.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-mebhey'
+        mingw32-make.exe: *** [Makefile:126: cmTC_61600/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "THREAD_SANITIZER_AVAILABLE_EXITCODE"
+      cached: true
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/cmake/sanitizer.cmake:20 (check_cxx_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/CMakeLists.txt:87 (include)"
+    checks:
+      - "Performing Test ADDRESS_SANITIZER_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-78c0pv"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-78c0pv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "ADDRESS_SANITIZER_AVAILABLE_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-78c0pv'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_fe4fc/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fe4fc.dir\\build.make CMakeFiles/cmTC_fe4fc.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-78c0pv'
+        Building CXX object CMakeFiles/cmTC_fe4fc.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DADDRESS_SANITIZER_AVAILABLE  -fsanitize=address -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\cmTC_fe4fc.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-78c0pv\\src.cxx
+        Linking CXX executable cmTC_fe4fc.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fe4fc.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_fe4fc.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_fe4fc.dir/objects.a @CMakeFiles\\cmTC_fe4fc.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe  -fsanitize=address -Wl,--whole-archive CMakeFiles\\cmTC_fe4fc.dir/objects.a -Wl,--no-whole-archive -o cmTC_fe4fc.exe -Wl,--out-implib,libcmTC_fe4fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fe4fc.dir\\linkLibs.rsp
+        D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lasan
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_fe4fc.dir\\build.make:100: cmTC_fe4fc.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-78c0pv'
+        mingw32-make.exe: *** [Makefile:126: cmTC_fe4fc/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "ADDRESS_SANITIZER_AVAILABLE_EXITCODE"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "cmake-build-debug-qt/_deps/cpr-src/cmake/sanitizer.cmake:28 (check_cxx_compiler_flag)"
+      - "cmake-build-debug-qt/_deps/cpr-src/CMakeLists.txt:87 (include)"
+    checks:
+      - "Performing Test LEAK_SANITIZER_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fe2f6l"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fe2f6l"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "LEAK_SANITIZER_AVAILABLE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fe2f6l'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_a9f0f/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a9f0f.dir\\build.make CMakeFiles/cmTC_a9f0f.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fe2f6l'
+        Building CXX object CMakeFiles/cmTC_a9f0f.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DLEAK_SANITIZER_AVAILABLE  -std=gnu++17 -fdiagnostics-color=always   -fsanitize=leak -o CMakeFiles\\cmTC_a9f0f.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-fe2f6l\\src.cxx
+        Linking CXX executable cmTC_a9f0f.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a9f0f.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a9f0f.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a9f0f.dir/objects.a @CMakeFiles\\cmTC_a9f0f.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -Wl,--whole-archive CMakeFiles\\cmTC_a9f0f.dir/objects.a -Wl,--no-whole-archive -o cmTC_a9f0f.exe -Wl,--out-implib,libcmTC_a9f0f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_a9f0f.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fe2f6l'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "cmake-build-debug-qt/_deps/cpr-src/cmake/sanitizer.cmake:35 (check_cxx_compiler_flag)"
+      - "cmake-build-debug-qt/_deps/cpr-src/CMakeLists.txt:87 (include)"
+    checks:
+      - "Performing Test UNDEFINED_BEHAVIOUR_SANITIZER_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-i0um1q"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-i0um1q"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "UNDEFINED_BEHAVIOUR_SANITIZER_AVAILABLE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-i0um1q'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_0bec1/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0bec1.dir\\build.make CMakeFiles/cmTC_0bec1.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-i0um1q'
+        Building CXX object CMakeFiles/cmTC_0bec1.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DUNDEFINED_BEHAVIOUR_SANITIZER_AVAILABLE  -std=gnu++17 -fdiagnostics-color=always   -fsanitize=undefined -o CMakeFiles\\cmTC_0bec1.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-i0um1q\\src.cxx
+        Linking CXX executable cmTC_0bec1.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_0bec1.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_0bec1.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_0bec1.dir/objects.a @CMakeFiles\\cmTC_0bec1.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -Wl,--whole-archive CMakeFiles\\cmTC_0bec1.dir/objects.a -Wl,--no-whole-archive -o cmTC_0bec1.exe -Wl,--out-implib,libcmTC_0bec1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_0bec1.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-i0um1q'
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceRuns.cmake:93 (try_run)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCXXSourceRuns.cmake:52 (cmake_check_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/cmake/sanitizer.cmake:44 (check_cxx_source_runs)"
+      - "cmake-build-debug-qt/_deps/cpr-src/CMakeLists.txt:87 (include)"
+    checks:
+      - "Performing Test ALL_SANITIZERS_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7t3px9"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7t3px9"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "ALL_SANITIZERS_AVAILABLE_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7t3px9'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_c2370/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c2370.dir\\build.make CMakeFiles/cmTC_c2370.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7t3px9'
+        Building CXX object CMakeFiles/cmTC_c2370.dir/src.cxx.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe -DALL_SANITIZERS_AVAILABLE  -fsanitize=leak -fsanitize=undefined -std=gnu++17 -fdiagnostics-color=always -o CMakeFiles\\cmTC_c2370.dir\\src.cxx.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-7t3px9\\src.cxx
+        Linking CXX executable cmTC_c2370.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_c2370.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_c2370.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_c2370.dir/objects.a @CMakeFiles\\cmTC_c2370.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\c++.exe   -fsanitize=leak -fsanitize=undefined -Wl,--whole-archive CMakeFiles\\cmTC_c2370.dir/objects.a -Wl,--no-whole-archive -o cmTC_c2370.exe -Wl,--out-implib,libcmTC_c2370.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c2370.dir\\linkLibs.rsp
+        D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lubsan
+        D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -llsan
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_c2370.dir\\build.make:100: cmTC_c2370.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7t3px9'
+        mingw32-make.exe: *** [Makefile:126: cmTC_c2370/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "ALL_SANITIZERS_AVAILABLE_EXITCODE"
+      cached: true
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:37 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: D:/Qt/Tools/mingw1120_64/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CompilerIdC/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:37 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_73090/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_73090.dir\\build.make CMakeFiles/cmTC_73090.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn'
+        Building C object CMakeFiles/cmTC_73090.dir/CMakeCCompilerABI.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -std=c99 -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj -c D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev3, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\'
+         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_73090.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -std=c99 -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\ccw6zf5a.s
+        GNU C99 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"
+        ignoring nonexistent directory "D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"
+        ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"
+        ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include
+         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed
+         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        GNU C99 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version isl-0.24-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 91c4f3c4bd8e22d803fb4b1665a580b8
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\'
+         D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj C:\\Users\\16640\\AppData\\Local\\Temp\\ccw6zf5a.s
+        GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
+        COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.'
+        Linking C executable cmTC_73090.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_73090.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_73090.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_73090.dir/objects.a @CMakeFiles\\cmTC_73090.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_73090.dir/objects.a -Wl,--no-whole-archive -o cmTC_73090.exe -Wl,--out-implib,libcmTC_73090.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev3, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc'
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.2.0 (x86_64-posix-seh-rev3, Built by MinGW-W64 project) 
+        COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/
+        LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_73090.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_73090.'
+         D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccR09uwu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_73090.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_73090.dir/objects.a --no-whole-archive --out-implib libcmTC_73090.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_73090.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_73090.'
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:37 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+          add: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+          add: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+        collapse include dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+        collapse include dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include] ==> [D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include]
+        implicit include dirs: [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include;D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed;D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:37 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn']
+        ignore line: []
+        ignore line: [Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_73090/fast]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_73090.dir\\build.make CMakeFiles/cmTC_73090.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pm0vmn']
+        ignore line: [Building C object CMakeFiles/cmTC_73090.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -std=c99 -fdiagnostics-color=always   -v -o CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj -c D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev3, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.2.0 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\\cmTC_73090.dir\\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=core2 -march=nocona -std=c99 -version -fdiagnostics-color=always -o C:\\Users\\16640\\AppData\\Local\\Temp\\ccw6zf5a.s]
+        ignore line: [GNU C99 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include"]
+        ignore line: [ignoring nonexistent directory "D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64D:/a/_temp/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "D:/Qt/Tools/mingw1120_64/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include]
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed]
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C99 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) version 11.2.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version isl-0.24-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 91c4f3c4bd8e22d803fb4b1665a580b8]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\']
+        ignore line: [ D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/as.exe -v -o CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj C:\\Users\\16640\\AppData\\Local\\Temp\\ccw6zf5a.s]
+        ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
+        ignore line: [COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-std=c99' '-v' '-o' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.obj' '-c' '-mtune=core2' '-march=nocona' '-dumpdir' 'CMakeFiles\\cmTC_73090.dir\\CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_73090.exe]
+        ignore line: [D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_73090.dir\\link.txt --verbose=1]
+        ignore line: [D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_73090.dir/objects.a]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_73090.dir/objects.a @CMakeFiles\\cmTC_73090.dir\\objects1.rsp]
+        ignore line: [D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -v -Wl --whole-archive CMakeFiles\\cmTC_73090.dir/objects.a -Wl --no-whole-archive -o cmTC_73090.exe -Wl --out-implib libcmTC_73090.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../../../src/gcc-11.2.0/configure --host=x86_64-w64-mingw32 --build=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --prefix=/mingw64 --with-sysroot=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 --enable-host-shared --disable-multilib --enable-languages=c,c++,fortran,lto --enable-libstdcxx-time=yes --enable-threads=posix --enable-libgomp --enable-libatomic --enable-lto --enable-graphite --enable-checking=release --enable-fully-dynamic-string --enable-version-specific-runtime-libs --enable-libstdcxx-filesystem-ts=yes --disable-libstdcxx-pch --disable-libstdcxx-debug --enable-bootstrap --disable-rpath --disable-win32-registry --disable-nls --disable-werror --disable-symvers --with-gnu-as --with-gnu-ld --with-arch=nocona --with-tune=core2 --with-libiconv --with-system-zlib --with-gmp=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpfr=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-mpc=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-isl=/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static --with-pkgversion='x86_64-posix-seh-rev3, Built by MinGW-W64 project' --with-bugurl=https://sourceforge.net/projects/mingw-w64 CFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CXXFLAGS='-O2 -pipe -fno-ident -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' CPPFLAGS=' -I/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/include -I/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/include' LDFLAGS='-pipe -fno-ident -L/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/opt/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-zlib-static/lib -L/d/a/mingw-builds/mingw-builds/buildroot/prerequisites/x86_64-w64-mingw32-static/lib ' LD_FOR_TARGET=/d/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64/bin/ld.exe --with-boot-ldflags=' -Wl,--disable-dynamicbase -static-libstdc++ -static-libgcc']
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.2.0 (x86_64-posix-seh-rev3  Built by MinGW-W64 project) ]
+        ignore line: [COMPILER_PATH=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/]
+        ignore line: [LIBRARY_PATH=D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_73090.exe' '-mtune=core2' '-march=nocona' '-dumpdir' 'cmTC_73090.']
+        link line: [ D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -plugin D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll -plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccR09uwu.res -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-lpthread -plugin-opt=-pass-through=-ladvapi32 -plugin-opt=-pass-through=-lshell32 -plugin-opt=-pass-through=-luser32 -plugin-opt=-pass-through=-lkernel32 -plugin-opt=-pass-through=-liconv -plugin-opt=-pass-through=-lmingw32 -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_eh -plugin-opt=-pass-through=-lmoldname -plugin-opt=-pass-through=-lmingwex -plugin-opt=-pass-through=-lmsvcrt -plugin-opt=-pass-through=-lkernel32 --sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64 -m i386pep -Bdynamic -o cmTC_73090.exe D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. --whole-archive CMakeFiles\\cmTC_73090.dir/objects.a --no-whole-archive --out-implib libcmTC_73090.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+          arg [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/liblto_plugin.dll] ==> ignore
+          arg [-plugin-opt=D:/Qt/Tools/mingw1120_64/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe] ==> ignore
+          arg [-plugin-opt=-fresolution=C:\\Users\\16640\\AppData\\Local\\Temp\\ccR09uwu.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lpthread] ==> ignore
+          arg [-plugin-opt=-pass-through=-ladvapi32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lshell32] ==> ignore
+          arg [-plugin-opt=-pass-through=-luser32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [-plugin-opt=-pass-through=-liconv] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingw32] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_eh] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmoldname] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmingwex] ==> ignore
+          arg [-plugin-opt=-pass-through=-lmsvcrt] ==> ignore
+          arg [-plugin-opt=-pass-through=-lkernel32] ==> ignore
+          arg [--sysroot=D:/a/mingw-builds/mingw-builds/buildroot/x86_64-1120-posix-seh-rt_v9-rev3/mingw64] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_73090.exe] ==> ignore
+          arg [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LD:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..]
+          arg [--whole-archive] ==> ignore
+          arg [CMakeFiles\\cmTC_73090.dir/objects.a] ==> ignore
+          arg [--no-whole-archive] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_73090.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        collapse obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o]
+        collapse obj [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc] ==> [D:/Qt/Tools/mingw1120_64/lib/gcc]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib] ==> [D:/Qt/Tools/mingw1120_64/lib]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib] ==> [D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib]
+        collapse library dir [D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../..] ==> [D:/Qt/Tools/mingw1120_64/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+        implicit objs: [D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib/crt2.o;D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o;D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+        implicit dirs: [D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0;D:/Qt/Tools/mingw1120_64/lib/gcc;D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/lib;D:/Qt/Tools/mingw1120_64/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "cmake-build-debug-qt/_deps/zlib-src/cmake/detect-arch.cmake:24 (try_run)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:49 (include)"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/zlib-build/CMakeFiles/CMakeTmp"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/zlib-build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "compile_result_unused"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_34f45/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_34f45.dir\\build.make CMakeFiles/cmTC_34f45.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        Building C object CMakeFiles/cmTC_34f45.dir/detect-arch.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_34f45.dir\\detect-arch.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\_deps\\zlib-src\\cmake\\detect-arch.c
+        \x1b[01m\x1b[KD:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\_deps\\zlib-src\\cmake\\detect-arch.c:8:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K#error archfound x86_64
+            8 |     #\x1b[01;31m\x1b[Kerror\x1b[m\x1b[K archfound x86_64
+              |      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_34f45.dir\\build.make:77: CMakeFiles/cmTC_34f45.dir/detect-arch.c.obj] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/zlib-build/CMakeFiles/CMakeTmp'
+        mingw32-make.exe: *** [Makefile:126: cmTC_34f45/fast] Error 2
+        
+      exitCode: 2
+    runResult:
+      variable: "run_result_unused"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:261 (check_c_source_compiles)"
+    checks:
+      - "Performing Test FNO_LTO_AVAILABLE"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-gn6dtw"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-gn6dtw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "FNO_LTO_AVAILABLE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-gn6dtw'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_136fa/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_136fa.dir\\build.make CMakeFiles/cmTC_136fa.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-gn6dtw'
+        Building C object CMakeFiles/cmTC_136fa.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DFNO_LTO_AVAILABLE  -fno-lto -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_136fa.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-gn6dtw\\src.c
+        Linking C executable cmTC_136fa.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_136fa.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_136fa.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_136fa.dir/objects.a @CMakeFiles\\cmTC_136fa.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -fno-lto -Wl,--whole-archive CMakeFiles\\cmTC_136fa.dir/objects.a -Wl,--no-whole-archive -o cmTC_136fa.exe -Wl,--out-implib,libcmTC_136fa.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_136fa.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-gn6dtw'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:339 (check_include_file)"
+    checks:
+      - "Looking for sys/sdt.h"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-0huhhh"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-0huhhh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SYS_SDT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-0huhhh'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_b5fd2/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b5fd2.dir\\build.make CMakeFiles/cmTC_b5fd2.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-0huhhh'
+        Building C object CMakeFiles/cmTC_b5fd2.dir/CheckIncludeFile.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_b5fd2.dir\\CheckIncludeFile.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-0huhhh\\CheckIncludeFile.c
+        \x1b[01m\x1b[KD:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-0huhhh\\CheckIncludeFile.c:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Ksys/sdt.h: No such file or directory
+            1 | #include \x1b[01;31m\x1b[K<sys/sdt.h>\x1b[m\x1b[K
+              |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K
+        compilation terminated.
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_b5fd2.dir\\build.make:77: CMakeFiles/cmTC_b5fd2.dir/CheckIncludeFile.c.obj] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-0huhhh'
+        mingw32-make.exe: *** [Makefile:126: cmTC_b5fd2/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:343 (check_include_file)"
+    checks:
+      - "Looking for unistd.h"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pzixq4"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pzixq4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pzixq4'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_8dc3b/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8dc3b.dir\\build.make CMakeFiles/cmTC_8dc3b.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pzixq4'
+        Building C object CMakeFiles/cmTC_8dc3b.dir/CheckIncludeFile.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_8dc3b.dir\\CheckIncludeFile.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-pzixq4\\CheckIncludeFile.c
+        Linking C executable cmTC_8dc3b.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_8dc3b.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_8dc3b.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_8dc3b.dir/objects.a @CMakeFiles\\cmTC_8dc3b.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_8dc3b.dir/objects.a -Wl,--no-whole-archive -o cmTC_8dc3b.exe -Wl,--out-implib,libcmTC_8dc3b.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8dc3b.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pzixq4'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:349 (check_type_size)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-air1lm"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-air1lm"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-air1lm'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_98f59/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_98f59.dir\\build.make CMakeFiles/cmTC_98f59.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-air1lm'
+        Building C object CMakeFiles/cmTC_98f59.dir/CheckIncludeFile.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_98f59.dir\\CheckIncludeFile.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-air1lm\\CheckIncludeFile.c
+        Linking C executable cmTC_98f59.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_98f59.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_98f59.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_98f59.dir/objects.a @CMakeFiles\\cmTC_98f59.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_98f59.dir/objects.a -Wl,--no-whole-archive -o cmTC_98f59.exe -Wl,--out-implib,libcmTC_98f59.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_98f59.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-air1lm'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:349 (check_type_size)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sb79sx"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sb79sx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sb79sx'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_be940/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_be940.dir\\build.make CMakeFiles/cmTC_be940.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sb79sx'
+        Building C object CMakeFiles/cmTC_be940.dir/CheckIncludeFile.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_be940.dir\\CheckIncludeFile.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-sb79sx\\CheckIncludeFile.c
+        Linking C executable cmTC_be940.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_be940.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_be940.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_be940.dir/objects.a @CMakeFiles\\cmTC_be940.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_be940.dir/objects.a -Wl,--no-whole-archive -o cmTC_be940.exe -Wl,--out-implib,libcmTC_be940.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_be940.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sb79sx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:349 (check_type_size)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-p83wgh"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-p83wgh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-p83wgh'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_c9ced/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c9ced.dir\\build.make CMakeFiles/cmTC_c9ced.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-p83wgh'
+        Building C object CMakeFiles/cmTC_c9ced.dir/CheckIncludeFile.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_c9ced.dir\\CheckIncludeFile.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-p83wgh\\CheckIncludeFile.c
+        Linking C executable cmTC_c9ced.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_c9ced.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_c9ced.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_c9ced.dir/objects.a @CMakeFiles\\cmTC_c9ced.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_c9ced.dir/objects.a -Wl,--no-whole-archive -o cmTC_c9ced.exe -Wl,--out-implib,libcmTC_c9ced.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c9ced.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-p83wgh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:349 (check_type_size)"
+    checks:
+      - "Check size of off64_t"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-j4zfou"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-j4zfou"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_OFF64_T"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-j4zfou'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_85b3a/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_85b3a.dir\\build.make CMakeFiles/cmTC_85b3a.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-j4zfou'
+        Building C object CMakeFiles/cmTC_85b3a.dir/OFF64_T.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_85b3a.dir\\OFF64_T.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-j4zfou\\OFF64_T.c
+        Linking C executable cmTC_85b3a.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_85b3a.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_85b3a.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_85b3a.dir/objects.a @CMakeFiles\\cmTC_85b3a.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_85b3a.dir/objects.a -Wl,--no-whole-archive -o cmTC_85b3a.exe -Wl,--out-implib,libcmTC_85b3a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_85b3a.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-j4zfou'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:365 (check_function_exists)"
+    checks:
+      - "Looking for fseeko"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fpjbsf"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fpjbsf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_FSEEKO"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fpjbsf'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_2cee5/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2cee5.dir\\build.make CMakeFiles/cmTC_2cee5.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fpjbsf'
+        Building C object CMakeFiles/cmTC_2cee5.dir/CheckFunctionExists.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=fseeko -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_2cee5.dir\\CheckFunctionExists.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-fpjbsf\\CheckFunctionExists.c
+        Linking C executable cmTC_2cee5.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_2cee5.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_2cee5.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_2cee5.dir/objects.a @CMakeFiles\\cmTC_2cee5.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=fseeko -Wl,--whole-archive CMakeFiles\\cmTC_2cee5.dir/objects.a -Wl,--no-whole-archive -o cmTC_2cee5.exe -Wl,--out-implib,libcmTC_2cee5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_2cee5.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-fpjbsf'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:369 (check_function_exists)"
+    checks:
+      - "Looking for strerror"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6m8al3"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6m8al3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STRERROR"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6m8al3'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_52ebb/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_52ebb.dir\\build.make CMakeFiles/cmTC_52ebb.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6m8al3'
+        Building C object CMakeFiles/cmTC_52ebb.dir/CheckFunctionExists.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=strerror -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_52ebb.dir\\CheckFunctionExists.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-6m8al3\\CheckFunctionExists.c
+        Linking C executable cmTC_52ebb.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_52ebb.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_52ebb.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_52ebb.dir/objects.a @CMakeFiles\\cmTC_52ebb.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=strerror -Wl,--whole-archive CMakeFiles\\cmTC_52ebb.dir/objects.a -Wl,--no-whole-archive -o cmTC_52ebb.exe -Wl,--out-implib,libcmTC_52ebb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_52ebb.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6m8al3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckFunctionExists.cmake:86 (try_compile)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:374 (check_function_exists)"
+    checks:
+      - "Looking for posix_memalign"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pbdq64"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pbdq64"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_POSIX_MEMALIGN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pbdq64'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_fc3be/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fc3be.dir\\build.make CMakeFiles/cmTC_fc3be.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pbdq64'
+        Building C object CMakeFiles/cmTC_fc3be.dir/CheckFunctionExists.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe   -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=posix_memalign -std=c99 -fdiagnostics-color=always   -D _POSIX_C_SOURCE=200112L -o CMakeFiles\\cmTC_fc3be.dir\\CheckFunctionExists.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-pbdq64\\CheckFunctionExists.c
+        Linking C executable cmTC_fc3be.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fc3be.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_fc3be.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_fc3be.dir/objects.a @CMakeFiles\\cmTC_fc3be.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -DCHECK_FUNCTION_EXISTS=posix_memalign -Wl,--whole-archive CMakeFiles\\cmTC_fc3be.dir/objects.a -Wl,--no-whole-archive -o cmTC_fc3be.exe -Wl,--out-implib,libcmTC_fc3be.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fc3be.dir\\linkLibs.rsp
+        D:/Qt/Tools/mingw1120_64/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/bin/ld.exe: CMakeFiles\\cmTC_fc3be.dir/objects.a(CheckFunctionExists.c.obj):CheckFunctionExists.c:(.text+0x15): undefined reference to `posix_memalign'
+        collect2.exe: error: ld returned 1 exit status
+        mingw32-make.exe[1]: *** [CMakeFiles\\cmTC_fc3be.dir\\build.make:100: cmTC_fc3be.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-pbdq64'
+        mingw32-make.exe: *** [Makefile:126: cmTC_fc3be/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCCompilerFlag.cmake:51 (cmake_check_compiler_flag)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:393 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test HAVE_NO_INTERPOSITION"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sgob8b"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sgob8b"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_NO_INTERPOSITION"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sgob8b'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_edcc6/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_edcc6.dir\\build.make CMakeFiles/cmTC_edcc6.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sgob8b'
+        Building C object CMakeFiles/cmTC_edcc6.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_NO_INTERPOSITION  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always   -fno-semantic-interposition -o CMakeFiles\\cmTC_edcc6.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-sgob8b\\src.c
+        Linking C executable cmTC_edcc6.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_edcc6.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_edcc6.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_edcc6.dir/objects.a @CMakeFiles\\cmTC_edcc6.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_edcc6.dir/objects.a -Wl,--no-whole-archive -o cmTC_edcc6.exe -Wl,--out-implib,libcmTC_edcc6.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_edcc6.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-sgob8b'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:398 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_VISIBILITY_HIDDEN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ex0v06"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ex0v06"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_VISIBILITY_HIDDEN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ex0v06'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_454e4/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_454e4.dir\\build.make CMakeFiles/cmTC_454e4.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ex0v06'
+        Building C object CMakeFiles/cmTC_454e4.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_ATTRIBUTE_VISIBILITY_HIDDEN  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_454e4.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-ex0v06\\src.c
+        \x1b[01m\x1b[KD:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-ex0v06\\src.c:5:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvisibility attribute not supported in this configuration; ignored [\x1b[01;35m\x1b[K-Wattributes\x1b[m\x1b[K]
+            5 |     \x1b[01;35m\x1b[K}\x1b[m\x1b[K
+              |     \x1b[01;35m\x1b[K^\x1b[m\x1b[K
+        Linking C executable cmTC_454e4.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_454e4.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_454e4.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_454e4.dir/objects.a @CMakeFiles\\cmTC_454e4.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_454e4.dir/objects.a -Wl,--no-whole-archive -o cmTC_454e4.exe -Wl,--out-implib,libcmTC_454e4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_454e4.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ex0v06'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:412 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_ATTRIBUTE_VISIBILITY_INTERNAL"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7wwse1"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7wwse1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_ATTRIBUTE_VISIBILITY_INTERNAL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7wwse1'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_587bc/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_587bc.dir\\build.make CMakeFiles/cmTC_587bc.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7wwse1'
+        Building C object CMakeFiles/cmTC_587bc.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_ATTRIBUTE_VISIBILITY_INTERNAL  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_587bc.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-7wwse1\\src.c
+        \x1b[01m\x1b[KD:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-7wwse1\\src.c:5:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvisibility attribute not supported in this configuration; ignored [\x1b[01;35m\x1b[K-Wattributes\x1b[m\x1b[K]
+            5 |     \x1b[01;35m\x1b[K}\x1b[m\x1b[K
+              |     \x1b[01;35m\x1b[K^\x1b[m\x1b[K
+        Linking C executable cmTC_587bc.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_587bc.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_587bc.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_587bc.dir/objects.a @CMakeFiles\\cmTC_587bc.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_587bc.dir/objects.a -Wl,--no-whole-archive -o cmTC_587bc.exe -Wl,--out-implib,libcmTC_587bc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_587bc.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-7wwse1'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:426 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_CTZ"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-c2yy2u"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-c2yy2u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_BUILTIN_CTZ"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-c2yy2u'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_d6f90/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_d6f90.dir\\build.make CMakeFiles/cmTC_d6f90.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-c2yy2u'
+        Building C object CMakeFiles/cmTC_d6f90.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_BUILTIN_CTZ  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_d6f90.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-c2yy2u\\src.c
+        Linking C executable cmTC_d6f90.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_d6f90.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_d6f90.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_d6f90.dir/objects.a @CMakeFiles\\cmTC_d6f90.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_d6f90.dir/objects.a -Wl,--no-whole-archive -o cmTC_d6f90.exe -Wl,--out-implib,libcmTC_d6f90.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_d6f90.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-c2yy2u'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:441 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_BUILTIN_CTZLL"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-tlp9gs"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-tlp9gs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_BUILTIN_CTZLL"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-tlp9gs'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_e80db/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_e80db.dir\\build.make CMakeFiles/cmTC_e80db.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-tlp9gs'
+        Building C object CMakeFiles/cmTC_e80db.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_BUILTIN_CTZLL  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_e80db.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-tlp9gs\\src.c
+        Linking C executable cmTC_e80db.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_e80db.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_e80db.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_e80db.dir/objects.a @CMakeFiles\\cmTC_e80db.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_e80db.dir/objects.a -Wl,--no-whole-archive -o cmTC_e80db.exe -Wl,--out-implib,libcmTC_e80db.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_e80db.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-tlp9gs'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:457 (check_c_source_compiles)"
+    checks:
+      - "Performing Test HAVE_PTRDIFF_T"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-po1zad"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-po1zad"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_PTRDIFF_T"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-po1zad'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_fea00/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fea00.dir\\build.make CMakeFiles/cmTC_fea00.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-po1zad'
+        Building C object CMakeFiles/cmTC_fea00.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_PTRDIFF_T  -Wall -Wno-implicit-fallthrough  -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_fea00.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-po1zad\\src.c
+        Linking C executable cmTC_fea00.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_fea00.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_fea00.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_fea00.dir/objects.a @CMakeFiles\\cmTC_fea00.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough  -Wl,--whole-archive CMakeFiles\\cmTC_fea00.dir/objects.a -Wl,--no-whole-archive -o cmTC_fea00.exe -Wl,--out-implib,libcmTC_fea00.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fea00.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-po1zad'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:513 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_SSE2_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ukpctx"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ukpctx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SSE2_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ukpctx'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_88426/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_88426.dir\\build.make CMakeFiles/cmTC_88426.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ukpctx'
+        Building C object CMakeFiles/cmTC_88426.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_SSE2_INTRIN  -Wall -Wno-implicit-fallthrough -msse2 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_88426.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-ukpctx\\src.c
+        Linking C executable cmTC_88426.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_88426.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_88426.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_88426.dir/objects.a @CMakeFiles\\cmTC_88426.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -msse2 -Wl,--whole-archive CMakeFiles\\cmTC_88426.dir/objects.a -Wl,--no-whole-archive -o cmTC_88426.exe -Wl,--out-implib,libcmTC_88426.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_88426.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ukpctx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:524 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_SSSE3_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-9wyb9y"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-9wyb9y"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SSSE3_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-9wyb9y'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_c6a6f/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_c6a6f.dir\\build.make CMakeFiles/cmTC_c6a6f.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-9wyb9y'
+        Building C object CMakeFiles/cmTC_c6a6f.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_SSSE3_INTRIN  -Wall -Wno-implicit-fallthrough -mssse3 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_c6a6f.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-9wyb9y\\src.c
+        Linking C executable cmTC_c6a6f.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_c6a6f.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_c6a6f.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_c6a6f.dir/objects.a @CMakeFiles\\cmTC_c6a6f.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -mssse3 -Wl,--whole-archive CMakeFiles\\cmTC_c6a6f.dir/objects.a -Wl,--no-whole-archive -o cmTC_c6a6f.exe -Wl,--out-implib,libcmTC_c6a6f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_c6a6f.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-9wyb9y'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:538 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_SSE42CRC_INLINE_ASM"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-miglrj"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-miglrj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SSE42CRC_INLINE_ASM"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-miglrj'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_2ea38/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_2ea38.dir\\build.make CMakeFiles/cmTC_2ea38.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-miglrj'
+        Building C object CMakeFiles/cmTC_2ea38.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_SSE42CRC_INLINE_ASM  -Wall -Wno-implicit-fallthrough -msse4 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_2ea38.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-miglrj\\src.c
+        Linking C executable cmTC_2ea38.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_2ea38.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_2ea38.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_2ea38.dir/objects.a @CMakeFiles\\cmTC_2ea38.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -msse4 -Wl,--whole-archive CMakeFiles\\cmTC_2ea38.dir/objects.a -Wl,--no-whole-archive -o cmTC_2ea38.exe -Wl,--out-implib,libcmTC_2ea38.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_2ea38.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-miglrj'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:551 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_SSE42CRC_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6954on"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6954on"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SSE42CRC_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6954on'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_f35f3/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_f35f3.dir\\build.make CMakeFiles/cmTC_f35f3.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6954on'
+        Building C object CMakeFiles/cmTC_f35f3.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_SSE42CRC_INTRIN  -Wall -Wno-implicit-fallthrough -msse4 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_f35f3.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-6954on\\src.c
+        Linking C executable cmTC_f35f3.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_f35f3.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_f35f3.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_f35f3.dir/objects.a @CMakeFiles\\cmTC_f35f3.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -msse4 -Wl,--whole-archive CMakeFiles\\cmTC_f35f3.dir/objects.a -Wl,--no-whole-archive -o cmTC_f35f3.exe -Wl,--out-implib,libcmTC_f35f3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_f35f3.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-6954on'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:567 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_SSE42CMPSTR_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-kk4faw"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-kk4faw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_SSE42CMPSTR_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-kk4faw'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_a7927/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a7927.dir\\build.make CMakeFiles/cmTC_a7927.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-kk4faw'
+        Building C object CMakeFiles/cmTC_a7927.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_SSE42CMPSTR_INTRIN  -Wall -Wno-implicit-fallthrough -msse4 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_a7927.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-kk4faw\\src.c
+        Linking C executable cmTC_a7927.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_a7927.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_a7927.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_a7927.dir/objects.a @CMakeFiles\\cmTC_a7927.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -msse4 -Wl,--whole-archive CMakeFiles\\cmTC_a7927.dir/objects.a -Wl,--no-whole-archive -o cmTC_a7927.exe -Wl,--out-implib,libcmTC_a7927.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_a7927.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-kk4faw'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:583 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_PCLMULQDQ_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-khyh9h"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-khyh9h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_PCLMULQDQ_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-khyh9h'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_365d5/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_365d5.dir\\build.make CMakeFiles/cmTC_365d5.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-khyh9h'
+        Building C object CMakeFiles/cmTC_365d5.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_PCLMULQDQ_INTRIN  -Wall -Wno-implicit-fallthrough -mpclmul -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_365d5.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-khyh9h\\src.c
+        Linking C executable cmTC_365d5.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_365d5.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_365d5.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_365d5.dir/objects.a @CMakeFiles\\cmTC_365d5.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -mpclmul -Wl,--whole-archive CMakeFiles\\cmTC_365d5.dir/objects.a -Wl,--no-whole-archive -o cmTC_365d5.exe -Wl,--out-implib,libcmTC_365d5.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_365d5.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-khyh9h'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:485 (check_c_source_compiles)"
+      - "cmake-build-debug-qt/_deps/zlib-src/CMakeLists.txt:599 (check_c_source_compile_or_run)"
+    checks:
+      - "Performing Test HAVE_AVX2_INTRIN"
+    directories:
+      source: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ra6spu"
+      binary: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ra6spu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -Wall -Wno-implicit-fallthrough"
+      CMAKE_C_FLAGS_DEBUG: "-g -DZLIB_DEBUG"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/cpr-src/cmake;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_AVX2_INTRIN"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ra6spu'
+        
+        Run Build Command(s): D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe -E env VERBOSE=1 D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe -f Makefile cmTC_8f67f/fast
+        D:/Qt/Tools/mingw1120_64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8f67f.dir\\build.make CMakeFiles/cmTC_8f67f.dir/build
+        mingw32-make.exe[1]: Entering directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ra6spu'
+        Building C object CMakeFiles/cmTC_8f67f.dir/src.c.obj
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe -DHAVE_AVX2_INTRIN  -Wall -Wno-implicit-fallthrough -mavx2 -std=c99 -fdiagnostics-color=always -o CMakeFiles\\cmTC_8f67f.dir\\src.c.obj -c D:\\Code\\C\\Webstockprj\\Webstockprj\\client\\cmake-build-debug-qt\\CMakeFiles\\CMakeScratch\\TryCompile-ra6spu\\src.c
+        Linking C executable cmTC_8f67f.exe
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E cmake_link_script CMakeFiles\\cmTC_8f67f.dir\\link.txt --verbose=1
+        D:\\Learning\\CLion\\bin\\cmake\\win\\x64\\bin\\cmake.exe -E rm -f CMakeFiles\\cmTC_8f67f.dir/objects.a
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\ar.exe qc CMakeFiles\\cmTC_8f67f.dir/objects.a @CMakeFiles\\cmTC_8f67f.dir\\objects1.rsp
+        D:\\Qt\\Tools\\mingw1120_64\\bin\\gcc.exe  -Wall -Wno-implicit-fallthrough -mavx2 -Wl,--whole-archive CMakeFiles\\cmTC_8f67f.dir/objects.a -Wl,--no-whole-archive -o cmTC_8f67f.exe -Wl,--out-implib,libcmTC_8f67f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8f67f.dir\\linkLibs.rsp
+        mingw32-make.exe[1]: Leaving directory 'D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/CMakeScratch/TryCompile-ra6spu'
+        
+      exitCode: 0

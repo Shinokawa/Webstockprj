@@ -1,5 +1,5 @@
-D:/Code/C/LoginWidget/cmake-build-debug-qt/LoginWidget_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Code/C/LoginWidget/mainwindow.h \
-  D:/Code/C/LoginWidget/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
+D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h \
+  D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
   D:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
   D:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
