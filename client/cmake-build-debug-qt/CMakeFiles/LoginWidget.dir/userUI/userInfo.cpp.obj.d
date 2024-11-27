@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\userInfo.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\userInfo.h \
+ D:\Code\C\Webstockprj\client\userUI\userInfo.cpp \
+ D:\Code\C\Webstockprj\client\userUI\userInfo.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -350,8 +350,8 @@ CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:/Code/C/Webstockprj/Webstockprj/client/Friend.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:/Code/C/Webstockprj/client/Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -363,7 +363,7 @@ CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
- D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h \
+ D:/Code/C/Webstockprj/client/mainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
@@ -409,7 +409,7 @@ CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabbar.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qrubberband.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI/infoUI.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI/changeInfoUI.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI/changePasswordUI.h
+ D:\Code\C\Webstockprj\client\userUI\subUserInfoUI/infoUI.h \
+ D:\Code\C\Webstockprj\client\userUI\subUserInfoUI/changeInfoUI.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:\Code\C\Webstockprj\client\userUI\subUserInfoUI/changePasswordUI.h

@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/userManager.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\userManager.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\userManager.h \
+ D:\Code\C\Webstockprj\client\userManager.cpp \
+ D:\Code\C\Webstockprj\client\userManager.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h \
@@ -108,7 +108,7 @@ CMakeFiles/LoginWidget.dir/userManager.cpp.obj: \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cerrno \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/charconv.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc \
- D:\Code\C\Webstockprj\Webstockprj\client\Friend.h \
+ D:\Code\C\Webstockprj\client\Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -340,7 +340,7 @@ CMakeFiles/LoginWidget.dir/userManager.cpp.obj: \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/ostream.tcc \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/istream.tcc \
- D:\Code\C\Webstockprj\Webstockprj\client\myServer.h \
+ D:\Code\C\Webstockprj\client\myServer.h \
  D:/Qt/6.5.3/mingw_64/include/QtNetwork/QTcpSocket \
  D:/Qt/6.5.3/mingw_64/include/QtNetwork/qtcpsocket.h \
  D:/Qt/6.5.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \

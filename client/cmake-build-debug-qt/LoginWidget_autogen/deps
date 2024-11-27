@@ -1,31 +1,39 @@
 LoginWidget_autogen/timestamp: \
-	D:/Code/C/Webstockprj/Webstockprj/client/CMakeLists.txt \
-	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
-	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake \
-	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake \
-	D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/dataManager.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/dataManager.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/loginWIindow.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/loginWindow.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/main.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/resources.qrc \
-	D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userManager.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.h \
-	D:/Code/C/Webstockprj/Webstockprj/client/userWindow.cpp \
-	D:/Code/C/Webstockprj/Webstockprj/client/userWindow.h \
+	D:/Code/C/Webstockprj/client/CMakeLists.txt \
+	D:/Code/C/Webstockprj/client/Friend.cpp \
+	D:/Code/C/Webstockprj/client/Friend.h \
+	D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
+	D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake \
+	D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake \
+	D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
+	D:/Code/C/Webstockprj/client/dataManager.cpp \
+	D:/Code/C/Webstockprj/client/dataManager.h \
+	D:/Code/C/Webstockprj/client/loginWIindow.cpp \
+	D:/Code/C/Webstockprj/client/loginWindow.h \
+	D:/Code/C/Webstockprj/client/main.cpp \
+	D:/Code/C/Webstockprj/client/mainwindow.cpp \
+	D:/Code/C/Webstockprj/client/mainwindow.h \
+	D:/Code/C/Webstockprj/client/myServer.cpp \
+	D:/Code/C/Webstockprj/client/myServer.h \
+	D:/Code/C/Webstockprj/client/resources.qrc \
+	D:/Code/C/Webstockprj/client/signupWindow.cpp \
+	D:/Code/C/Webstockprj/client/signupWindow.h \
+	D:/Code/C/Webstockprj/client/userManager.cpp \
+	D:/Code/C/Webstockprj/client/userManager.h \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp \
+	D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.h \
+	D:/Code/C/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp \
+	D:/Code/C/Webstockprj/client/userUI/subUserMassageUI/friendUI.h \
+	D:/Code/C/Webstockprj/client/userUI/userInfo.cpp \
+	D:/Code/C/Webstockprj/client/userUI/userInfo.h \
+	D:/Code/C/Webstockprj/client/userUI/userMassage.cpp \
+	D:/Code/C/Webstockprj/client/userUI/userMassage.h \
+	D:/Code/C/Webstockprj/client/userWindow.cpp \
+	D:/Code/C/Webstockprj/client/userWindow.h \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake \
@@ -61,8 +69,10 @@ LoginWidget_autogen/timestamp: \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake \
 	D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/ProcessorCount.cmake \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qabstractitemmodel.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qalgorithms.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qanystringview.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qarraydata.h \
@@ -77,6 +87,9 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qbytearrayalgorithms.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qbytearraylist.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qbytearrayview.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qcalendar.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qcborvalue.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qchar.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qcompare.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qcompare_impl.h \
@@ -89,6 +102,7 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qcontiguouscache.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qdarwinhelpers.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qdatastream.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qdatetime.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qdebug.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qexceptionhandling.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qflags.h \
@@ -101,10 +115,14 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qhash.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qhashfunctions.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qiodevicebase.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qitemselectionmodel.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qiterable.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qiterator.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qline.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qlist.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qlocale.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qlogging.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qmalloc.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qmap.h \
@@ -125,6 +143,7 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qprocessordetection.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qrect.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qrefcount.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qscopedpointer.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qscopeguard.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qset.h \
@@ -164,7 +183,9 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qtversionchecks.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qtypeinfo.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qtypes.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qutf8stringview.h \
+	D:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qvariant.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qvarlengtharray.h \
 	D:/Qt/6.5.3/mingw_64/include/QtCore/qversiontagging.h \
@@ -192,12 +213,27 @@ LoginWidget_autogen/timestamp: \
 	D:/Qt/6.5.3/mingw_64/include/QtGui/qtguiexports.h \
 	D:/Qt/6.5.3/mingw_64/include/QtGui/qtguiglobal.h \
 	D:/Qt/6.5.3/mingw_64/include/QtGui/qtransform.h \
+	D:/Qt/6.5.3/mingw_64/include/QtGui/qvalidator.h \
 	D:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs.h \
 	D:/Qt/6.5.3/mingw_64/include/QtGui/qwindowdefs_win.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/QListWidgetItem \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractitemview.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractslider.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractspinbox.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qframe.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistview.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qrubberband.h \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qslider.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qstyle.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qstyleoption.h \
+	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabbar.h \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgets-config.h \
 	D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsexports.h \

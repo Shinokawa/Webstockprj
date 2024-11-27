@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\userWindow.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\userWindow.h \
+ D:\Code\C\Webstockprj\client\userWindow.cpp \
+ D:\Code\C\Webstockprj\client\userWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -350,8 +350,8 @@ CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\Friend.h \
+ D:\Code\C\Webstockprj\client\userManager.h \
+ D:\Code\C\Webstockprj\client\Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -393,6 +393,6 @@ CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlayoutitem.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qboxlayout.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qgridlayout.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI/userMassage.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI/userInfo.h
+ D:\Code\C\Webstockprj\client\userUI/userMassage.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:\Code\C\Webstockprj\client\userUI/userInfo.h

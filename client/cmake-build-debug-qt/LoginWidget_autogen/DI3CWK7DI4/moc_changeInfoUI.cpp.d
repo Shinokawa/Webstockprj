@@ -1,7 +1,7 @@
-D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/DI3CWK7DI4/moc_changeInfoUI.cpp: D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
-  D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
-  D:/Code/C/Webstockprj/Webstockprj/client/Friend.h \
-  D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
+D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/DI3CWK7DI4/moc_changeInfoUI.cpp: D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
+  D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h \
+  D:/Code/C/Webstockprj/client/Friend.h \
+  D:/Code/C/Webstockprj/client/userManager.h \
   D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
   D:/Qt/6.5.3/mingw_64/include/QtCore/q20memory.h \
   D:/Qt/6.5.3/mingw_64/include/QtCore/q20type_traits.h \

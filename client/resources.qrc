@@ -3,5 +3,6 @@
         <file>resources/images/bg-4.png</file>
         <file>resources/images/password-icon.png</file>
         <file>resources/images/user-icon.png</file>
+        <file>resources/images/result.png</file>
     </qresource>
 </RCC>

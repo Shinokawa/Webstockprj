@@ -6,4 +6,5 @@
 #include "DI3CWK7DI4/moc_changePasswordUI.cpp"
 #include "DI3CWK7DI4/moc_infoUI.cpp"
 #include "ITZWGQVO4N/moc_userInfo.cpp"
+#include "ITZWGQVO4N/moc_userMassage.cpp"
 #include "EWIEGA46WW/moc_userWindow.cpp"

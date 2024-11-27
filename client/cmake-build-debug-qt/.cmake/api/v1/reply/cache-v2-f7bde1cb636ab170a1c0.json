@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt"
+			"value" : "d:/Code/C/Webstockprj/client/cmake-build-debug-qt"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/pkgRedirects"
+			"value" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/Code/C/Webstockprj/Webstockprj/client"
+			"value" : "D:/Code/C/Webstockprj/client"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1563,7 +1563,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt"
+			"value" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt"
 		},
 		{
 			"name" : "LoginWidget_IS_TOP_LEVEL",
@@ -1587,7 +1587,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/Code/C/Webstockprj/Webstockprj/client"
+			"value" : "D:/Code/C/Webstockprj/client"
 		},
 		{
 			"name" : "QT_ADDITIONAL_HOST_PACKAGES_PREFIX_PATH",

@@ -1,7 +1,7 @@
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_loginWindow.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/loginWindow.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_loginWindow.cpp \
+ D:/Code/C/Webstockprj/client/loginWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -352,19 +352,19 @@ CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qtmochelpers.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_mainwindow.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_mainwindow.cpp \
+ D:/Code/C/Webstockprj/client/mainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_signupWindow.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.h \
- D:/Code/C/Webstockprj/Webstockprj/client/loginWindow.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_changeInfoUI.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:/Code/C/Webstockprj/Webstockprj/client/Friend.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_signupWindow.cpp \
+ D:/Code/C/Webstockprj/client/signupWindow.h \
+ D:/Code/C/Webstockprj/client/loginWindow.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_changeInfoUI.cpp \
+ D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:/Code/C/Webstockprj/client/Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -376,18 +376,18 @@ CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qurl.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_changePasswordUI.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_infoUI.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\ITZWGQVO4N/moc_userInfo.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\ITZWGQVO4N/moc_userMassage.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.h \
- D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_userWindow.cpp \
- D:/Code/C/Webstockprj/Webstockprj/client/userWindow.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_changePasswordUI.cpp \
+ D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\DI3CWK7DI4/moc_infoUI.cpp \
+ D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\ITZWGQVO4N/moc_userInfo.cpp \
+ D:/Code/C/Webstockprj/client/userUI/userInfo.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\ITZWGQVO4N/moc_userMassage.cpp \
+ D:/Code/C/Webstockprj/client/userUI/userMassage.h \
+ D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW/moc_userWindow.cpp \
+ D:/Code/C/Webstockprj/client/userWindow.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QListWidgetItem \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistview.h \

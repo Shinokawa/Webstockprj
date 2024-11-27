@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.h \
+ D:\Code\C\Webstockprj\client\mainwindow.cpp \
+ D:\Code\C\Webstockprj\client\mainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -352,10 +352,10 @@ CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtabwidget.h \
- D:\Code\C\Webstockprj\Webstockprj\client\loginWindow.h \
+ D:\Code\C\Webstockprj\client\loginWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
- D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.h \
+ D:\Code\C\Webstockprj\client\signupWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QPushButton \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qpushbutton.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qabstractbutton.h \
@@ -373,9 +373,9 @@ CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMessageBox \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmessagebox.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qdialog.h \
- D:\Code\C\Webstockprj\Webstockprj\client\dataManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userManager.h \
- D:\Code\C\Webstockprj\Webstockprj\client\Friend.h \
+ D:\Code\C\Webstockprj\client\dataManager.h \
+ D:\Code\C\Webstockprj\client\userManager.h \
+ D:\Code\C\Webstockprj\client\Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -386,7 +386,7 @@ CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qcborcommon.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qregularexpression.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/quuid.h \
- D:\Code\C\Webstockprj\Webstockprj\client\userWindow.h \
+ D:\Code\C\Webstockprj\client\userWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QListWidgetItem \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qlistview.h \

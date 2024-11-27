@@ -12,6 +12,7 @@ class infoUI : public QWidget {
 
 public:
     QLabel *usernameLabel;
+    QLabel *EmailLabel;
 
 public:
     explicit infoUI(userManager user);

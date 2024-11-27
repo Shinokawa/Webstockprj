@@ -12,6 +12,7 @@ class userManager {
 private:
     string userName;
     string Password;
+    string EmailAdress;
     vector<Friend> frends;
 
 public:
@@ -19,13 +20,12 @@ public:
     ~userManager();
     string getUserName();
     string getPassword();
+    string getEmailAdress();
     vector<Friend> getFriendList();
-
     void printUser() const;
     void setPassword(const string &newPassword);
-
     void setUsername(const string &newUsername);
-
+    void setEmailAdress(const string &newEmailAdress);
     void initFriend();
 };
 

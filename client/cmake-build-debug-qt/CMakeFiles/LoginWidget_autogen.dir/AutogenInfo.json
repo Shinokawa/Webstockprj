@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen",
-	"CMAKE_BINARY_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt",
-	"CMAKE_CURRENT_BINARY_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt",
-	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client",
+	"BUILD_DIR" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen",
+	"CMAKE_BINARY_DIR" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt",
+	"CMAKE_CURRENT_BINARY_DIR" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt",
+	"CMAKE_CURRENT_SOURCE_DIR" : "D:/Code/C/Webstockprj/client",
 	"CMAKE_EXECUTABLE" : "D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe",
 	"CMAKE_LIST_FILES" : 
 	[
-		"D:/Code/C/Webstockprj/Webstockprj/client/CMakeLists.txt",
-		"D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake",
+		"D:/Code/C/Webstockprj/client/CMakeLists.txt",
+		"D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeSystem.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake",
-		"D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
+		"D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeCXXCompiler.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -26,7 +26,7 @@
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake",
-		"D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake",
+		"D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/3.28.1/CMakeRCCompiler.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake",
@@ -281,101 +281,101 @@
 		"D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginTargets-relwithdebinfo.cmake",
 		"D:/Qt/6.5.3/mingw_64/lib/cmake/Qt6Widgets/Qt6QWindowsVistaStylePluginAdditionalTargetInfo.cmake",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake",
-		"D:/Code/C/Webstockprj/Webstockprj/client/resources.qrc"
+		"D:/Code/C/Webstockprj/client/resources.qrc"
 	],
-	"CMAKE_SOURCE_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client",
-	"DEP_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "D:/Code/C/Webstockprj/client",
+	"DEP_FILE" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "LoginWidget_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/Friend.h",
+			"D:/Code/C/Webstockprj/client/Friend.h",
 			"MU",
 			"EWIEGA46WW/moc_Friend.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/dataManager.h",
+			"D:/Code/C/Webstockprj/client/dataManager.h",
 			"MU",
 			"EWIEGA46WW/moc_dataManager.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/loginWindow.h",
+			"D:/Code/C/Webstockprj/client/loginWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_loginWindow.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h",
+			"D:/Code/C/Webstockprj/client/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/myServer.h",
+			"D:/Code/C/Webstockprj/client/myServer.h",
 			"MU",
 			"EWIEGA46WW/moc_myServer.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.h",
+			"D:/Code/C/Webstockprj/client/signupWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_signupWindow.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userManager.h",
+			"D:/Code/C/Webstockprj/client/userManager.h",
 			"MU",
 			"EWIEGA46WW/moc_userManager.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.h",
 			"MU",
 			"DI3CWK7DI4/moc_changeInfoUI.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.h",
 			"MU",
 			"DI3CWK7DI4/moc_changePasswordUI.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.h",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.h",
 			"MU",
 			"DI3CWK7DI4/moc_infoUI.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserMassageUI/friendUI.h",
+			"D:/Code/C/Webstockprj/client/userUI/subUserMassageUI/friendUI.h",
 			"MU",
 			"DKLFKMQ5YO/moc_friendUI.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.h",
+			"D:/Code/C/Webstockprj/client/userUI/userInfo.h",
 			"MU",
 			"ITZWGQVO4N/moc_userInfo.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.h",
+			"D:/Code/C/Webstockprj/client/userUI/userMassage.h",
 			"MU",
 			"ITZWGQVO4N/moc_userMassage.cpp",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userWindow.h",
+			"D:/Code/C/Webstockprj/client/userWindow.h",
 			"MU",
 			"EWIEGA46WW/moc_userWindow.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/include",
-	"MOC_COMPILATION_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/include",
+	"MOC_COMPILATION_FILE" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -430,74 +430,50 @@
 		"-c",
 		"D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 14,
-	"PARSE_CACHE_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "D:/Qt/6.5.3/mingw_64/./bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "D:/Qt/6.5.3/mingw_64/./bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 5,
-	"SETTINGS_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "D:/Code/C/Webstockprj/Webstockprj/client/Friend.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/Friend.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/dataManager.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/loginWIindow.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/main.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/mainwindow.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/myServer.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/signupWindow.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/userManager.cpp", "MU", null ],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/dataManager.cpp",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/loginWIindow.cpp",
-			"MU",
-			null
-		],
-		[ "D:/Code/C/Webstockprj/Webstockprj/client/main.cpp", "MU", null ],
-		[ "D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.cpp", "MU", null ],
-		[ "D:/Code/C/Webstockprj/Webstockprj/client/myServer.cpp", "MU", null ],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.cpp",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userManager.cpp",
+			"D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp",
 			"MU",
 			null
 		],
 		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp",
+			"D:/Code/C/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp",
 			"MU",
 			null
 		],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.cpp",
-			"MU",
-			null
-		],
-		[
-			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.cpp",
-			"MU",
-			null
-		],
-		[ "D:/Code/C/Webstockprj/Webstockprj/client/userWindow.cpp", "MU", null ]
+		[ "D:/Code/C/Webstockprj/client/userUI/userInfo.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/userUI/userMassage.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/client/userWindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

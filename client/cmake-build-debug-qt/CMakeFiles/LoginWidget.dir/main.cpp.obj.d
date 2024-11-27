@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/main.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\main.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.h \
+ D:\Code\C\Webstockprj\client\main.cpp \
+ D:\Code\C\Webstockprj\client\mainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QMainWindow \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qmainwindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

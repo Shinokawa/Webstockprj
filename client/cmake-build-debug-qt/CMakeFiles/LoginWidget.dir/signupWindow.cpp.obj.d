@@ -1,7 +1,7 @@
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.h \
- D:\Code\C\Webstockprj\Webstockprj\client\loginWindow.h \
+ D:\Code\C\Webstockprj\client\signupWindow.cpp \
+ D:\Code\C\Webstockprj\client\signupWindow.h \
+ D:\Code\C\Webstockprj\client\loginWindow.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \

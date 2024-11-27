@@ -52,10 +52,10 @@ RM = D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Code\C\Webstockprj\Webstockprj\client
+CMAKE_SOURCE_DIR = D:\Code\C\Webstockprj\client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt
+CMAKE_BINARY_DIR = D:\Code\C\Webstockprj\client\cmake-build-debug-qt
 
 # Utility rule file for LoginWidget_autogen_timestamp_deps.
 
@@ -65,9 +65,9 @@ include CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/progress.make
 
+CMakeFiles/LoginWidget_autogen_timestamp_deps: D:/Qt/6.5.3/mingw_64/lib/libQt6Core.a
 CMakeFiles/LoginWidget_autogen_timestamp_deps: D:/Qt/6.5.3/mingw_64/./bin/uic.exe
 CMakeFiles/LoginWidget_autogen_timestamp_deps: D:/Qt/6.5.3/mingw_64/./bin/moc.exe
-CMakeFiles/LoginWidget_autogen_timestamp_deps: D:/Qt/6.5.3/mingw_64/lib/libQt6Core.a
 CMakeFiles/LoginWidget_autogen_timestamp_deps: D:/Qt/6.5.3/mingw_64/lib/libQt6Widgets.a
 
 LoginWidget_autogen_timestamp_deps: CMakeFiles/LoginWidget_autogen_timestamp_deps
@@ -83,6 +83,6 @@ CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Code\C\Webstockprj\Webstockprj\client D:\Code\C\Webstockprj\Webstockprj\client D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles\LoginWidget_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Code\C\Webstockprj\client D:\Code\C\Webstockprj\client D:\Code\C\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles\LoginWidget_autogen_timestamp_deps.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LoginWidget_autogen_timestamp_deps.dir/depend
 

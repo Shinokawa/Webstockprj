@@ -9,6 +9,7 @@ using namespace std;
 userManager::userManager(const string &userName, const string &password) {
     this->userName = userName;
     this->Password = password;
+    this->EmailAdress = "无";
     initFriend();
 }
 
@@ -20,6 +21,14 @@ string userManager::getUserName() {
 
 string userManager::getPassword() {
     return this->Password;
+}
+
+string userManager::getEmailAdress() {
+    return this->EmailAdress;
+}
+
+void userManager::setEmailAdress(const string &newEmailAdress) {
+    this->EmailAdress = newEmailAdress;
 }
 
 vector<Friend> userManager::getFriendList() {

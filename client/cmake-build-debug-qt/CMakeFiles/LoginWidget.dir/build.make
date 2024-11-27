@@ -52,10 +52,10 @@ RM = D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = D:\Code\C\Webstockprj\Webstockprj\client
+CMAKE_SOURCE_DIR = D:\Code\C\Webstockprj\client
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt
+CMAKE_BINARY_DIR = D:\Code\C\Webstockprj\client\cmake-build-debug-qt
 
 # Include any dependencies generated for this target.
 include CMakeFiles/LoginWidget.dir/depend.make
@@ -71,273 +71,274 @@ include CMakeFiles/LoginWidget.dir/flags.make
 LoginWidget_autogen/timestamp: D:/Qt/6.5.3/mingw_64/./bin/moc.exe
 LoginWidget_autogen/timestamp: D:/Qt/6.5.3/mingw_64/./bin/uic.exe
 LoginWidget_autogen/timestamp: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target LoginWidget"
-	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E cmake_autogen D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutogenInfo.json Debug
-	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E touch D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target LoginWidget"
+	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E cmake_autogen D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutogenInfo.json Debug
+	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E touch D:/Code/C/Webstockprj/client/cmake-build-debug-qt/LoginWidget_autogen/timestamp
 
-LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/Webstockprj/client/resources.qrc
+LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/client/resources.qrc
 LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: CMakeFiles/LoginWidget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json
-LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/Webstockprj/client/resources/images/password-icon.png
-LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/Webstockprj/client/resources/images/user-icon.png
-LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/Webstockprj/client/resources/images/bg-4.png
+LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/client/resources/images/password-icon.png
+LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/client/resources/images/user-icon.png
+LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/client/resources/images/bg-4.png
+LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Code/C/Webstockprj/client/resources/images/result.png
 LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp: D:/Qt/6.5.3/mingw_64/./bin/rcc.exe
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
-	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E cmake_autorcc D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resources.qrc"
+	D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E cmake_autorcc D:/Code/C/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutoRcc_resources_EWIEGA46WW_Info.json Debug
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: LoginWidget_autogen/mocs_compilation.cpp
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.obj -MF CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.obj.d -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.obj -c D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp > CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp > CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.i
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/LoginWidget_autogen/mocs_compilation.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\mocs_compilation.cpp -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\mocs_compilation.cpp.s
 
 CMakeFiles/LoginWidget.dir/main.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/main.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/main.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/main.cpp
+CMakeFiles/LoginWidget.dir/main.cpp.obj: D:/Code/C/Webstockprj/client/main.cpp
 CMakeFiles/LoginWidget.dir/main.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LoginWidget.dir/main.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/main.cpp.obj -MF CMakeFiles\LoginWidget.dir\main.cpp.obj.d -o CMakeFiles\LoginWidget.dir\main.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/LoginWidget.dir/main.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/main.cpp.obj -MF CMakeFiles\LoginWidget.dir\main.cpp.obj.d -o CMakeFiles\LoginWidget.dir\main.cpp.obj -c D:\Code\C\Webstockprj\client\main.cpp
 
 CMakeFiles/LoginWidget.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/main.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\main.cpp > CMakeFiles\LoginWidget.dir\main.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\main.cpp > CMakeFiles\LoginWidget.dir\main.cpp.i
 
 CMakeFiles/LoginWidget.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/main.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\main.cpp -o CMakeFiles\LoginWidget.dir\main.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\main.cpp -o CMakeFiles\LoginWidget.dir\main.cpp.s
 
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.cpp
+CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: D:/Code/C/Webstockprj/client/mainwindow.cpp
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\mainwindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\mainwindow.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/mainwindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\mainwindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\mainwindow.cpp.obj -c D:\Code\C\Webstockprj\client\mainwindow.cpp
 
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/mainwindow.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.cpp > CMakeFiles\LoginWidget.dir\mainwindow.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\mainwindow.cpp > CMakeFiles\LoginWidget.dir\mainwindow.cpp.i
 
 CMakeFiles/LoginWidget.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/mainwindow.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\mainwindow.cpp -o CMakeFiles\LoginWidget.dir\mainwindow.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\mainwindow.cpp -o CMakeFiles\LoginWidget.dir\mainwindow.cpp.s
 
 CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/loginWIindow.cpp
+CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj: D:/Code/C/Webstockprj/client/loginWIindow.cpp
 CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\loginWIindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\loginWIindow.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\loginWIindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/loginWIindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\loginWIindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\loginWIindow.cpp.obj -c D:\Code\C\Webstockprj\client\loginWIindow.cpp
 
 CMakeFiles/LoginWidget.dir/loginWIindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/loginWIindow.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\loginWIindow.cpp > CMakeFiles\LoginWidget.dir\loginWIindow.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\loginWIindow.cpp > CMakeFiles\LoginWidget.dir\loginWIindow.cpp.i
 
 CMakeFiles/LoginWidget.dir/loginWIindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/loginWIindow.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\loginWIindow.cpp -o CMakeFiles\LoginWidget.dir\loginWIindow.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\loginWIindow.cpp -o CMakeFiles\LoginWidget.dir\loginWIindow.cpp.s
 
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.cpp
+CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: D:/Code/C/Webstockprj/client/signupWindow.cpp
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\signupWindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\signupWindow.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/signupWindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\signupWindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\signupWindow.cpp.obj -c D:\Code\C\Webstockprj\client\signupWindow.cpp
 
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/signupWindow.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.cpp > CMakeFiles\LoginWidget.dir\signupWindow.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\signupWindow.cpp > CMakeFiles\LoginWidget.dir\signupWindow.cpp.i
 
 CMakeFiles/LoginWidget.dir/signupWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/signupWindow.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\signupWindow.cpp -o CMakeFiles\LoginWidget.dir\signupWindow.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\signupWindow.cpp -o CMakeFiles\LoginWidget.dir\signupWindow.cpp.s
 
 CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/dataManager.cpp
+CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: D:/Code/C/Webstockprj/client/dataManager.cpp
 CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LoginWidget.dir/dataManager.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/dataManager.cpp.obj -MF CMakeFiles\LoginWidget.dir\dataManager.cpp.obj.d -o CMakeFiles\LoginWidget.dir\dataManager.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\dataManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LoginWidget.dir/dataManager.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/dataManager.cpp.obj -MF CMakeFiles\LoginWidget.dir\dataManager.cpp.obj.d -o CMakeFiles\LoginWidget.dir\dataManager.cpp.obj -c D:\Code\C\Webstockprj\client\dataManager.cpp
 
 CMakeFiles/LoginWidget.dir/dataManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/dataManager.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\dataManager.cpp > CMakeFiles\LoginWidget.dir\dataManager.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\dataManager.cpp > CMakeFiles\LoginWidget.dir\dataManager.cpp.i
 
 CMakeFiles/LoginWidget.dir/dataManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/dataManager.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\dataManager.cpp -o CMakeFiles\LoginWidget.dir\dataManager.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\dataManager.cpp -o CMakeFiles\LoginWidget.dir\dataManager.cpp.s
 
 CMakeFiles/LoginWidget.dir/userManager.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userManager.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userManager.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userManager.cpp
+CMakeFiles/LoginWidget.dir/userManager.cpp.obj: D:/Code/C/Webstockprj/client/userManager.cpp
 CMakeFiles/LoginWidget.dir/userManager.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LoginWidget.dir/userManager.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userManager.cpp.obj -MF CMakeFiles\LoginWidget.dir\userManager.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userManager.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LoginWidget.dir/userManager.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userManager.cpp.obj -MF CMakeFiles\LoginWidget.dir\userManager.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userManager.cpp.obj -c D:\Code\C\Webstockprj\client\userManager.cpp
 
 CMakeFiles/LoginWidget.dir/userManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userManager.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userManager.cpp > CMakeFiles\LoginWidget.dir\userManager.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userManager.cpp > CMakeFiles\LoginWidget.dir\userManager.cpp.i
 
 CMakeFiles/LoginWidget.dir/userManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userManager.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userManager.cpp -o CMakeFiles\LoginWidget.dir\userManager.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userManager.cpp -o CMakeFiles\LoginWidget.dir\userManager.cpp.s
 
 CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userWindow.cpp
+CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: D:/Code/C/Webstockprj/client/userWindow.cpp
 CMakeFiles/LoginWidget.dir/userWindow.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LoginWidget.dir/userWindow.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userWindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\userWindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userWindow.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LoginWidget.dir/userWindow.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userWindow.cpp.obj -MF CMakeFiles\LoginWidget.dir\userWindow.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userWindow.cpp.obj -c D:\Code\C\Webstockprj\client\userWindow.cpp
 
 CMakeFiles/LoginWidget.dir/userWindow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userWindow.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userWindow.cpp > CMakeFiles\LoginWidget.dir\userWindow.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userWindow.cpp > CMakeFiles\LoginWidget.dir\userWindow.cpp.i
 
 CMakeFiles/LoginWidget.dir/userWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userWindow.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userWindow.cpp -o CMakeFiles\LoginWidget.dir\userWindow.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userWindow.cpp -o CMakeFiles\LoginWidget.dir\userWindow.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.cpp
+CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: D:/Code/C/Webstockprj/client/userUI/userInfo.cpp
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\userInfo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\userInfo.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\userInfo.cpp > CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\userInfo.cpp > CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/userInfo.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\userInfo.cpp -o CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\userInfo.cpp -o CMakeFiles\LoginWidget.dir\userUI\userInfo.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp
+CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/infoUI.cpp
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\infoUI.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp
+CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj: D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changeInfoUI.cpp
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changeInfoUI.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changeInfoUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changeInfoUI.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp
+CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj: D:/Code/C/Webstockprj/client/userUI/subUserInfoUI/changePasswordUI.cpp
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/changePasswordUI.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\changePasswordUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserInfoUI\changePasswordUI.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.cpp
+CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj: D:/Code/C/Webstockprj/client/userUI/userMassage.cpp
 CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\userMassage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\userMassage.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\userMassage.cpp > CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\userMassage.cpp > CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/userMassage.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\userMassage.cpp -o CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\userMassage.cpp -o CMakeFiles\LoginWidget.dir\userUI\userMassage.cpp.s
 
 CMakeFiles/LoginWidget.dir/myServer.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/myServer.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/myServer.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/myServer.cpp
+CMakeFiles/LoginWidget.dir/myServer.cpp.obj: D:/Code/C/Webstockprj/client/myServer.cpp
 CMakeFiles/LoginWidget.dir/myServer.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LoginWidget.dir/myServer.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/myServer.cpp.obj -MF CMakeFiles\LoginWidget.dir\myServer.cpp.obj.d -o CMakeFiles\LoginWidget.dir\myServer.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\myServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/LoginWidget.dir/myServer.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/myServer.cpp.obj -MF CMakeFiles\LoginWidget.dir\myServer.cpp.obj.d -o CMakeFiles\LoginWidget.dir\myServer.cpp.obj -c D:\Code\C\Webstockprj\client\myServer.cpp
 
 CMakeFiles/LoginWidget.dir/myServer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/myServer.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\myServer.cpp > CMakeFiles\LoginWidget.dir\myServer.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\myServer.cpp > CMakeFiles\LoginWidget.dir\myServer.cpp.i
 
 CMakeFiles/LoginWidget.dir/myServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/myServer.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\myServer.cpp -o CMakeFiles\LoginWidget.dir\myServer.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\myServer.cpp -o CMakeFiles\LoginWidget.dir\myServer.cpp.s
 
 CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp
+CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj: D:/Code/C/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp
 CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.obj -MF CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.obj.d -o CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.obj -c D:\Code\C\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp
 
 CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp > CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.i
 
 CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/userUI/subUserMassageUI/friendUI.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\userUI\subUserMassageUI\friendUI.cpp -o CMakeFiles\LoginWidget.dir\userUI\subUserMassageUI\friendUI.cpp.s
 
 CMakeFiles/LoginWidget.dir/Friend.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/Friend.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
-CMakeFiles/LoginWidget.dir/Friend.cpp.obj: D:/Code/C/Webstockprj/Webstockprj/client/Friend.cpp
+CMakeFiles/LoginWidget.dir/Friend.cpp.obj: D:/Code/C/Webstockprj/client/Friend.cpp
 CMakeFiles/LoginWidget.dir/Friend.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LoginWidget.dir/Friend.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/Friend.cpp.obj -MF CMakeFiles\LoginWidget.dir\Friend.cpp.obj.d -o CMakeFiles\LoginWidget.dir\Friend.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\Friend.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/LoginWidget.dir/Friend.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/Friend.cpp.obj -MF CMakeFiles\LoginWidget.dir\Friend.cpp.obj.d -o CMakeFiles\LoginWidget.dir\Friend.cpp.obj -c D:\Code\C\Webstockprj\client\Friend.cpp
 
 CMakeFiles/LoginWidget.dir/Friend.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/Friend.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\Friend.cpp > CMakeFiles\LoginWidget.dir\Friend.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\Friend.cpp > CMakeFiles\LoginWidget.dir\Friend.cpp.i
 
 CMakeFiles/LoginWidget.dir/Friend.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/Friend.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\Friend.cpp -o CMakeFiles\LoginWidget.dir\Friend.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\Friend.cpp -o CMakeFiles\LoginWidget.dir\Friend.cpp.s
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/LoginWidget.dir/flags.make
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/LoginWidget.dir/includes_CXX.rsp
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj: LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj: CMakeFiles/LoginWidget.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj -MF CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.obj -c D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj"
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.obj -MF CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.obj.d -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.obj -c D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.i"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp > CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.i
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp > CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.i
 
 CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/LoginWidget.dir/LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp.s"
-	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.s
+	D:\Qt\Tools\mingw1120_64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\Code\C\Webstockprj\client\cmake-build-debug-qt\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp -o CMakeFiles\LoginWidget.dir\LoginWidget_autogen\EWIEGA46WW\qrc_resources.cpp.s
 
 # Object files for target LoginWidget
 LoginWidget_OBJECTS = \
@@ -387,7 +388,7 @@ LoginWidget.exe: D:/Qt/6.5.3/mingw_64/lib/libQt6EntryPoint.a
 LoginWidget.exe: CMakeFiles/LoginWidget.dir/linkLibs.rsp
 LoginWidget.exe: CMakeFiles/LoginWidget.dir/objects1.rsp
 LoginWidget.exe: CMakeFiles/LoginWidget.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable LoginWidget.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable LoginWidget.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\LoginWidget.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -400,6 +401,6 @@ CMakeFiles/LoginWidget.dir/clean:
 
 CMakeFiles/LoginWidget.dir/depend: LoginWidget_autogen/EWIEGA46WW/qrc_resources.cpp
 CMakeFiles/LoginWidget.dir/depend: LoginWidget_autogen/timestamp
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Code\C\Webstockprj\Webstockprj\client D:\Code\C\Webstockprj\Webstockprj\client D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\Webstockprj\client\cmake-build-debug-qt\CMakeFiles\LoginWidget.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" D:\Code\C\Webstockprj\client D:\Code\C\Webstockprj\client D:\Code\C\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\client\cmake-build-debug-qt D:\Code\C\Webstockprj\client\cmake-build-debug-qt\CMakeFiles\LoginWidget.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/LoginWidget.dir/depend
 

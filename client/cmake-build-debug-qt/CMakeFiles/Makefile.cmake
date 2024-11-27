@@ -7,11 +7,11 @@ set(CMAKE_DEPENDS_GENERATOR "MinGW Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "D:/Code/C/Webstockprj/Webstockprj/client/CMakeLists.txt"
+  "D:/Code/C/Webstockprj/client/CMakeLists.txt"
   "CMakeFiles/3.28.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeRCCompiler.cmake"
   "CMakeFiles/3.28.1/CMakeSystem.cmake"
-  "D:/Code/C/Webstockprj/Webstockprj/client/resources.qrc"
+  "D:/Code/C/Webstockprj/client/resources.qrc"
   "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
   "D:/Learning/CLion/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"

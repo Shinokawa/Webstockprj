@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\userUI\subUserInfoUI\infoUI.h \
+ D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\infoUI.cpp \
+ D:\Code\C\Webstockprj\client\userUI\subUserInfoUI\infoUI.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/QWidget \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -350,8 +350,8 @@ CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qsizepolicy.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qcursor.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qbitmap.h \
- D:/Code/C/Webstockprj/Webstockprj/client/userManager.h \
- D:/Code/C/Webstockprj/Webstockprj/client/Friend.h \
+ D:/Code/C/Webstockprj/client/userManager.h \
+ D:/Code/C/Webstockprj/client/Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \
@@ -375,4 +375,6 @@ CMakeFiles/LoginWidget.dir/userUI/subUserInfoUI/infoUI.cpp.obj: \
  D:/Qt/6.5.3/mingw_64/include/QtWidgets/qwidget.h \
  D:/Qt/6.5.3/mingw_64/include/QtGui/qpicture.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qiodevice.h \
- D:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h
+ D:/Qt/6.5.3/mingw_64/include/QtGui/qtextdocument.h \
+ D:/Qt/6.5.3/mingw_64/include/QtGui/QFont \
+ D:/Qt/6.5.3/mingw_64/include/QtGui/qfont.h

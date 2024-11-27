@@ -1,6 +1,6 @@
 CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: \
- D:\Code\C\Webstockprj\Webstockprj\client\dataManager.cpp \
- D:\Code\C\Webstockprj\Webstockprj\client\dataManager.h \
+ D:\Code\C\Webstockprj\client\dataManager.cpp \
+ D:\Code\C\Webstockprj\client\dataManager.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/vector \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stl_algobase.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32/bits/c++config.h \
@@ -40,7 +40,7 @@ CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/hash_bytes.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/range_access.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/vector.tcc \
- D:\Code\C\Webstockprj\Webstockprj\client\userManager.h \
+ D:\Code\C\Webstockprj\client\userManager.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/string \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/stringfwd.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/char_traits.h \
@@ -114,7 +114,7 @@ CMakeFiles/LoginWidget.dir/dataManager.cpp.obj: \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/cerrno \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/charconv.h \
  D:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/bits/basic_string.tcc \
- D:\Code\C\Webstockprj\Webstockprj\client\Friend.h \
+ D:\Code\C\Webstockprj\client\Friend.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/QJsonObject \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonobject.h \
  D:/Qt/6.5.3/mingw_64/include/QtCore/qjsonvalue.h \

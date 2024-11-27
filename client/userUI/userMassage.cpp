@@ -10,9 +10,8 @@ userMassage::userMassage(const userManager& user): user(user) {
     listWidget = new QListWidget();
     auto friendList = this->user.getFriendList();
 
-    //初始化listWidget
-    //创建friend页面，并加入到stackedWidget和UIList中
-    for(auto frd : friendList) {
+    // 初始化 listWidget
+    for (auto frd : friendList) {
         listWidget->addItem(frd.getUsername().c_str());
 
         auto frdUI = new friendUI(frd);
@@ -20,17 +19,53 @@ userMassage::userMassage(const userManager& user): user(user) {
         stackedWidget->addWidget(frdUI);
     }
 
+    // 美化 listWidget
+    listWidget->setStyleSheet(R"(
+        QListWidget {
+            background-color: #f8f9fa;
+            border: none;
+        }
+        QListWidget::item {
+            padding: 10px;
+            border-bottom: 1px solid #e1e1e1;
+        }
+        QListWidget::item:hover {
+            background-color: #e9ecef;
+        }
+        QListWidget::item:selected {
+            background-color: #0078D7;
+            color: white;
+        }
+    )");
+
+    // 美化 QSplitter
     splitter = new QSplitter(Qt::Horizontal);
-    splitter->addWidget(this->listWidget);
-    splitter->addWidget(this->stackedWidget);
+    splitter->addWidget(listWidget);
+    splitter->addWidget(stackedWidget);
     splitter->setStretchFactor(0, 1);
     splitter->setStretchFactor(1, 5);
+    splitter->setStyleSheet(R"(
+        QSplitter::handle {
+            background-color: #d1d1d1;
+            width: 2px;
+        }
+        QSplitter::handle:hover {
+            background-color: #0078D7;
+        }
+    )");
 
-    connect(listWidget,QListWidget::currentRowChanged,this,userMassage::doListWidget);
+    // 美化 stackedWidget
+    stackedWidget->setStyleSheet("background-color: #ffffff; border-radius: 5px;");
 
+    // 布局调整
     auto mainWindow = new QVBoxLayout();
+    mainWindow->setContentsMargins(10, 10, 10, 10);  // 设置边距
     mainWindow->addWidget(splitter);
+
     this->setLayout(mainWindow);
+
+    // 连接信号槽
+    connect(listWidget, &QListWidget::currentRowChanged, this, &userMassage::doListWidget);
 }
 
 userMassage::~userMassage() = default;

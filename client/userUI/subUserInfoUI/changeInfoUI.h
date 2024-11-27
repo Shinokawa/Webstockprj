@@ -13,6 +13,7 @@ class changeInfoUI : public QWidget {
 
 public:
     QLineEdit* usernameText;
+    QLineEdit* EmailAdressText;
     QPushButton* okButton;
 
     userManager user;
