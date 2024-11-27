@@ -1,0 +1,12 @@
+# This is a generated file and its contents are an internal implementation detail.
+# The download step will be re-executed if anything in this file changes.
+# No other meaning or use of this file is supported.
+
+method=url
+command=D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe;-P;D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/download-curl-populate.cmake;COMMAND;D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe;-P;D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/verify-curl-populate.cmake;COMMAND;D:/Learning/CLion/bin/cmake/win/x64/bin/cmake.exe;-P;D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/curl-subbuild/curl-populate-prefix/src/curl-populate-stamp/extract-curl-populate.cmake
+source_dir=D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps/curl-src
+work_dir=D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/_deps
+url(s)=https://github.com/curl/curl/releases/download/curl-8_4_0/curl-8.4.0.tar.xz
+hash=SHA256=16c62a9c4af0f703d28bda6d7bbf37ba47055ad3414d70dec63e2e6336f2a82d
+no_extract=
+

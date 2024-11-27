@@ -1,0 +1,3 @@
+D:\Learning\CLion\bin\cmake\win\x64\bin\cmake.exe -E rm -f CMakeFiles\LoginWidget.dir/objects.a
+D:\Qt\Tools\mingw1120_64\bin\ar.exe qc CMakeFiles\LoginWidget.dir/objects.a @CMakeFiles\LoginWidget.dir\objects1.rsp
+D:\Qt\Tools\mingw1120_64\bin\c++.exe -g -mwindows -Wl,--whole-archive CMakeFiles\LoginWidget.dir/objects.a -Wl,--no-whole-archive -o LoginWidget.exe -Wl,--out-implib,libLoginWidget.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\LoginWidget.dir\linkLibs.rsp

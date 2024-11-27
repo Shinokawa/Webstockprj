@@ -289,6 +289,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/Friend.h",
+			"MU",
+			"EWIEGA46WW/moc_Friend.cpp",
+			null
+		],
+		[
 			"D:/Code/C/Webstockprj/Webstockprj/client/dataManager.h",
 			"MU",
 			"EWIEGA46WW/moc_dataManager.cpp",
@@ -304,6 +310,12 @@
 			"D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/myServer.h",
+			"MU",
+			"EWIEGA46WW/moc_myServer.cpp",
 			null
 		],
 		[
@@ -337,9 +349,21 @@
 			null
 		],
 		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserMassageUI/friendUI.h",
+			"MU",
+			"DKLFKMQ5YO/moc_friendUI.cpp",
+			null
+		],
+		[
 			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.h",
 			"MU",
 			"ITZWGQVO4N/moc_userInfo.cpp",
+			null
+		],
+		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.h",
+			"MU",
+			"ITZWGQVO4N/moc_userMassage.cpp",
 			null
 		],
 		[
@@ -419,6 +443,7 @@
 	"SETTINGS_FILE" : "D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt/CMakeFiles/LoginWidget_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Code/C/Webstockprj/Webstockprj/client/Friend.cpp", "MU", null ],
 		[
 			"D:/Code/C/Webstockprj/Webstockprj/client/dataManager.cpp",
 			"MU",
@@ -431,6 +456,7 @@
 		],
 		[ "D:/Code/C/Webstockprj/Webstockprj/client/main.cpp", "MU", null ],
 		[ "D:/Code/C/Webstockprj/Webstockprj/client/mainwindow.cpp", "MU", null ],
+		[ "D:/Code/C/Webstockprj/Webstockprj/client/myServer.cpp", "MU", null ],
 		[
 			"D:/Code/C/Webstockprj/Webstockprj/client/signupWindow.cpp",
 			"MU",
@@ -457,7 +483,17 @@
 			null
 		],
 		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/subUserMassageUI/friendUI.cpp",
+			"MU",
+			null
+		],
+		[
 			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userInfo.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/Code/C/Webstockprj/Webstockprj/client/userUI/userMassage.cpp",
 			"MU",
 			null
 		],

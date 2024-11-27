@@ -42,6 +42,18 @@ set(PROJECT_SOURCES
         userUI/subUserInfoUI/changePasswordUI.cpp
         userUI/subUserInfoUI/changePasswordUI.h
         userUI/subUserInfoUI/changePasswordUI.h
+        userUI/userMassage.cpp
+        userUI/userMassage.h
+        userUI/userMassage.h
+        myServer.cpp
+        myServer.h
+        myServer.h
+        userUI/subUserMassageUI/friendUI.cpp
+        userUI/subUserMassageUI/friendUI.h
+        userUI/subUserMassageUI/friendUI.h
+        Friend.cpp
+        Friend.h
+        Friend.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -9,6 +9,6 @@ CMake Deprecation Warning:
 
 
 -- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
--- Configuring done (0.5s)
--- Generating done (0.0s)
+-- Configuring done (0.9s)
+-- Generating done (0.1s)
 -- Build files have been written to: D:/Code/C/Webstockprj/Webstockprj/client/cmake-build-debug-qt

@@ -17,7 +17,7 @@ void dataManager::addUser(const userManager& newUser) {
 }
 
 void dataManager::printUserList() {
-    for(userManager user : this->userList) {
+    for(const userManager& user : this->userList) {
         user.printUser();
     }
 }
