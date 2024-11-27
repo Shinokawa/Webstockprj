@@ -1,0 +1,3 @@
+/Users/sakiko/Documents/webso/build/CMakeFiles/WEBSO.dir
+/Users/sakiko/Documents/webso/build/CMakeFiles/edit_cache.dir
+/Users/sakiko/Documents/webso/build/CMakeFiles/rebuild_cache.dir
