@@ -1,6 +1,6 @@
 #ifndef USERWINDOW_H
 #define USERWINDOW_H
-#include <QWidget>
+
 #include "userManager.h"
 #include <QListWidgetItem>
 
@@ -10,6 +10,7 @@ class QListWidget;
 class QStackedWidget;
 class QSplitter;
 class userMassage;
+class userEmail;
 
 class userWindow : public QWidget
 {
@@ -24,6 +25,7 @@ public:
 
     userInfo *userInfo;
     userMassage *userMassage;
+    userEmail *userEmail;
 
 public:
     explicit userWindow(const userManager& thisUser);

@@ -54,6 +54,15 @@ set(PROJECT_SOURCES
         Friend.cpp
         Friend.h
         Friend.h
+        Email.cpp
+        Email.h
+        Email.h
+        Email.h
+        userUI/UserEmail.cpp
+        userUI/UserEmail.h
+        userUI/subUserEmailUI/EmailUI.cpp
+        userUI/subUserEmailUI/EmailUI.h
+        userUI/subUserEmailUI/EmailUI.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

@@ -3,6 +3,8 @@
 #include <QStackedWidget>
 #include <QSplitter>
 #include <QVBoxLayout>
+
+#include "userUI/userEmail.h"
 #include "userUI/userMassage.h"
 #include "userUI/userInfo.h"
 
@@ -38,11 +40,14 @@ userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     // 创建并初始化子页面
     userInfo = new class userInfo(this->user);
     userMassage = new class userMassage(this->user);
+    userEmail = new class userEmail(this->user);
 
     // 设置stackedWidget
     stackedWidget = new QStackedWidget();
     stackedWidget->addWidget(userInfo);
     stackedWidget->addWidget(userMassage);
+    stackedWidget->addWidget(userEmail);
+
     stackedWidget->setCurrentWidget(userInfo);
 
     // 美化QSplitter
@@ -87,8 +92,7 @@ void userWindow::doListWidget(const QListWidgetItem *item) const {
     }
 
     else if(option == "我的邮箱") {
-        qDebug()<< "我的邮箱";
-        //this->stackedWidget->setCurrentWidget();
+        this->stackedWidget->setCurrentWidget(this->userEmail);
     }
 
     else if(option == "我的期货") {

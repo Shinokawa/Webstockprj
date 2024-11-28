@@ -13,7 +13,7 @@ private:
     QJsonObject messageJson;
 
 public:
-    explicit Friend(const string& friendInfo);
+    explicit Friend(const QJsonObject& friendInfo);
     ~Friend();
     QJsonObject getMessage();
     string getUsername();
