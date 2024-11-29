@@ -1,6 +1,6 @@
 #ifndef USERWINDOW_H
 #define USERWINDOW_H
-#include <QWidget>
+
 #include "userManager.h"
 #include <QListWidgetItem>
 
@@ -10,6 +10,8 @@ class QListWidget;
 class QStackedWidget;
 class QSplitter;
 class userMassage;
+class userEmail;
+class userFutures;
 
 class userWindow : public QWidget
 {
@@ -24,6 +26,8 @@ public:
 
     userInfo *userInfo;
     userMassage *userMassage;
+    userEmail *userEmail;
+    userFutures *userFutures;
 
 public:
     explicit userWindow(const userManager& thisUser);
@@ -31,6 +35,8 @@ public:
 
 private slots:
     void doListWidget(const QListWidgetItem *item) const;
+
+    void doAddFriendButton();
 };
 
 #endif //USERWINDOW_H

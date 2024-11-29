@@ -1,9 +1,9 @@
 #include "dataManager.h"
-
 #include "userManager.h"
 
 dataManager::dataManager() {
-    this->userList.emplace_back("123","123");
+    auto user = userManager("123","123");
+    this->userList.emplace_back(user);
 }
 
 dataManager::~dataManager() = default;

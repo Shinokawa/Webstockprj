@@ -1,12 +1,9 @@
 #include "Friend.h"
-#include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonValue>
-#include <QJsonArray>
+#include "../userManager.h"
 
-#include "userManager.h"
-
-Friend::Friend(const string& friendInfo) {
+Friend::Friend(const QJsonObject& friendInfo) {
     /*
     QString jsonString = R"({
         "friendName": "我的客服",
@@ -16,15 +13,8 @@ Friend::Friend(const string& friendInfo) {
         ]
     })";
     */
-    auto jsonString = QString::fromStdString(friendInfo);
-    // 将 JSON 字符串转换为 QByteArray，因为 QJsonDocument 的解析器需要 QByteArray
-    QByteArray jsonData = jsonString.toUtf8();
-
-    // 将 JSON 数据解析为 QJsonDocument
-    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
-
     // 获取 JSON 对象
-    messageJson = jsonDoc.object();
+    messageJson = friendInfo;
     username = messageJson["friendName"].toString().toStdString();
 }
 
