@@ -1,33 +1,57 @@
-﻿// CTP行情Demo.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
+﻿// main.cpp
 #include <iostream>
 #include <thread>
-#include "CThostFtdcMdSpiImp.h"
+#include "CSimpleMdHandlerExtended.h" // 引入扩展后的头文件
 #pragma comment(lib, "tradeapi64_se/thostmduserapi_se.lib")
 
 int main()
 {
-    CSimpleMdHandler ash;
+    CSimpleMdHandlerExtended handler;
     /// 由于连接需要时间，且是异步的，此处暂停5s，保证连接完成
     std::this_thread::sleep_for(std::chrono::seconds(5));
     /// 登录
-    ash.ReqUserLogin();
+    handler.ReqUserLogin();
     /// 等待，同连接
     std::this_thread::sleep_for(std::chrono::seconds(5));
     /// 订阅行情
-    ash.SubscribeMarketData({"m2501"});//订阅行情
-    getchar();
+    handler.SubscribeMarketData({"m2501"}); // 订阅行情
+
+    // 启动一个线程或在主线程中循环获取数据
+    // 这里以简单的示例展示如何获取数据
+    std::cout << "开始接收行情数据，按回车键退出...\n";
+
+    while (true)
+    {
+        // 检查是否有新数据
+        {
+            auto data = handler.GetMarketData();
+            if (!data.empty())
+            {
+                for (const auto& md : data)
+                {
+                    std::cout << "InstrumentID: " << md.InstrumentID
+                              << ", LastPrice: " << md.LastPrice
+                              << ", UpdateTime: " << md.UpdateTime << std::endl;
+                    // 根据需要处理数据
+                }
+                // 获取后可以选择清空存储的数据
+                handler.ClearMarketData();
+            }
+        }
+
+        // 为了避免频繁查询，可以适当睡眠
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+        // 检查用户是否按下回车键退出
+        if (std::cin.peek() != EOF)
+        {
+            char c = std::cin.get();
+            if (c == '\n')
+            {
+                break;
+            }
+        }
+    }
+
     return 0;
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
