@@ -9,9 +9,8 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
-
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets NetWork)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets Network)
 
 set(PROJECT_SOURCES
         main.cpp
@@ -51,18 +50,27 @@ set(PROJECT_SOURCES
         userUI/subUserMassageUI/friendUI.cpp
         userUI/subUserMassageUI/friendUI.h
         userUI/subUserMassageUI/friendUI.h
-        Friend.cpp
-        Friend.h
-        Friend.h
-        Email.cpp
-        Email.h
-        Email.h
-        Email.h
+        userData/Friend.cpp
+        userData/Friend.h
+        userData/Friend.h
+        userData/Email.cpp
+        userData/Email.h
+        userData/Email.h
+        userData/Email.h
         userUI/UserEmail.cpp
         userUI/UserEmail.h
         userUI/subUserEmailUI/EmailUI.cpp
         userUI/subUserEmailUI/EmailUI.h
         userUI/subUserEmailUI/EmailUI.h
+        userData/Futures.cpp
+        userData/Futures.h
+        userData/Futures.h
+        userUI/subUserInfoUI/friendAddUI.cpp
+        userUI/subUserInfoUI/friendAddUI.h
+        userUI/subUserInfoUI/friendAddUI.h
+        userUI/userFutures.cpp
+        userUI/userFutures.h
+        userUI/userFutures.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -89,7 +97,7 @@ else()
     endif()
 endif()
 
-target_link_libraries(WebstockClient PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
+target_link_libraries(WebstockClient PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Network)
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an

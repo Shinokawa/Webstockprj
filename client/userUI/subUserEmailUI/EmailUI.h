@@ -1,7 +1,7 @@
 #ifndef EMAILUI_H
 #define EMAILUI_H
 #include <QWidget>
-#include "../../Email.h"
+#include "../../userData/Email.h"
 
 class QPushButton;
 

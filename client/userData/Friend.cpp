@@ -1,7 +1,7 @@
 #include "Friend.h"
 #include <QJsonObject>
 #include <QJsonValue>
-#include "userManager.h"
+#include "../userManager.h"
 
 Friend::Friend(const QJsonObject& friendInfo) {
     /*

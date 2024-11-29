@@ -1,20 +1,28 @@
 #ifndef MYSERVER_H
 #define MYSERVER_H
 
-#include <QtNetwork/QTcpSocket>
+#include <QtNetwork/QNetworkRequest>
 #include <string>
 #include "userManager.h"
-#include "Email.h"
-#include "Friend.h"
+#include "userData/Email.h"
+#include "userData/Friend.h"
+#include <QCoreApplication>
+#include <QtNetwork/QNetworkReply>
 
 using namespace std;
 
-class myServer {
+class myServer : public QObject{
+
+    Q_OBJECT
+
+private:
+    userManager user;
+    QNetworkAccessManager *m_manager;
 
 public:
-    //int isUserExist(string username, string password);
-    //Email ReqThisUserEmail(string username, string password);
-
+    explicit myServer(const userManager &user);
+    string PostFromURL(const string &url, const string &data);
+    string GetFromURL(const string &url);
 };
 
 #endif //MYSERVER_H

@@ -12,6 +12,7 @@ class QListWidgetItem;
 class infoUI;
 class changeInfoUI;
 class changePasswordUI;
+class friendAddUI;
 
 class userInfo : public QWidget{
 
@@ -27,6 +28,7 @@ public:
     infoUI *infoUI;
     changeInfoUI *changeInfoUI;
     changePasswordUI *changePasswordUI;
+    friendAddUI *friendAddUI;
 
 public:
     explicit userInfo(const userManager& thisUser);

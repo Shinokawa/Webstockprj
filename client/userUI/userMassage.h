@@ -27,7 +27,8 @@ public:
 
 public:
     explicit userMassage(const userManager& user);
-    ~userMassage() override;
+    ~userMassage() override;void
+    flashFriendList(Friend frd);
 
 private slots:
     void doListWidget(int row) const;

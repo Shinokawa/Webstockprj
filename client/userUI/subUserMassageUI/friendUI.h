@@ -2,7 +2,7 @@
 #define FRIENDUI_H
 
 #include <QWidget>
-#include "../../Friend.h"
+#include "../../userData/Friend.h"
 
 class QTextEdit;
 class QPushButton;

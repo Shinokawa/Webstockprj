@@ -75,3 +75,10 @@ void userMassage::doListWidget(int row) const {
         stackedWidget->setCurrentIndex(row);
     }
 }
+
+void userMassage::flashFriendList(Friend frd) {
+    this->listWidget->addItem(frd.getUsername().c_str());
+    auto frdUI = new friendUI(frd);
+    friendUIList.emplace_back(frdUI);
+    stackedWidget->addWidget(frdUI);
+}

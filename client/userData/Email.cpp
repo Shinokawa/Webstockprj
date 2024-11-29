@@ -1,4 +1,5 @@
 #include "Email.h"
+#include "../myServer.h"
 
 Email::Email(const QJsonObject &EmialInfo) {
     /*
@@ -9,7 +10,6 @@ Email::Email(const QJsonObject &EmialInfo) {
         "Body" : "我让你加仓你二龙嘛？"
     }
     */
-
     this->From = EmialInfo["From"].toString().toStdString();
     this->To = EmialInfo["To"].toString().toStdString();
     this->Subject = EmialInfo["Subject"].toString().toStdString();

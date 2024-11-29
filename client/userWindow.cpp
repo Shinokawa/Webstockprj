@@ -1,12 +1,17 @@
 #include "userWindow.h"
+
+#include <QLineEdit>
 #include <QListWidget>
+#include <QPushButton>
 #include <QStackedWidget>
 #include <QSplitter>
 #include <QVBoxLayout>
-
+#include "mainwindow.h"
+#include "userUI/userFutures.h"
 #include "userUI/userEmail.h"
 #include "userUI/userMassage.h"
 #include "userUI/userInfo.h"
+#include "userUI/subUserInfoUI/friendAddUI.h"
 
 userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     // 初始化左侧菜单栏
@@ -41,12 +46,14 @@ userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     userInfo = new class userInfo(this->user);
     userMassage = new class userMassage(this->user);
     userEmail = new class userEmail(this->user);
+    userFutures = new class userFutures(this->user);
 
     // 设置stackedWidget
     stackedWidget = new QStackedWidget();
     stackedWidget->addWidget(userInfo);
     stackedWidget->addWidget(userMassage);
     stackedWidget->addWidget(userEmail);
+    stackedWidget->addWidget(userFutures);
 
     stackedWidget->setCurrentWidget(userInfo);
 
@@ -76,6 +83,7 @@ userWindow::userWindow(const userManager& thisUser): user(thisUser) {
 
     // 信号与槽连接
     connect(listWidget, &QListWidget::itemClicked, this, &userWindow::doListWidget);
+    connect(userInfo->friendAddUI->okButton,&QPushButton::clicked,this,&userWindow::doAddFriendButton);
 }
 
 userWindow::~userWindow() = default;
@@ -96,7 +104,13 @@ void userWindow::doListWidget(const QListWidgetItem *item) const {
     }
 
     else if(option == "我的期货") {
-        qDebug()<< "我的期货";
-        //this->stackedWidget->setCurrentWidget();
+        this->stackedWidget->setCurrentWidget(this->userFutures);
     }
+}
+
+void userWindow::doAddFriendButton() {
+    string friendName = userInfo->friendAddUI->friendText->text().toStdString();
+    auto frd = user.addNewFriend(friendName);
+    userMassage->flashFriendList(frd);
+    MainWindow::popInfoMessage("成功","好友添加成功");
 }

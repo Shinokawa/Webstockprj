@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include "myServer.h"
-#include "Friend.h"
+#include "userData/Friend.h"
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonValue>
@@ -10,12 +10,14 @@
 
 using namespace std;
 
-userManager::userManager(const string &userName, const string &password) {
+userManager::userManager(const string &userName, const string &password){
     this->userName = userName;
     this->Password = password;
     this->EmailAdress = "无";
     initFriend();
     initEmail();
+    initFutures();
+    this->server = new myServer(*this);
 }
 
 userManager::~userManager() = default;
@@ -42,6 +44,14 @@ vector<Friend> userManager::getFriendList() {
 
 vector<Email> userManager::getEmailList() {
     return this->EmailList;
+}
+
+vector<Futures> userManager::getFuturesList() {
+    return this->FuturesList;
+}
+
+myServer* userManager::getServer() const {
+    return this->server;
 }
 
 void userManager::printUser() const {
@@ -101,13 +111,36 @@ void userManager::initEmail() {
         }
     ]
     })";
-
     auto EmailArray = ParseJosnToArray(EmailInfo, "Email");
 
     for(auto EmailJson : EmailArray) {
         auto Eml = Email(EmailJson.toObject());
         EmailList.emplace_back(Eml);
     }
+}
+
+void userManager::initFutures() {
+    //string url = "http://www.shakouzu.top:8786/marketdata/m2501";
+    //auto data = server->GetFromURL(url);
+    //testFu = data;
+}
+
+Friend userManager::addNewFriend(const string& friendName) {
+    QString jsonString = QString(R"({
+    "friendName": "%1",
+    "dialogue": [
+        {"sendName": "我", "sendMessage": "你好"}
+    ]
+    })").arg(QString::fromStdString(friendName));
+
+    auto jsonData = jsonString.toUtf8();
+    auto jsonDoc = QJsonDocument::fromJson(jsonData);
+    auto newFriendJson = jsonDoc.object();
+
+    auto newFriend = Friend(newFriendJson);
+
+    friendList.emplace_back(newFriend);
+    return newFriend;
 }
 
 QJsonArray userManager::ParseJosnToArray(const string &info, const string &title) {
