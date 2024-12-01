@@ -28,7 +28,7 @@ string Friend::getUsername() {
     return this->username;
 }
 
-void Friend::flashMessage(const QJsonObject& newMessageJson) {
+void Friend::flashMessage(const QJsonObject& newMessageJson) const {
     /*
     QString jsonString = R"({
         "friendName": "我的客服",
@@ -41,7 +41,7 @@ void Friend::flashMessage(const QJsonObject& newMessageJson) {
     // 获取 dialogue 数组
     QJsonArray dialogueArray = messageJson["dialogue"].toArray();
 
-    dialogueArray.append(messageJson);
+    dialogueArray.append(newMessageJson);
 
     messageJson["dialogue"] = dialogueArray;
 }

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
-#include "loginWindow.h"
-#include "signupWindow.h"
+#include "capitalWindow/loginWindow.h"
+#include "capitalWindow/signupWindow.h"
 #include <QPushButton>
 #include <QStackedWidget>
 #include <string>
@@ -8,7 +8,7 @@
 #include <QMessageBox>
 #include "dataManager.h"
 #include "userManager.h"
-#include "userWindow.h"
+#include "capitalWindow/userWindow.h"
 
 using namespace std;
 

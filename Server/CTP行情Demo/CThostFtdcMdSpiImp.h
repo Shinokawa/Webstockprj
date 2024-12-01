@@ -6,33 +6,33 @@
 #include <memory>
 #include <mutex>
 #include <unordered_map>
-#include "httplib.h" // È·±£°üº¬httplibÍ·ÎÄ¼ş
+#include "include/httplib.h" // ç¡®ä¿åŒ…å«httplibå¤´æ–‡ä»¶
 #include <unordered_set>
 #include <set>
 
-// ĞĞÇéÊı¾İ´æ´¢
+// è¡Œæƒ…æ•°æ®å­˜å‚¨
 extern std::mutex data_mutex;
 extern std::unordered_map<std::string, CThostFtdcDepthMarketDataField> market_data_map;
 
 using std::cout;
 using std::endl;
 
-//ĞĞÇéÀà
+//è¡Œæƒ…ç±»
 class CSimpleMdHandler : public CThostFtdcMdSpi
 {
 public:
-    // ¹¹Ôìº¯Êı£¬ĞèÒªÒ»¸öÓĞĞ§µÄÖ¸ÏòCThostFtdcMduserApiÊµÀıµÄÖ¸Õë
+    // æ„é€ å‡½æ•°ï¼Œéœ€è¦ä¸€ä¸ªæœ‰æ•ˆçš„æŒ‡å‘CThostFtdcMduserApiå®ä¾‹çš„æŒ‡é’ˆ
     CSimpleMdHandler()
     {
-        /// ´´½¨api
+        /// åˆ›å»ºapi
         m_pUserMdApi = CThostFtdcMdApi::CreateFtdcMdApi();
         if (m_pUserMdApi)
         {
-            /// ×¢²áspi
+            /// æ³¨å†Œspi
             m_pUserMdApi->RegisterSpi(this);
-            /// ×¢²áÇ°ÖÃ
+            /// æ³¨å†Œå‰ç½®
             m_pUserMdApi->RegisterFront(const_cast<char*>("tcp://180.168.146.187:10211"));
-            /// ³õÊ¼»¯
+            /// åˆå§‹åŒ–
             m_pUserMdApi->Init();
         }
         else
@@ -79,16 +79,16 @@ public:
         printf("</OnHeartBeatWarning>\n");
     }
 
-    // µ±¿Í»§¶ËÓë½»Ò×ÍĞ¹ÜÏµÍ³Í¨ĞÅÁ¬½Ó¶Ï¿ªÊ±£¬¸Ã·½·¨±»µ÷ÓÃ
+    // å½“å®¢æˆ·ç«¯ä¸äº¤æ˜“æ‰˜ç®¡ç³»ç»Ÿé€šä¿¡è¿æ¥æ–­å¼€æ—¶ï¼Œè¯¥æ–¹æ³•è¢«è°ƒç”¨
     virtual void OnFrontDisconnected(int nReason)
     {
-        // µ±·¢ÉúÕâ¸öÇé¿öºó£¬API»á×Ô¶¯ÖØĞÂÁ¬½Ó£¬¿Í»§¶Ë¿É²»×ö´¦Àí
+        // å½“å‘ç”Ÿè¿™ä¸ªæƒ…å†µåï¼ŒAPIä¼šè‡ªåŠ¨é‡æ–°è¿æ¥ï¼Œå®¢æˆ·ç«¯å¯ä¸åšå¤„ç†
         printf("<OnFrontDisconnected>\n");
         printf("\tnReason= = [%d]", nReason);
         printf("</OnFrontDisconnected>\n");
     }
 
-    // µ±¿Í»§¶Ë·¢³öµÇÂ¼ÇëÇóÖ®ºó£¬¸Ã·½·¨»á±»µ÷ÓÃ£¬Í¨Öª¿Í»§¶ËµÇÂ¼ÊÇ·ñ³É¹¦
+    // å½“å®¢æˆ·ç«¯å‘å‡ºç™»å½•è¯·æ±‚ä¹‹åï¼Œè¯¥æ–¹æ³•ä¼šè¢«è°ƒç”¨ï¼Œé€šçŸ¥å®¢æˆ·ç«¯ç™»å½•æ˜¯å¦æˆåŠŸ
     virtual void OnRspUserLogin(CThostFtdcRspUserLoginField* pRspUserLogin,
         CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
@@ -118,7 +118,7 @@ public:
         printf("\tbIsLast [%d]\n", bIsLast);
         printf("</OnRspUserLogin>\n");
         if (pRspInfo->ErrorID != 0) {
-            // ¶ËµÇÊ§°Ü£¬¿Í»§¶ËĞè½øĞĞ´íÎó´¦Àí
+            // ç«¯ç™»å¤±è´¥ï¼Œå®¢æˆ·ç«¯éœ€è¿›è¡Œé”™è¯¯å¤„ç†
             printf("\tFailed to login, errorcode=%d errormsg=%s requestid=%d chain = %d",
                 pRspInfo->ErrorID, pRspInfo->ErrorMsg, nRequestID, bIsLast);
             std::cin.get();
@@ -127,7 +127,7 @@ public:
         }
     }
 
-    ///µÇ³öÇëÇóÏìÓ¦
+    ///ç™»å‡ºè¯·æ±‚å“åº”
     virtual void OnRspUserLogout(CThostFtdcUserLogoutField* pUserLogout, CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
         printf("<OnRspUserLogout>\n");
@@ -161,7 +161,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->UnSubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍ³É¹¦\n" : "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍÊ§°Ü£¬´íÎóĞòºÅ=[%d]\n", nResult);
+            printf((nResult == 0) ? "è®¢é˜…è¡Œæƒ…è¯·æ±‚......å‘é€æˆåŠŸ\n" : "è®¢é˜…è¡Œæƒ…è¯·æ±‚......å‘é€å¤±è´¥ï¼Œé”™è¯¯åºå·=[%d]\n", nResult);
         }
     }
 
@@ -182,7 +182,7 @@ public:
         printf("</OnRspUnSubMarketData>\n");
     };
 
-    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//ÊÕĞĞÇé
+    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//æ”¶è¡Œæƒ…
     {
         int nIndexReal = 0;
         int nLoopStep = 500;
@@ -196,7 +196,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->SubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍ³É¹¦\n" : "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍÊ§°Ü£¬´íÎóĞòºÅ=[%d]\n", nResult);
+            printf((nResult == 0) ? "è®¢é˜…è¡Œæƒ…è¯·æ±‚......å‘é€æˆåŠŸ\n" : "è®¢é˜…è¡Œæƒ…è¯·æ±‚......å‘é€å¤±è´¥ï¼Œé”™è¯¯åºå·=[%d]\n", nResult);
         }
     }
 
@@ -217,7 +217,7 @@ public:
         printf("</OnRspSubMarketData>\n");
     };
 
-    ///Éî¶ÈĞĞÇéÍ¨Öª
+    ///æ·±åº¦è¡Œæƒ…é€šçŸ¥
     virtual void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField* pDepthMarketData)
     {
         if (pDepthMarketData)
@@ -225,12 +225,12 @@ public:
             std::lock_guard<std::mutex> lock(data_mutex);
             market_data_map[pDepthMarketData->InstrumentID] = *pDepthMarketData;
         }
-        //»ñÈ¡ÏµÍ³Ê±¼ä
+        //è·å–ç³»ç»Ÿæ—¶é—´
         auto tmNow = std::chrono::system_clock::now();
         std::tm rtnTimeInfo;
         auto&& timeTemp = std::chrono::system_clock::to_time_t(tmNow);
         localtime_s(&rtnTimeInfo, &timeTemp);
-        /*printf("%02d:%02d:%02d.%03lld\t",
+        printf("%02d:%02d:%02d.%03lld\t",
             rtnTimeInfo.tm_hour,
             rtnTimeInfo.tm_min,
             rtnTimeInfo.tm_sec,
@@ -284,10 +284,10 @@ public:
             printf("\tAveragePrice [%.8lf]\n", (pDepthMarketData->AveragePrice > 10000000) ? 0 : pDepthMarketData->AveragePrice);
         }
         printf("</OnRtnDepthMarketData>\n");
-        */
+        
     };
 
 private:
-    // Ö¸ÏòCThostFtdcMduserApiÊµÀıµÄÖ¸Õë
+    // æŒ‡å‘CThostFtdcMduserApiå®ä¾‹çš„æŒ‡é’ˆ
     CThostFtdcMdApi* m_pUserMdApi;
 };

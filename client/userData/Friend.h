@@ -17,7 +17,7 @@ public:
     ~Friend();
     QJsonObject getMessage();
     string getUsername();
-    void flashMessage(const QJsonObject& newMessageJson);
+    void flashMessage(const QJsonObject &newMessageJson) const;
 };
 
 

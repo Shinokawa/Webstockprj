@@ -6,12 +6,12 @@
 #include <QStackedWidget>
 #include <QSplitter>
 #include <QVBoxLayout>
-#include "mainwindow.h"
-#include "userUI/userFutures.h"
-#include "userUI/userEmail.h"
-#include "userUI/userMassage.h"
-#include "userUI/userInfo.h"
-#include "userUI/subUserInfoUI/friendAddUI.h"
+#include "../mainwindow.h"
+#include "../userUI/userFutures.h"
+#include "../userUI/userEmail.h"
+#include "../userUI/userMassage.h"
+#include "../userUI/userInfo.h"
+#include "../userUI/subUserInfoUI/friendAddUI.h"
 
 userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     // 初始化左侧菜单栏
