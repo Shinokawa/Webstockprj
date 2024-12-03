@@ -6,33 +6,56 @@
 #include <memory>
 #include <mutex>
 #include <unordered_map>
-#include "include/httplib.h" // 确保包含httplib头文件
+#include "include/httplib.h" // 纭繚鍖呭惈httplib澶存枃浠�
 #include <unordered_set>
 #include <set>
 
-// 行情数据存储
+// 琛屾儏鏁版嵁瀛樺偍
 extern std::mutex data_mutex;
 extern std::unordered_map<std::string, CThostFtdcDepthMarketDataField> market_data_map;
 
 using std::cout;
 using std::endl;
 
+
+// 警报设置结构
+struct AlertSettings {
+    std::string time_alert;          // 格式："HH:MM:SS"
+    double resistance_price;         // 压力位价格
+    double support_price;            // 支撑位价格
+};
+
+// 警报状态结构
+struct AlertStatus {
+    bool time_alert_triggered = false;
+    bool resistance_alert_triggered = false;
+    bool support_alert_triggered = false;
+    std::vector<std::string> alert_history; // 最近五次警报状态
+};
+
+// 全局警报管理变量
+extern std::mutex alert_mutex;
+extern std::unordered_map<std::string, AlertSettings> client_alert_settings;
+extern std::unordered_map<std::string, AlertStatus> client_alert_status;
+extern std::unordered_map<std::string, std::unordered_set<std::string>> client_subscriptions;
+
+
 //行情类
 class CSimpleMdHandler : public CThostFtdcMdSpi
 {
 public:
-    // 构造函数，需要一个有效的指向CThostFtdcMduserApi实例的指针
+    // 鏋勯�犲嚱鏁帮紝闇�瑕佷竴涓湁鏁堢殑鎸囧悜CThostFtdcMduserApi瀹炰緥鐨勬寚閽�
     CSimpleMdHandler()
     {
-        /// 创建api
+        /// 鍒涘缓api
         m_pUserMdApi = CThostFtdcMdApi::CreateFtdcMdApi();
         if (m_pUserMdApi)
         {
-            /// 注册spi
+            /// 娉ㄥ唽spi
             m_pUserMdApi->RegisterSpi(this);
-            /// 注册前置
+            /// 娉ㄥ唽鍓嶇疆
             m_pUserMdApi->RegisterFront(const_cast<char*>("tcp://180.168.146.187:10211"));
-            /// 初始化
+            /// 鍒濆鍖�
             m_pUserMdApi->Init();
         }
         else
@@ -79,16 +102,16 @@ public:
         printf("</OnHeartBeatWarning>\n");
     }
 
-    // 当客户端与交易托管系统通信连接断开时，该方法被调用
+    // 褰撳鎴风涓庝氦鏄撴墭绠＄郴缁熼�氫俊杩炴帴鏂紑鏃讹紝璇ユ柟娉曡璋冪敤
     virtual void OnFrontDisconnected(int nReason)
     {
-        // 当发生这个情况后，API会自动重新连接，客户端可不做处理
+        // 褰撳彂鐢熻繖涓儏鍐靛悗锛孉PI浼氳嚜鍔ㄩ噸鏂拌繛鎺ワ紝瀹㈡埛绔彲涓嶅仛澶勭悊
         printf("<OnFrontDisconnected>\n");
         printf("\tnReason= = [%d]", nReason);
         printf("</OnFrontDisconnected>\n");
     }
 
-    // 当客户端发出登录请求之后，该方法会被调用，通知客户端登录是否成功
+    // 褰撳鎴风鍙戝嚭鐧诲綍璇锋眰涔嬪悗锛岃鏂规硶浼氳璋冪敤锛岄�氱煡瀹㈡埛绔櫥褰曟槸鍚︽垚鍔�
     virtual void OnRspUserLogin(CThostFtdcRspUserLoginField* pRspUserLogin,
         CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
@@ -118,7 +141,7 @@ public:
         printf("\tbIsLast [%d]\n", bIsLast);
         printf("</OnRspUserLogin>\n");
         if (pRspInfo->ErrorID != 0) {
-            // 端登失败，客户端需进行错误处理
+            // 绔櫥澶辫触锛屽鎴风闇�杩涜閿欒澶勭悊
             printf("\tFailed to login, errorcode=%d errormsg=%s requestid=%d chain = %d",
                 pRspInfo->ErrorID, pRspInfo->ErrorMsg, nRequestID, bIsLast);
             std::cin.get();
@@ -127,7 +150,7 @@ public:
         }
     }
 
-    ///登出请求响应
+    ///鐧诲嚭璇锋眰鍝嶅簲
     virtual void OnRspUserLogout(CThostFtdcUserLogoutField* pUserLogout, CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
         printf("<OnRspUserLogout>\n");
@@ -161,7 +184,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->UnSubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "订阅行情请求......发送成功\n" : "订阅行情请求......发送失败，错误序号=[%d]\n", nResult);
+            printf((nResult == 0) ? "璁㈤槄琛屾儏璇锋眰......鍙戦�佹垚鍔焅n" : "璁㈤槄琛屾儏璇锋眰......鍙戦�佸け璐ワ紝閿欒搴忓彿=[%d]\n", nResult);
         }
     }
 
@@ -182,7 +205,7 @@ public:
         printf("</OnRspUnSubMarketData>\n");
     };
 
-    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//收行情
+    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//鏀惰鎯�
     {
         int nIndexReal = 0;
         int nLoopStep = 500;
@@ -196,7 +219,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->SubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "订阅行情请求......发送成功\n" : "订阅行情请求......发送失败，错误序号=[%d]\n", nResult);
+            printf((nResult == 0) ? "璁㈤槄琛屾儏璇锋眰......鍙戦�佹垚鍔焅n" : "璁㈤槄琛屾儏璇锋眰......鍙戦�佸け璐ワ紝閿欒搴忓彿=[%d]\n", nResult);
         }
     }
 
@@ -217,7 +240,7 @@ public:
         printf("</OnRspSubMarketData>\n");
     };
 
-    ///深度行情通知
+    ///娣卞害琛屾儏閫氱煡
     virtual void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField* pDepthMarketData)
     {
         if (pDepthMarketData)
@@ -225,8 +248,72 @@ public:
             std::lock_guard<std::mutex> lock(data_mutex);
             market_data_map[pDepthMarketData->InstrumentID] = *pDepthMarketData;
         }
-        //获取系统时间
+
+        // 获取系统时间
+
         auto tmNow = std::chrono::system_clock::now();
+        std::time_t time_now = std::chrono::system_clock::to_time_t(tmNow);
+        std::tm local_tm;
+        if (localtime_s(&local_tm, &time_now) != 0) {
+            // 处理错误
+            std::cerr << "Failed to convert time using localtime_s." << std::endl;
+            return;
+        }
+        char current_time[9]; // HH:MM:SS
+        std::strftime(current_time, sizeof(current_time), "%H:%M:%S", &local_tm);
+        std::string current_time_str(current_time);
+
+        // 检查所有用户的警报
+        std::lock_guard<std::mutex> lock(alert_mutex);
+        for (auto& [uuid, settings] : client_alert_settings)
+        {
+            AlertStatus& status = client_alert_status[uuid];
+            bool alert_triggered = false;
+            std::string alert_message;
+
+            // 时间警报
+            if (!settings.time_alert.empty() && !status.time_alert_triggered && current_time_str == settings.time_alert)
+            {
+                status.time_alert_triggered = true;
+                alert_triggered = true;
+                alert_message += "Time alert triggered at " + settings.time_alert + "; ";
+            }
+
+            // 检查用户是否订阅了当前Instrument
+            if (client_subscriptions.find(uuid) != client_subscriptions.end() &&
+                client_subscriptions[uuid].find(pDepthMarketData->InstrumentID) != client_subscriptions[uuid].end())
+            {
+                double last_price = pDepthMarketData->LastPrice;
+
+                // 压力位警报
+                if (settings.resistance_price > 0 && !status.resistance_alert_triggered && last_price >= settings.resistance_price)
+                {
+                    status.resistance_alert_triggered = true;
+                    alert_triggered = true;
+                    alert_message += "Resistance price alert triggered at " + std::to_string(settings.resistance_price) + "; ";
+                }
+
+                // 支撑位警报
+                if (settings.support_price > 0 && !status.support_alert_triggered && last_price <= settings.support_price)
+                {
+                    status.support_alert_triggered = true;
+                    alert_triggered = true;
+                    alert_message += "Support price alert triggered at " + std::to_string(settings.support_price) + "; ";
+                }
+            }
+
+            if (alert_triggered)
+            {
+                // 记录警报历史，保持五次
+                if (status.alert_history.size() >= 5)
+                {
+                    status.alert_history.erase(status.alert_history.begin());
+                }
+                status.alert_history.push_back(alert_message);
+                printf("Alert for UUID [%s]: %s\n", uuid.c_str(), alert_message.c_str());
+            }
+        }
+
         std::tm rtnTimeInfo;
         auto&& timeTemp = std::chrono::system_clock::to_time_t(tmNow);
         localtime_s(&rtnTimeInfo, &timeTemp);
@@ -288,6 +375,6 @@ public:
     };
 
 private:
-    // 指向CThostFtdcMduserApi实例的指针
+    // 鎸囧悜CThostFtdcMduserApi瀹炰緥鐨勬寚閽�
     CThostFtdcMdApi* m_pUserMdApi;
 };
