@@ -9,6 +9,7 @@ class QGridLayout;
 class QLabel;
 class QPushButton;
 class configFuturesUI;
+class QStackedWidget;
 
 class FuturesUI : public QWidget {
 
@@ -18,9 +19,12 @@ public:
     userManager user;
     Futures Ftrs;
 
+    QStackedWidget *stackedWidget;
+
     configFuturesUI *cfgFtrUI;
 
     QGridLayout *gridLayout;
+    QWidget *gridWidget;
 
     QPushButton *exitButton;
     QPushButton *editButton;
@@ -64,6 +68,8 @@ public:
 private slots:
     void updateFuturesUI(const std::string &data) const;   //更新UI的方法
 
+    void doEditButton();
+    void doConfigOKButton();
 };
 
 #endif //FUTURESUI_H

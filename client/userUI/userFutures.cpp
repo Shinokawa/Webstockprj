@@ -17,54 +17,14 @@ userFutures::userFutures(const userManager& user): user(user) {
     auto FuturesList = this->user.getFuturesList();
 
     // 设置头标签
-    auto headLabel = new QLabel("  名称代码\t最新\t\t涨幅\t\t金额");
+    auto headLabel = new QLabel("  名称代码\t\t最新\t\t涨幅\t\t金额");
     headLabel->setStyleSheet("font-size: 16px; font-weight: bold; color: #333;");
     headLabel->setAlignment(Qt::AlignLeft);  // 标签文字对齐方式：左对齐
 
     // 初始化 listWidget
     for (auto& Ftrs : FuturesList) {
 
-        double priceChange = ((Ftrs.LastPrice - Ftrs.PreClosePrice) / Ftrs.PreClosePrice) * 100;  //涨幅
-        double tradeAmount = Ftrs.LastPrice * Ftrs.Volume;   //金额
-
-        QString qTradeAmount;
-        if (tradeAmount / 10000.0 >= 1) {
-            tradeAmount /= 10000.0;
-            if (tradeAmount / 10000.0 >= 1) {
-                tradeAmount /= 10000.0;
-                qTradeAmount = QString::number(tradeAmount,'f',2) + "亿";
-            }
-            else {
-                qTradeAmount = QString::number(tradeAmount,'f',2) + "万";
-            }
-        }
-        else {
-            qTradeAmount = QString::number(tradeAmount,'f',2);
-        }
-
-        auto lastPrice = QString::number(Ftrs.LastPrice,'f',3);
-        auto qPriceChange = QString::number(priceChange,'f',2);
-
-        auto option = QString::fromStdString(Ftrs.ExchangeID )+ "\t    " + lastPrice + "\t     " +
-                        qPriceChange + "%\t" + qTradeAmount;
-
-        auto *item = new QListWidgetItem(option);
-        item->setFont(QFont("Arial", 14)); // 设置字体大小
-
-        // 判断涨跌，设置字体颜色
-        if (priceChange > 0) {
-            // 涨幅为正，设置字体为绿色
-            item->setForeground(QBrush(QColor(255, 0, 0))); // Red
-        }
-        else if (priceChange < 0) {
-            // 涨幅为负，设置字体为红色
-            item->setForeground(QBrush(QColor(0, 255, 0))); // Green
-        }
-        else {
-            // 涨幅为零，设置为黑色
-            item->setForeground(QBrush(QColor(0, 0, 0))); // Black
-        }
-
+        auto item = initListItem(Ftrs);
         listWidget->addItem(item);
 
         auto FtrsUI = new FuturesUI(this->user, Ftrs);
@@ -138,6 +98,66 @@ userFutures::userFutures(const userManager& user): user(user) {
 
 userFutures::~userFutures() = default;
 
+QListWidgetItem * userFutures::initListItem(const Futures &Ftrs) {
+    double priceChange = ((Ftrs.LastPrice - Ftrs.PreClosePrice) / Ftrs.PreClosePrice) * 100;  //涨幅
+    double tradeAmount = Ftrs.LastPrice * Ftrs.Volume;   //金额
+
+    QString qTradeAmount;
+    if (tradeAmount / 10000.0 >= 1) {
+        tradeAmount /= 10000.0;
+        if (tradeAmount / 10000.0 >= 1) {
+            tradeAmount /= 10000.0;
+            qTradeAmount = QString::number(tradeAmount,'f',2) + "亿";
+        }
+        else {
+            qTradeAmount = QString::number(tradeAmount,'f',2) + "万";
+        }
+    }
+    else {
+        qTradeAmount = QString::number(tradeAmount,'f',2);
+    }
+
+    auto lastPrice = QString::number(Ftrs.LastPrice,'f',3);
+    auto qPriceChange = QString::number(priceChange,'f',2);
+
+    auto option = QString::fromStdString(Ftrs.InstrumentID )+ "\t    " + lastPrice + "\t     " +
+                    qPriceChange + "%\t" + qTradeAmount;
+
+    auto *item = new QListWidgetItem(option);
+    item->setFont(QFont("Arial", 14)); // 设置字体大小
+
+    // 判断涨跌，设置字体颜色
+    if (priceChange > 0) {
+        // 涨幅为正，设置字体为绿色
+        item->setForeground(QBrush(QColor(255, 0, 0))); // Red
+    }
+    else if (priceChange < 0) {
+        // 涨幅为负，设置字体为红色
+        item->setForeground(QBrush(QColor(0, 255, 0))); // Green
+    }
+    else {
+        // 涨幅为零，设置为黑色
+        item->setForeground(QBrush(QColor(0, 0, 0))); // Black
+    }
+    return item;
+}
+
+void userFutures::flashFuturesList(const Futures &newFutures) {
+    auto item = initListItem(newFutures);
+    this->listWidget->addItem(item);
+    auto newFuturesUI = new FuturesUI(user, newFutures);
+
+    connect(newFuturesUI->exitButton, &QPushButton::clicked, this, [this]() {
+            this->doExitButton();
+        });
+    connect(newFuturesUI->deleteButton,&QPushButton::clicked,this, [this, newFuturesUI]() {
+            this->doDeleteButton(newFuturesUI);
+        });
+
+    FuturesUIList.emplace_back(newFuturesUI);
+    stackedWidget->addWidget(newFuturesUI);
+}
+
 void userFutures::doListWidget(int row) const {
     if (row >= 0 && row < FuturesUIList.size()) {
         stackedWidget->setCurrentIndex(row);
@@ -150,7 +170,7 @@ void userFutures::doExitButton() const {
     allStackedWidget->setCurrentWidget(optionWidget);
 }
 
-void userFutures::doDeleteButton(const FuturesUI* FtrsUI) {
+void userFutures::doDeleteButton(const FuturesUI* FtrsUI) const {
     auto name = FtrsUI->Ftrs.ExchangeID;
 
     int index = -1;

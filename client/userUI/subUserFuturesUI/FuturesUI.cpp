@@ -6,7 +6,11 @@
 #include <QVBoxLayout>
 #include <QtConcurrent/QtConcurrent>
 #include <QGridLayout>
+#include <QLineEdit>
+#include <QStackedWidget>
 #include <QTimer>
+
+#include "../../mainwindow.h"
 
 FuturesUI::FuturesUI(const userManager& user, const Futures &Ftrs): user(user), Ftrs(Ftrs) {
     // 获取并显示初始数据
@@ -18,9 +22,9 @@ FuturesUI::FuturesUI(const userManager& user, const Futures &Ftrs): user(user), 
     editButton = new QPushButton("编辑");
     deleteButton = new QPushButton("删除");
     // 名称
-    name = new QLabel(Ftrs.ExchangeID.c_str());
+    name = new QLabel(Ftrs.InstrumentID.c_str());
     // 代号
-    code = new QLabel(Ftrs.InstrumentID.c_str());
+    code = new QLabel(Ftrs.ExchangeID.c_str());
     // 最新价
     lastPrice = new QLabel();
     // 涨跌金额
@@ -206,7 +210,20 @@ FuturesUI::FuturesUI(const userManager& user, const Futures &Ftrs): user(user), 
     gridLayout->addWidget(buy4, 10, 5, 1, 2, Qt::AlignCenter);
     gridLayout->addWidget(buy5, 11, 5, 1, 2, Qt::AlignCenter);
 
-    this->setLayout(gridLayout);
+    gridWidget = new QWidget();
+    gridWidget->setLayout(gridLayout);
+
+    stackedWidget = new QStackedWidget();
+    stackedWidget->addWidget(gridWidget);
+    stackedWidget->addWidget(cfgFtrUI);
+    stackedWidget->setCurrentWidget(gridWidget);
+
+    auto *mainLayout = new QVBoxLayout();
+    mainLayout->addWidget(stackedWidget);
+    this->setLayout(mainLayout);
+
+    connect(this->cfgFtrUI->okButton,&QPushButton::clicked,this,doConfigOKButton);
+    connect(this->editButton,QPushButton::clicked,this,doEditButton);
 
     /*
     // 启动定时器，每5秒钟获取一次聊天数据
@@ -336,4 +353,27 @@ void FuturesUI::fetchFuturesData() const {
 void FuturesUI::updateFuturesUI(const string &data) const {
     // 在UI线程中更新标签的文本
    // info->setText(data.c_str());
+}
+
+void FuturesUI::doEditButton() {
+    this->stackedWidget->setCurrentWidget(this->cfgFtrUI);
+}
+
+void FuturesUI::doConfigOKButton() {
+    double highPriceWarning = this->cfgFtrUI->highPriceWarningText->text().toDouble();
+    double lowPriceWarning = this->cfgFtrUI->lowPriceWarningText->text().toDouble();
+
+    if (highPriceWarning != Ftrs.highPriceWarning) {
+        auto info = "成功把预警的最高价设定成" + this->cfgFtrUI->highPriceWarningText->text().toStdString();
+        MainWindow::popInfoMessage("成功", info);
+    }
+
+    if (lowPriceWarning != Ftrs.lowPriceWarning) {
+        auto info = "成功把预警的最低价设定成" + this->cfgFtrUI->lowPriceWarningText->text().toStdString();
+        MainWindow::popInfoMessage("成功", info);
+    }
+
+    this->Ftrs.highPriceWarning = highPriceWarning;
+    this->Ftrs.lowPriceWarning = lowPriceWarning;
+    this->stackedWidget->setCurrentWidget(this->gridWidget);
 }

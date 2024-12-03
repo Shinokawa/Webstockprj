@@ -8,7 +8,7 @@ Futures::Futures(const QJsonObject& FuturesJson) {
 }
 
 void Futures::initFuturesData(const QJsonObject &FuturesJson) {
-        ///交易日
+    ///交易日
     TradingDay = FuturesJson["TradingDay"].toInt();
     ///保留的无效字段
     reserve1 = FuturesJson["reserve1"].toString().toStdString();
@@ -104,6 +104,10 @@ void Futures::initFuturesData(const QJsonObject &FuturesJson) {
     BandingUpperPrice = FuturesJson["BandingUpperPrice"].toDouble();
     ///下带价
     BandingLowerPrice = FuturesJson["BandingLowerPrice"].toDouble();
+    //预警最高价
+    highPriceWarning = FuturesJson["highPriceWarning"].toDouble();
+    //预警最低价
+    lowPriceWarning = FuturesJson["lowPriceWarning"].toDouble();
 }
 
 Futures::~Futures() = default;

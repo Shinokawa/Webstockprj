@@ -105,6 +105,10 @@ public:
 	double BandingUpperPrice{};
 	///下带价
 	double BandingLowerPrice{};
+	//预警最高价
+	double highPriceWarning{};
+	//预警最低价
+	double lowPriceWarning{};
 
 public:
     explicit Futures(const QJsonObject& FuturesJson);

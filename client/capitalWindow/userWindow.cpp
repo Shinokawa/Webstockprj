@@ -11,6 +11,7 @@
 #include "../userUI/userEmail.h"
 #include "../userUI/userMassage.h"
 #include "../userUI/userInfo.h"
+#include "../userUI/subUserInfoUI/addFuturesUI.h"
 #include "../userUI/subUserInfoUI/friendAddUI.h"
 
 userWindow::userWindow(const userManager& thisUser): user(thisUser) {
@@ -84,6 +85,7 @@ userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     // 信号与槽连接
     connect(listWidget, &QListWidget::itemClicked, this, &userWindow::doListWidget);
     connect(userInfo->friendAddUI->okButton,&QPushButton::clicked,this,&userWindow::doAddFriendButton);
+    connect(userInfo->addFuturesUI->okButton,&QPushButton::clicked,this,&userWindow::doAddFuturesButton);
 }
 
 userWindow::~userWindow() = default;
@@ -113,4 +115,11 @@ void userWindow::doAddFriendButton() {
     auto frd = user.addNewFriend(friendName);
     userMassage->flashFriendList(frd);
     MainWindow::popInfoMessage("成功","好友添加成功");
+}
+
+void userWindow::doAddFuturesButton() {
+    string InstrumentID = userInfo->addFuturesUI->newFuturesText->text().toStdString();
+    auto newFutures = user.addNewFutures(InstrumentID);
+    userFutures->flashFuturesList(newFutures);
+    MainWindow::popInfoMessage("成功",InstrumentID + "添加成功");
 }

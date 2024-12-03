@@ -37,6 +37,7 @@ private slots:
     void doListWidget(const QListWidgetItem *item) const;
 
     void doAddFriendButton();
+    void doAddFuturesButton();
 };
 
 #endif //USERWINDOW_H

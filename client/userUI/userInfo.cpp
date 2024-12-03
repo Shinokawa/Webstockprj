@@ -11,6 +11,7 @@
 #include "subUserInfoUI/changeInfoUI.h"
 #include "subUserInfoUI/changePasswordUI.h"
 #include "subUserInfoUI/friendAddUI.h"
+#include "subUserInfoUI/addFuturesUI.h"
 
 userInfo::userInfo(const userManager& thisUser): user(thisUser) {
     // 初始化子页面
@@ -18,6 +19,7 @@ userInfo::userInfo(const userManager& thisUser): user(thisUser) {
     changeInfoUI = new class changeInfoUI(user);
     changePasswordUI = new class changePasswordUI(user);
     friendAddUI = new class friendAddUI(user);
+    addFuturesUI = new class addFuturesUI(user);
 
     // 左侧菜单（列表）
     listWidget = new QListWidget();
@@ -25,6 +27,7 @@ userInfo::userInfo(const userManager& thisUser): user(thisUser) {
     listWidget->addItem("信息修改");
     listWidget->addItem("密码修改");
     listWidget->addItem("添加好友");
+    listWidget->addItem("添加期货");
 
     // 美化 QListWidget
     listWidget->setStyleSheet(R"(
@@ -50,6 +53,7 @@ userInfo::userInfo(const userManager& thisUser): user(thisUser) {
     stackedWidget->addWidget(changeInfoUI);
     stackedWidget->addWidget(changePasswordUI);
     stackedWidget->addWidget(friendAddUI);
+    stackedWidget->addWidget(addFuturesUI);
 
     stackedWidget->setCurrentWidget(infoUI);
 
@@ -106,6 +110,9 @@ void userInfo::doListWidget(const QListWidgetItem *item) const {
     }
     else if (option == "添加好友") {
         this->stackedWidget->setCurrentWidget(this->friendAddUI);
+    }
+    else if (option == "添加期货") {
+        this->stackedWidget->setCurrentWidget(this->addFuturesUI);
     }
 }
 

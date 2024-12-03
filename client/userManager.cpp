@@ -170,7 +170,9 @@ void userManager::initFutures() {
           "InstrumentID": "M1901",
           "ExchangeInstID": "M1901.SHFE",
           "BandingUpperPrice": 3500.00,
-          "BandingLowerPrice": 3300.00
+          "BandingLowerPrice": 3300.00,
+          "lowPriceWarning": 1500,
+          "highPriceWarning": 1600
         },
         {
           "TradingDay": 20241201,
@@ -220,7 +222,9 @@ void userManager::initFutures() {
           "InstrumentID": "ESZ20",
           "ExchangeInstID": "ESZ20.CME",
           "BandingUpperPrice": 2650.00,
-          "BandingLowerPrice": 2450.00
+          "BandingLowerPrice": 2450.00,
+          "lowPriceWarning": 2000,
+          "highPriceWarning": 3000
     }
     ]
     })";
@@ -252,6 +256,69 @@ Friend userManager::addNewFriend(const string& friendName) {
 
     friendList.emplace_back(newFriend);
     return newFriend;
+}
+
+Futures userManager::addNewFutures(const string &InstrumentID) {
+    QString FuturesInfo = QString(R"({
+        "TradingDay": 20241201,
+        "reserve1": "new_value",
+        "ExchangeID": "DCE",
+        "reserve2": "new_value",
+        "LastPrice": 4500.75,
+        "PreSettlementPrice": 4490.50,
+        "PreClosePrice": 4485.00,
+        "PreOpenInterest": 120000,
+        "OpenPrice": 4502.00,
+        "HighestPrice": 4520.00,
+        "LowestPrice": 4480.00,
+        "Volume": 60000,
+        "Turnover": 270000000,
+        "OpenInterest": 140000,
+        "ClosePrice": 4510.00,
+        "SettlementPrice": 4508.50,
+        "UpperLimitPrice": 4550.00,
+        "LowerLimitPrice": 4450.00,
+        "PreDelta": 0.04,
+        "CurrDelta": 0.03,
+        "UpdateTime": 145000,
+        "UpdateMillisec": 500,
+        "BidPrice1": 4500.00,
+        "BidVolume1": 150,
+        "AskPrice1": 4501.00,
+        "AskVolume1": 200,
+        "BidPrice2": 4499.00,
+        "BidVolume2": 130,
+        "AskPrice2": 4502.00,
+        "AskVolume2": 180,
+        "BidPrice3": 4498.00,
+        "BidVolume3": 100,
+        "AskPrice3": 4503.00,
+        "AskVolume3": 150,
+        "BidPrice4": 4497.00,
+        "BidVolume4": 90,
+        "AskPrice4": 4504.00,
+        "AskVolume4": 120,
+        "BidPrice5": 4496.00,
+        "BidVolume5": 80,
+        "AskPrice5": 4505.00,
+        "AskVolume5": 100,
+        "AveragePrice": 4504.25,
+        "ActionDay": 20241201,
+        "InstrumentID": "%1",
+        "ExchangeInstID": "M1902.DCE",
+        "BandingUpperPrice": 4600.00,
+        "BandingLowerPrice": 4400.00,
+        "lowPriceWarning": 2000,
+        "highPriceWarning": 2100
+    })").arg(QString::fromStdString(InstrumentID));
+
+    auto jsonData = FuturesInfo.toUtf8();
+    auto jsonDoc = QJsonDocument::fromJson(jsonData);
+
+    auto newFuturesJson = jsonDoc.object();
+    auto newFutures = Futures(newFuturesJson);
+    FuturesList.emplace_back(newFutures);
+    return newFutures;
 }
 
 QJsonArray userManager::ParseJosnToArray(const string &info, const string &title) {

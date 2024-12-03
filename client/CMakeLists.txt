@@ -78,6 +78,8 @@ set(PROJECT_SOURCES
         userUI/subUserFuturesUI/configFuturesUI.cpp
         userUI/subUserFuturesUI/configFuturesUI.h
         userUI/subUserFuturesUI/configFuturesUI.h
+        userUI/subUserInfoUI/addFuturesUI.cpp
+        userUI/subUserInfoUI/addFuturesUI.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
