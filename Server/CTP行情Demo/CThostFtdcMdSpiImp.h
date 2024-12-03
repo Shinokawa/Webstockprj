@@ -17,6 +17,28 @@ extern std::unordered_map<std::string, CThostFtdcDepthMarketDataField> market_da
 using std::cout;
 using std::endl;
 
+// 警报设置结构
+struct AlertSettings {
+    std::string time_alert;          // 格式："HH:MM:SS"
+    double resistance_price;         // 压力位价格
+    double support_price;            // 支撑位价格
+};
+
+// 警报状态结构
+struct AlertStatus {
+    bool time_alert_triggered = false;
+    bool resistance_alert_triggered = false;
+    bool support_alert_triggered = false;
+    std::vector<std::string> alert_history; // 最近五次警报状态
+};
+
+// 全局警报管理变量
+extern std::mutex alert_mutex;
+extern std::unordered_map<std::string, AlertSettings> client_alert_settings;
+extern std::unordered_map<std::string, AlertStatus> client_alert_status;
+extern std::unordered_map<std::string, std::unordered_set<std::string>> client_subscriptions;
+
+
 //行情类
 class CSimpleMdHandler : public CThostFtdcMdSpi
 {
@@ -225,8 +247,71 @@ public:
             std::lock_guard<std::mutex> lock(data_mutex);
             market_data_map[pDepthMarketData->InstrumentID] = *pDepthMarketData;
         }
-        //获取系统时间
+
+        // 获取系统时间
         auto tmNow = std::chrono::system_clock::now();
+        std::time_t time_now = std::chrono::system_clock::to_time_t(tmNow);
+        std::tm local_tm;
+        if (localtime_s(&local_tm, &time_now) != 0) {
+            // 处理错误
+            std::cerr << "Failed to convert time using localtime_s." << std::endl;
+            return;
+        }
+        char current_time[9]; // HH:MM:SS
+        std::strftime(current_time, sizeof(current_time), "%H:%M:%S", &local_tm);
+        std::string current_time_str(current_time);
+
+        // 检查所有用户的警报
+        std::lock_guard<std::mutex> lock(alert_mutex);
+        for (auto& [uuid, settings] : client_alert_settings)
+        {
+            AlertStatus& status = client_alert_status[uuid];
+            bool alert_triggered = false;
+            std::string alert_message;
+
+            // 时间警报
+            if (!settings.time_alert.empty() && !status.time_alert_triggered && current_time_str == settings.time_alert)
+            {
+                status.time_alert_triggered = true;
+                alert_triggered = true;
+                alert_message += "Time alert triggered at " + settings.time_alert + "; ";
+            }
+
+            // 检查用户是否订阅了当前Instrument
+            if (client_subscriptions.find(uuid) != client_subscriptions.end() &&
+                client_subscriptions[uuid].find(pDepthMarketData->InstrumentID) != client_subscriptions[uuid].end())
+            {
+                double last_price = pDepthMarketData->LastPrice;
+
+                // 压力位警报
+                if (settings.resistance_price > 0 && !status.resistance_alert_triggered && last_price >= settings.resistance_price)
+                {
+                    status.resistance_alert_triggered = true;
+                    alert_triggered = true;
+                    alert_message += "Resistance price alert triggered at " + std::to_string(settings.resistance_price) + "; ";
+                }
+
+                // 支撑位警报
+                if (settings.support_price > 0 && !status.support_alert_triggered && last_price <= settings.support_price)
+                {
+                    status.support_alert_triggered = true;
+                    alert_triggered = true;
+                    alert_message += "Support price alert triggered at " + std::to_string(settings.support_price) + "; ";
+                }
+            }
+
+            if (alert_triggered)
+            {
+                // 记录警报历史，保持五次
+                if (status.alert_history.size() >= 5)
+                {
+                    status.alert_history.erase(status.alert_history.begin());
+                }
+                status.alert_history.push_back(alert_message);
+                printf("Alert for UUID [%s]: %s\n", uuid.c_str(), alert_message.c_str());
+            }
+        }
+
         std::tm rtnTimeInfo;
         auto&& timeTemp = std::chrono::system_clock::to_time_t(tmNow);
         localtime_s(&rtnTimeInfo, &timeTemp);
