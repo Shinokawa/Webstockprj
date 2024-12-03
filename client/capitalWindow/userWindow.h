@@ -1,7 +1,7 @@
 #ifndef USERWINDOW_H
 #define USERWINDOW_H
 
-#include "userManager.h"
+#include "../userManager.h"
 #include <QListWidgetItem>
 
 class userInfo;
@@ -37,6 +37,7 @@ private slots:
     void doListWidget(const QListWidgetItem *item) const;
 
     void doAddFriendButton();
+    void doAddFuturesButton();
 };
 
 #endif //USERWINDOW_H

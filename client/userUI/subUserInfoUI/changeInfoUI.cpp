@@ -13,7 +13,19 @@ changeInfoUI::changeInfoUI(const userManager &user): user(user) {
     usernameLabel->setStyleSheet("background: transparent; border: none; color: #333333; font-size: 14px;");
 
     usernameText = new QLineEdit(username.c_str());
-    usernameText->setStyleSheet("padding: 8px; border-radius: 5px; border: 1px solid #ddd;");
+    usernameText->setStyleSheet(
+        "QLineEdit {"
+        "    background-color: #ffffff;"
+        "    border: 2px solid #4CAF50;"
+        "    border-radius: 5px;"
+        "    padding: 10px;"
+        "    font-size: 14px;"
+        "    color: #333333;"
+        "}"
+        "QLineEdit:focus {"
+        "    border-color: #3e8e41;"
+        "}"
+    );
 
     auto EmailAdress = this->user.getEmailAdress();
     auto EmailAdressLabel = new QLabel("邮箱：");
@@ -21,7 +33,19 @@ changeInfoUI::changeInfoUI(const userManager &user): user(user) {
     EmailAdressLabel->setStyleSheet("background: transparent; border: none; color: #333333; font-size: 14px;");
 
     EmailAdressText = new QLineEdit(EmailAdress.c_str());
-    EmailAdressText->setStyleSheet("padding: 8px; border-radius: 5px; border: 1px solid #ddd;");
+    EmailAdressText->setStyleSheet(
+        "QLineEdit {"
+        "    background-color: #ffffff;"
+        "    border: 2px solid #4CAF50;"
+        "    border-radius: 5px;"
+        "    padding: 10px;"
+        "    font-size: 14px;"
+        "    color: #333333;"
+        "}"
+        "QLineEdit:focus {"
+        "    border-color: #3e8e41;"
+        "}"
+    );
 
     this->okButton = new QPushButton("确定");
     okButton->setStyleSheet("background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;");

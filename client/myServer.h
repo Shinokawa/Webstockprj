@@ -8,6 +8,7 @@
 #include "userData/Friend.h"
 #include <QCoreApplication>
 #include <QtNetwork/QNetworkReply>
+#include <QJsonObject>
 
 using namespace std;
 
@@ -23,6 +24,8 @@ public:
     explicit myServer(const userManager &user);
     string PostFromURL(const string &url, const string &data);
     string GetFromURL(const string &url);
+    string GetChatData();
+    void PostMessage(const QJsonObject &data);
 };
 
 #endif //MYSERVER_H

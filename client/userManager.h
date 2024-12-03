@@ -45,6 +45,7 @@ public:
     void initEmail();
     void initFutures();
     Friend addNewFriend(const string& friendName);
+    Futures addNewFutures(const string& InstrumentID);
     static QJsonArray ParseJosnToArray(const string &info, const string &title);
 };
 

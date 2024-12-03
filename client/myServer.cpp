@@ -5,11 +5,36 @@
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkRequest>
 #include <QtNetwork/QNetworkReply>
+#include <QByteArray>
+#include <QJsonDocument>
 
 myServer::myServer(const userManager &user): user(user){
 	m_manager = new QNetworkAccessManager();
 }
 
+string myServer::PostFromURL(const string &url, const string &data) {
+	auto qurl = QString::fromStdString(url);
+	auto qdata = QString::fromStdString(data);
+	assert(!qurl.isEmpty());
+
+	const QUrl url1 = QUrl::fromUserInput(qurl);
+	assert(url1.isValid());
+
+	QNetworkRequest qnr(url1);
+	QNetworkReply* reply = m_manager->post(qnr,qdata.toUtf8()); //m_qnam是QNetworkAccessManager对象
+
+	QEventLoop eventLoop;
+	connect(reply, &QNetworkReply::finished, &eventLoop, &QEventLoop::quit);
+	eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+
+	QByteArray replyData = reply->readAll();
+	reply->deleteLater();
+	reply = nullptr;
+
+	return replyData.toStdString();
+}
+
+/*
 string myServer::PostFromURL(const string &url, const string &data) {
 	// 创建 QNetworkRequest 对象并设置 URL
 	QNetworkRequest request(QUrl(QString::fromStdString(url)));
@@ -36,7 +61,9 @@ string myServer::PostFromURL(const string &url, const string &data) {
 	reply->deleteLater(); // 清理资源
 	return response.toStdString();      // 返回结果
 }
+*/
 
+/*
 string myServer::GetFromURL(const string &url) {
 	// 创建 QNetworkRequest 对象并设置 URL
 	QNetworkRequest request(QUrl(QString::fromStdString(url)));
@@ -61,6 +88,39 @@ string myServer::GetFromURL(const string &url) {
 	}
 
 	reply->deleteLater(); // 清理资源
-	return response.toStdString();      // 返回结果
+	return response.toStdString();  // 返回结果
+}
+*/
+
+string myServer::GetFromURL(const string &url) {
+	auto qurl = QString::fromStdString(url);
+ 	assert(!qurl.isEmpty());
+
+	const QUrl url1 = QUrl::fromUserInput(qurl);
+ 	assert(url1.isValid());
+
+	QNetworkRequest qnr(url1);
+ 	QNetworkReply* reply = m_manager->get(qnr); //m_qnam是QNetworkAccessManager对象
+
+	QEventLoop eventLoop;
+ 	connect(reply, &QNetworkReply::finished, &eventLoop, &QEventLoop::quit);
+ 	eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+
+	QByteArray replyData = reply->readAll();
+ 	reply->deleteLater();
+ 	reply = nullptr;
+
+	return replyData.toStdString();
 }
 
+string myServer::GetChatData() {
+	string url = "127.0.0.1/8786";
+	auto data = GetFromURL(url);
+	return data;
+}
+
+void myServer::PostMessage(const QJsonObject &data) {
+	string url = "127.0.0.1/8786";
+	QJsonDocument doc(data);
+	PostFromURL(url,doc.toJson(QJsonDocument::Indented).toStdString());
+}

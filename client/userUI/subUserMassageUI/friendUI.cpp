@@ -7,7 +7,9 @@
 #include <QJsonArray>
 #include <QSplitter>
 
-friendUI::friendUI(const Friend& frd) : frd(frd) {
+#include "../../myServer.h"
+
+friendUI::friendUI(const userManager &user, const Friend& frd) : user(user), frd(frd) {
     // 输入框
     sendBox = new QTextEdit();
     sendBox->setPlaceholderText("请输入消息...");
@@ -39,7 +41,7 @@ friendUI::friendUI(const Friend& frd) : frd(frd) {
     // 从 JSON 加载对话
     QJsonObject rootObj = this->frd.getMessage();
     QJsonArray dialogueArray = rootObj["dialogue"].toArray();
-    for (QJsonValue value : dialogueArray) {
+    for (QJsonValue value: dialogueArray) {
         fromJsonLineToLabel(value);
     }
 
@@ -123,13 +125,15 @@ void friendUI::fromJsonLineToLabel(const QJsonValue& value) const {
     dialogueLayout->addStretch();
 }
 
-void friendUI::doSendButton() {
+void friendUI::doSendButton() const {
     QString message = sendBox->toPlainText();
 
     if (!message.isEmpty()) {
         QJsonObject newMessageJson;
         newMessageJson["sendName"] = "我";
         newMessageJson["sendMessage"] = message;
+
+        //this->user.getServer()->PostMessage(newMessageJson);
 
         frd.flashMessage(newMessageJson);
 

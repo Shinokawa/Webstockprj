@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "../../userData/Friend.h"
+#include "../../userManager.h"
 
 class QTextEdit;
 class QPushButton;
@@ -12,6 +13,7 @@ class QLabel;
 class friendUI : public QWidget{
 
 public:
+    userManager user;
     Friend frd;
 
     QTextEdit *sendBox;
@@ -19,12 +21,12 @@ public:
     QVBoxLayout *dialogueLayout;
 
 public:
-    explicit friendUI(const Friend& frd);
+    explicit friendUI(const userManager &user, const Friend& frd);
     ~friendUI() override;
     void fromJsonLineToLabel(const QJsonValue &value) const;
 
 private slots:
-    void doSendButton();
+    void doSendButton() const;
 };
 
 #endif //FRIENDUI_H

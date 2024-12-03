@@ -2,7 +2,12 @@
 #include <QJsonObject>
 
 Futures::Futures(const QJsonObject& FuturesJson) {
-    
+
+    initFuturesData(FuturesJson);
+
+}
+
+void Futures::initFuturesData(const QJsonObject &FuturesJson) {
     ///交易日
     TradingDay = FuturesJson["TradingDay"].toInt();
     ///保留的无效字段
@@ -18,7 +23,7 @@ Futures::Futures(const QJsonObject& FuturesJson) {
     ///昨收盘
     PreClosePrice = FuturesJson["PreClosePrice"].toDouble();
     ///昨持仓量
-    PreOpenInterest = FuturesJson["PreOpenInterest"].toDouble();
+    PreOpenInterest = FuturesJson["PreOpenInterest"].toInt();
     ///今开盘
     OpenPrice = FuturesJson["OpenPrice"].toDouble();
     ///最高价
@@ -26,11 +31,11 @@ Futures::Futures(const QJsonObject& FuturesJson) {
     ///最低价
     LowestPrice = FuturesJson["LowestPrice"].toDouble();
     ///数量
-    Volume = FuturesJson["Volume"].toDouble();
+    Volume = FuturesJson["Volume"].toInt();
     ///成交金额
     Turnover = FuturesJson["Turnover"].toDouble();
     ///持仓量
-    OpenInterest = FuturesJson["OpenInterest"].toDouble();
+    OpenInterest = FuturesJson["OpenInterest"].toInt();
     ///今收盘
     ClosePrice = FuturesJson["ClosePrice"].toDouble();
     ///本次结算价
@@ -50,47 +55,47 @@ Futures::Futures(const QJsonObject& FuturesJson) {
     ///申买价一
     BidPrice1 = FuturesJson["BidPrice1"].toDouble();
     ///申买量一
-    BidVolume1 = FuturesJson["BidVolume1"].toDouble();
+    BidVolume1 = FuturesJson["BidVolume1"].toInt();
     ///申卖价一
     AskPrice1 = FuturesJson["AskPrice1"].toDouble();
     ///申卖量一
-    AskVolume1 = FuturesJson["AskVolume1"].toDouble();
+    AskVolume1 = FuturesJson["AskVolume1"].toInt();
     ///申买价二
     BidPrice2 = FuturesJson["BidPrice2"].toDouble();
     ///申买量二
-    BidVolume2 = FuturesJson["BidVolume2"].toDouble();
+    BidVolume2 = FuturesJson["BidVolume2"].toInt();
     ///申卖价二
     AskPrice2 = FuturesJson["AskPrice2"].toDouble();
     ///申卖量二
-    AskVolume2 = FuturesJson["AskVolume2"].toDouble();
+    AskVolume2 = FuturesJson["AskVolume2"].toInt();
     ///申买价三
     BidPrice3 = FuturesJson["BidPrice3"].toDouble();
     ///申买量三
-    BidVolume3 = FuturesJson["BidVolume3"].toDouble();
+    BidVolume3 = FuturesJson["BidVolume3"].toInt();
     ///申卖价三
     AskPrice3 = FuturesJson["AskPrice3"].toDouble();
     ///申卖量三
-    AskVolume3 = FuturesJson["AskVolume3"].toDouble();
+    AskVolume3 = FuturesJson["AskVolume3"].toInt();
     ///申买价四
     BidPrice4 = FuturesJson["BidPrice4"].toDouble();
     ///申买量四
-    BidVolume4 = FuturesJson["BidVolume4"].toDouble();
+    BidVolume4 = FuturesJson["BidVolume4"].toInt();
     ///申卖价四
     AskPrice4 = FuturesJson["AskPrice4"].toDouble();
     ///申卖量四
-    AskVolume4 = FuturesJson["AskVolume4"].toDouble();
+    AskVolume4 = FuturesJson["AskVolume4"].toInt();
     ///申买价五
     BidPrice5 = FuturesJson["BidPrice5"].toDouble();
     ///申买量五
-    BidVolume5 = FuturesJson["BidVolume5"].toDouble();
+    BidVolume5 = FuturesJson["BidVolume5"].toInt();
     ///申卖价五
     AskPrice5 = FuturesJson["AskPrice5"].toDouble();
     ///申卖量五
-    AskVolume5 = FuturesJson["AskVolume5"].toDouble();
+    AskVolume5 = FuturesJson["AskVolume5"].toInt();
     ///当日均价
     AveragePrice = FuturesJson["AveragePrice"].toDouble();
     ///业务日期
-    ActionDay = FuturesJson["ActionDay"].toDouble();
+    ActionDay = FuturesJson["ActionDay"].toInt();
     ///合约代码
     InstrumentID = FuturesJson["InstrumentID"].toString().toStdString();
     ///合约在交易所的代码
@@ -99,7 +104,10 @@ Futures::Futures(const QJsonObject& FuturesJson) {
     BandingUpperPrice = FuturesJson["BandingUpperPrice"].toDouble();
     ///下带价
     BandingLowerPrice = FuturesJson["BandingLowerPrice"].toDouble();
-    
+    //预警最高价
+    highPriceWarning = FuturesJson["highPriceWarning"].toDouble();
+    //预警最低价
+    lowPriceWarning = FuturesJson["lowPriceWarning"].toDouble();
 }
 
 Futures::~Futures() = default;

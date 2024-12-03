@@ -16,19 +16,19 @@ set(PROJECT_SOURCES
         main.cpp
         mainwindow.cpp
         mainwindow.h
-        loginWindow.h
-        loginWIindow.cpp
-        loginWIindow.cpp
-        signupWindow.cpp
-        signupWindow.h
+        capitalWindow/loginWindow.h
+        capitalWindow/loginWIindow.cpp
+        capitalWindow/loginWIindow.cpp
+        capitalWindow/signupWindow.cpp
+        capitalWindow/signupWindow.h
         dataManager.cpp
         dataManager.h
         dataManager.h
         userManager.cpp
         userManager.h
-        userWindow.cpp
-        userWindow.h
-        userWindow.h
+        capitalWindow/userWindow.cpp
+        capitalWindow/userWindow.h
+        capitalWindow/userWindow.h
         userUI/userInfo.cpp
         userUI/userInfo.h
         userUI/userInfo.h
@@ -71,6 +71,15 @@ set(PROJECT_SOURCES
         userUI/userFutures.cpp
         userUI/userFutures.h
         userUI/userFutures.h
+        userUI/subUserFuturesUI/FuturesUI.cpp
+        userUI/subUserFuturesUI/FuturesUI.h
+        userUI/subUserFuturesUI/FuturesUI.h
+        userUI/subUserFuturesUI/FuturesUI.h
+        userUI/subUserFuturesUI/configFuturesUI.cpp
+        userUI/subUserFuturesUI/configFuturesUI.h
+        userUI/subUserFuturesUI/configFuturesUI.h
+        userUI/subUserInfoUI/addFuturesUI.cpp
+        userUI/subUserInfoUI/addFuturesUI.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

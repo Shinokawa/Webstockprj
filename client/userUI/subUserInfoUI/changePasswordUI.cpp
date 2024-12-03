@@ -14,7 +14,19 @@ changePasswordUI::changePasswordUI(const userManager& user): user(user) {
     passwordText = new QLineEdit();
     passwordText->setPlaceholderText("请输入原密码");  // 设置密码框提示文字
     passwordText->setEchoMode(QLineEdit::Password);  // 密码框隐藏输入
-    passwordText->setStyleSheet("padding: 8px; border-radius: 5px; border: 1px solid #ddd;");
+    passwordText->setStyleSheet(
+        "QLineEdit {"
+        "    background-color: #ffffff;"
+        "    border: 2px solid #4CAF50;"
+        "    border-radius: 5px;"
+        "    padding: 10px;"
+        "    font-size: 14px;"
+        "    color: #333333;"
+        "}"
+        "QLineEdit:focus {"
+        "    border-color: #3e8e41;"
+        "}"
+    );
 
     auto newPasswordLabel = new QLabel("新密码：");
     newPasswordLabel->setFont(QFont("Arial", 12));
@@ -23,7 +35,19 @@ changePasswordUI::changePasswordUI(const userManager& user): user(user) {
     newPasswordText = new QLineEdit();
     newPasswordText->setPlaceholderText("请输入新密码");
     newPasswordText->setEchoMode(QLineEdit::Password);
-    newPasswordText->setStyleSheet("padding: 8px; border-radius: 5px; border: 1px solid #ddd;");
+    newPasswordText->setStyleSheet(
+        "QLineEdit {"
+        "    background-color: #ffffff;"
+        "    border: 2px solid #4CAF50;"
+        "    border-radius: 5px;"
+        "    padding: 10px;"
+        "    font-size: 14px;"
+        "    color: #333333;"
+        "}"
+        "QLineEdit:focus {"
+        "    border-color: #3e8e41;"
+        "}"
+    );
 
     auto confirmLabel = new QLabel("确认密码：");
     confirmLabel->setFont(QFont("Arial", 12));
@@ -32,7 +56,19 @@ changePasswordUI::changePasswordUI(const userManager& user): user(user) {
     confirmText = new QLineEdit();
     confirmText->setPlaceholderText("请再输入一次密码");
     confirmText->setEchoMode(QLineEdit::Password);
-    confirmText->setStyleSheet("padding: 8px; border-radius: 5px; border: 1px solid #ddd;");
+    confirmText->setStyleSheet(
+        "QLineEdit {"
+        "    background-color: #ffffff;"
+        "    border: 2px solid #4CAF50;"
+        "    border-radius: 5px;"
+        "    padding: 10px;"
+        "    font-size: 14px;"
+        "    color: #333333;"
+        "}"
+        "QLineEdit:focus {"
+        "    border-color: #3e8e41;"
+        "}"
+    );
 
     okButton = new QPushButton("确定");
     okButton->setStyleSheet("background-color: #4CAF50; color: white; padding: 10px 20px; border-radius: 5px;");
