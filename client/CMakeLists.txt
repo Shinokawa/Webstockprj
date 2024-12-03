@@ -17,8 +17,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         capitalWindow/loginWindow.h
-        capitalWindow/loginWIindow.cpp
-        capitalWindow/loginWIindow.cpp
+        capitalWindow/loginWindow.cpp
+        capitalWindow/loginWindow.cpp
         capitalWindow/signupWindow.cpp
         capitalWindow/signupWindow.h
         dataManager.cpp

@@ -244,11 +244,11 @@ FuturesUI::~FuturesUI() = default;
 string FuturesUI::InitHttpQReq() const {
     string url = "127.0.0.1:8786/marketdata?uuid=user-1234";
     string PostURL = "http://127.0.0.1:8786/subscribe";
-    string Postdata = R"({
+    string PostData = R"({
         "uuid" : "user-1234",
         "instruments" : ["m2501", "m2505"]
     })";
-    auto data = this->user.getServer()->PostFromURL(PostURL, Postdata);
+    auto data = this->user.getServer()->PostFromURL(PostURL, PostData);
     return data;
 }
 
@@ -355,7 +355,7 @@ void FuturesUI::updateFuturesUI(const string &data) const {
    // info->setText(data.c_str());
 }
 
-void FuturesUI::doEditButton() {
+void FuturesUI::doEditButton() const {
     this->stackedWidget->setCurrentWidget(this->cfgFtrUI);
 }
 

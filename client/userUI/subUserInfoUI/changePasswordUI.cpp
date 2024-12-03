@@ -2,7 +2,6 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>
-#include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QFont>
 

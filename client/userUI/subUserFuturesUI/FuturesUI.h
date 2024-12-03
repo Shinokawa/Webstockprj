@@ -68,7 +68,7 @@ public:
 private slots:
     void updateFuturesUI(const std::string &data) const;   //更新UI的方法
 
-    void doEditButton();
+    void doEditButton() const;
     void doConfigOKButton();
 };
 

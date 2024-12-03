@@ -184,8 +184,9 @@ void userFutures::doDeleteButton(const FuturesUI* FtrsUI) const {
     QListWidgetItem *item = listWidget->takeItem(index);
     delete item; // 删除该项的内存
 
-    delete FtrsUI;
     FtrsUI = nullptr;  // 防止野指针
+    delete FtrsUI;
+
     listWidget->clearSelection();
     allStackedWidget->setCurrentWidget(optionWidget);
     MainWindow::popInfoMessage("成功","成功删除" + name + "期货");

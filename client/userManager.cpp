@@ -86,7 +86,7 @@ void userManager::initFriend() {
     ]
     })";
 
-    auto friendArray = ParseJosnToArray(friendsInfo, "friend");
+    auto friendArray = ParseJsonToArray(friendsInfo, "friend");
 
     for(auto frdJson : friendArray) {
         auto frd = Friend(frdJson.toObject());
@@ -111,7 +111,7 @@ void userManager::initEmail() {
         }
     ]
     })";
-    auto EmailArray = ParseJosnToArray(EmailInfo, "Email");
+    auto EmailArray = ParseJsonToArray(EmailInfo, "Email");
 
     for(auto EmailJson : EmailArray) {
         auto Eml = Email(EmailJson.toObject());
@@ -231,7 +231,7 @@ void userManager::initFutures() {
     //string url = "http://www.shakouzu.top:8786/marketdata/m2501";
     //auto data = server->GetFromURL(url);
     //testFu = data;
-    auto FuturesArray = ParseJosnToArray( FuturesInfo, "Futures");
+    auto FuturesArray = ParseJsonToArray( FuturesInfo, "Futures");
 
     for(auto FuturesJson : FuturesArray) {
         auto Ftrs = Futures(FuturesJson.toObject());
@@ -321,7 +321,7 @@ Futures userManager::addNewFutures(const string &InstrumentID) {
     return newFutures;
 }
 
-QJsonArray userManager::ParseJosnToArray(const string &info, const string &title) {
+QJsonArray userManager::ParseJsonToArray(const string &info, const string &title) {
     auto jsonString = QString::fromStdString(info);
     // 将 JSON 字符串转换为 QByteArray，因为 QJsonDocument 的解析器需要 QByteArray
 

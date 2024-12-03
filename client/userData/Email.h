@@ -15,7 +15,7 @@ private:
     string Body;
 
 public:
-    explicit Email(const QJsonObject &EmialInfo);
+    explicit Email(const QJsonObject &EmailInfo);
     ~Email();
     string getFrom();
     string getTo();

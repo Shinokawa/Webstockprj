@@ -46,7 +46,7 @@ public:
     void initFutures();
     Friend addNewFriend(const string& friendName);
     Futures addNewFutures(const string& InstrumentID);
-    static QJsonArray ParseJosnToArray(const string &info, const string &title);
+    static QJsonArray ParseJsonToArray(const string &info, const string &title);
 };
 
 #endif //USERMANAGER_H

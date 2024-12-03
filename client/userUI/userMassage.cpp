@@ -118,7 +118,7 @@ void userMassage::fetchChatData() {
         }
     ]
     })";
-    auto friendArray = userManager::ParseJosnToArray(data,"friend");   //把string变成jsonArray
+    auto friendArray = userManager::ParseJsonToArray(data,"friend");   //把string变成jsonArray
     for(auto frdMsg : friendArray) {        //遍历每一个好友的对话
         auto frdJson = frdMsg.toObject();         //把对话的JsonValueRef变成JsonObject
         auto frdName = frdJson["friendName"].toString().toStdString();
