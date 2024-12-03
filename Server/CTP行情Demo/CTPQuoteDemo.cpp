@@ -1,20 +1,185 @@
-﻿// CTP行情Demo.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
-//
-
-#include <iostream>
+﻿#include <iostream>
 #include <thread>
 #include "CThostFtdcMdSpiImp.h"
 #pragma comment(lib, "tradeapi64_se/thostmduserapi_se.lib")
-// 添加到您的主.cpp 或一个公共的头文件中
 #include <mutex>
 #include <unordered_map>
 #include <string>
-#include "include/httplib.h" // 包含cpp-httplib头文件
-
+#include "httplib.h" 
 #include <unordered_map>
 #include <unordered_set>
 #include <mutex>
 #include <string>
+#include <cstring>
+#include <winsock2.h>
+#include <windows.h>
+#include <sstream>
+#include <ws2tcpip.h> 
+#pragma comment(lib, "ws2_32.lib") 
+
+std::unordered_map<std::string, std::string> user_emails; // uuid -> email
+std::mutex emails_mutex;
+
+// 邮件发送配置
+std::string sender_email = "sk_kiko@163.com";    // 在此处设置发送邮箱
+std::string sender_password = "KAx7Kzftas4v32JZ";          // 在此处设置发送密码
+std::mutex email_config_mutex;
+
+// Base64 编码函数
+std::string base64Encode(const std::string& input) {
+    static const char table[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    std::string encoded;
+    int val = 0, valb = -6;
+    for (unsigned char c : input) {
+        val = (val << 8) + c;
+        valb += 8;
+        while (valb >= 0) {
+            encoded.push_back(table[(val >> valb) & 0x3F]);
+            valb -= 6;
+        }
+    }
+    if (valb > -6) {
+        encoded.push_back(table[((val << 8) >> (valb + 8)) & 0x3F]);
+    }
+    while (encoded.size() % 4) {
+        encoded.push_back('=');
+    }
+    return encoded;
+}
+
+// 日志宏
+#define SMTP_LOG(step, recv_len, buff) \
+    if (recv_len >= 0) { \
+        std::cout << "[STEP " << step << "] Received: " << std::string(buff, recv_len) << std::endl; \
+    } else { \
+        std::cerr << "[STEP " << step << "] Error receiving data, ret: " << recv_len << std::endl; \
+        return -1; \
+    }
+
+int sendEmail(const std::string& user_account,
+    const std::string& user_passwd,
+    const std::vector<std::string>& dest_account,
+    const std::string& content) {
+    // SMTP 配置
+    std::string smtp_url = "smtp." + user_account.substr(user_account.find('@') + 1);
+    int smtp_port = 25; // 明文传输端口
+
+    // 初始化 WinSock
+    WSADATA wsaData;
+    if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0) {
+        std::cerr << "Failed to initialize WinSock." << std::endl;
+        return -1;
+    }
+
+    // 创建 Socket
+    int sock = ::socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) {
+        std::cerr << "Failed to create socket." << std::endl;
+        WSACleanup();
+        return -1;
+    }
+
+    // 使用 getaddrinfo 解析主机名
+    struct addrinfo hints = {};
+    struct addrinfo* result = nullptr;
+
+    hints.ai_family = AF_INET;         // IPv4
+    hints.ai_socktype = SOCK_STREAM;  // 流式套接字
+    hints.ai_protocol = IPPROTO_TCP;  // TCP 协议
+
+    if (getaddrinfo(smtp_url.c_str(), std::to_string(smtp_port).c_str(), &hints, &result) != 0) {
+        std::cerr << "Failed to resolve host: " << smtp_url << std::endl;
+        ::closesocket(sock);
+        WSACleanup();
+        return -1;
+    }
+
+    // 填充 sockaddr_in 结构
+    struct sockaddr_in addr = *(struct sockaddr_in*)result->ai_addr;
+    freeaddrinfo(result);  // 释放 getaddrinfo 分配的内存
+
+    // 连接服务器
+    if (::connect(sock, (struct sockaddr*)&addr, sizeof(addr)) < 0) {
+        std::cerr << "Failed to connect to server." << std::endl;
+        ::closesocket(sock);
+        WSACleanup();
+        return -1;
+    }
+
+    char buff[1024] = { 0 };
+    size_t len = sizeof(buff);
+
+    // Step 1: Connect
+    int recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(1, recv_len, buff);
+
+    // Step 2: EHLO
+    std::string send_msg = "EHLO localhost\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(2, recv_len, buff);
+
+    // Step 3: AUTH LOGIN
+    send_msg = "AUTH LOGIN\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(3, recv_len, buff);
+
+    // Step 4: Base64 编码的账号
+    std::string account_name = user_account;
+    send_msg = base64Encode(account_name) + "\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(4, recv_len, buff);
+
+    // Step 5: Base64 编码的密码
+    send_msg = base64Encode(user_passwd) + "\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(5, recv_len, buff);
+
+    // Step 6: MAIL FROM
+    send_msg = "MAIL FROM: <" + user_account + ">\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(6, recv_len, buff);
+
+    // Step 7: RCPT TO
+    for (const auto& recipient : dest_account) {
+        send_msg = "RCPT TO: <" + recipient + ">\r\n";
+        ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+        recv_len = ::recv(sock, buff, len, 0);
+        SMTP_LOG(7, recv_len, buff);
+    }
+
+    // Step 8: DATA
+    send_msg = "DATA\r\n";
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(8, recv_len, buff);
+
+    // Step 9: Content
+    send_msg = "FROM: " + user_account + "\r\n";
+    send_msg += "TO: ";
+    for (const auto& recipient : dest_account) {
+        send_msg += recipient + ",";
+    }
+    send_msg.pop_back(); // Remove trailing comma
+    send_msg += "\r\n";
+    send_msg += "SUBJECT: 测试邮件\r\n";
+    send_msg += "Content-Type: text/plain; charset=utf-8\r\n";
+    send_msg += "Content-Transfer-Encoding: base64\r\n\r\n";
+    send_msg += base64Encode(content) + "\r\n.\r\n";
+
+    ::send(sock, send_msg.c_str(), send_msg.size(), 0);
+    recv_len = ::recv(sock, buff, len, 0);
+    SMTP_LOG(9, recv_len, buff);
+
+    // 关闭 Socket
+    ::closesocket(sock);
+    WSACleanup();
+    return 0;
+}
 
 
 
@@ -34,7 +199,7 @@ std::unordered_map<std::string, AlertSettings> client_alert_settings;
 std::unordered_map<std::string, AlertStatus> client_alert_status;
 std::unordered_map<std::string, std::unordered_set<std::string>> client_subscriptions;
 
-// 简单的JSON解析函数，用于提取字符串值
+// JSON解析函数
 std::string extract_json_string(const std::string& json, const std::string& key) {
     size_t key_pos = json.find("\"" + key + "\"");
     if (key_pos == std::string::npos) return "";
@@ -46,7 +211,6 @@ std::string extract_json_string(const std::string& json, const std::string& key)
     return json.substr(first_quote + 1, second_quote - first_quote - 1);
 }
 
-// 简单的JSON解析函数，用于提取数组值
 std::vector<std::string> extract_json_array(const std::string& json, const std::string& key) {
     std::vector<std::string> result;
     size_t key_pos = json.find("\"" + key + "\"");
@@ -68,7 +232,6 @@ std::vector<std::string> extract_json_array(const std::string& json, const std::
     return result;
 }
 
-// 简单的JSON解析函数，用于提取双精度数值
 double extract_json_double(const std::string& json, const std::string& key) {
     size_t key_pos = json.find("\"" + key + "\"");
     if (key_pos == std::string::npos) return 0.0;
@@ -97,9 +260,6 @@ int main()
     ash.ReqUserLogin();
     std::this_thread::sleep_for(std::chrono::seconds(5));
 
-    // 移除初始订阅，如果不需要默认订阅
-    // ash.SubscribeMarketData({ "m2501","m2505" }); // 订阅行情
-
     // 启动HTTP服务器线程
     std::thread server_thread([&ash]() {
         httplib::Server svr;
@@ -107,9 +267,7 @@ int main()
         // 订阅端点
         svr.Post("/subscribe", [&](const httplib::Request& req, httplib::Response& res) {
             std::string body = req.body;
-            printf("Received subscribe request body: %s\n", body.c_str()); // 调试日志
-
-            // 解析JSON请求体
+            printf("Received subscribe request body: %s\n", body.c_str()); 
             std::string uuid = extract_json_string(body, "uuid");
             std::vector<std::string> instruments = extract_json_array(body, "instruments");
             std::string time_alert = extract_json_string(body, "time_alert");
@@ -122,7 +280,6 @@ int main()
                 return;
             }
 
-            // 添加Instrument到用户订阅
             {
                 std::lock_guard<std::mutex> lock(alert_mutex);
                 for (const auto& inst : instruments) {
@@ -130,26 +287,43 @@ int main()
                 }
             }
 
-            // 存储警报设置
             {
                 std::lock_guard<std::mutex> lock(alert_mutex);
                 client_alert_settings[uuid] = AlertSettings{ time_alert, resistance_price, support_price };
-                client_alert_status[uuid] = AlertStatus(); // 初始化警报状态
+                client_alert_status[uuid] = AlertStatus(); 
             }
 
-            // 订阅行情数据
             ash.SubscribeMarketData(instruments);
 
             res.set_content("Subscribed successfully", "text/plain");
             });
 
+        // 邮箱端点
+        svr.Post("/set_email", [&](const httplib::Request& req, httplib::Response& res) {
+            std::string body = req.body;
+            printf("Received set_email request body: %s\n", body.c_str()); 
+
+            std::string uuid = extract_json_string(body, "uuid");
+            std::string email = extract_json_string(body, "email");
+
+            if (uuid.empty() || email.empty()) {
+                res.status = 400;
+                res.set_content("Invalid request: Missing uuid or email", "text/plain");
+                return;
+            }
+
+            {
+                std::lock_guard<std::mutex> lock(emails_mutex);
+                user_emails[uuid] = email;
+            }
+
+            res.set_content("Email set successfully", "text/plain");
+            });
 
         // 取消订阅端点
         svr.Post("/unsubscribe", [&](const httplib::Request& req, httplib::Response& res) {
             std::string body = req.body;
-            printf("Received unsubscribe request body: %s\n", body.c_str()); // 调试日志
-
-            // 解析JSON请求体
+            printf("Received unsubscribe request body: %s\n", body.c_str()); 
             std::string uuid = extract_json_string(body, "uuid");
             std::vector<std::string> instruments = extract_json_array(body, "instruments");
 
@@ -159,13 +333,11 @@ int main()
                 return;
             }
 
-            // 从用户订阅中移除Instrument
             {
                 std::lock_guard<std::mutex> lock(alert_mutex);
                 for (const auto& inst : instruments) {
                     client_subscriptions[uuid].erase(inst);
                 }
-                // 如果用户没有任何订阅，移除警报设置和状态
                 if (client_subscriptions[uuid].empty()) {
                     client_subscriptions.erase(uuid);
                     client_alert_settings.erase(uuid);
@@ -173,7 +345,6 @@ int main()
                 }
             }
 
-            // 取消订阅行情数据
             ash.UnSubscribeMarketData(instruments);
 
             res.set_content("Unsubscribed successfully", "text/plain");
@@ -331,7 +502,6 @@ int main()
                                 json += ",";
                             }
                             first_alert = false;
-                            // 转义双引号
                             std::string escaped_alert = alert;
                             size_t pos = 0;
                             while ((pos = escaped_alert.find("\"", pos)) != std::string::npos) {
@@ -353,10 +523,10 @@ int main()
 
 
         std::cout << "HTTP服务器启动，监听端口 8786 ..." << std::endl;
-        svr.listen("0.0.0.0", 8786); // 监听所有IP的8786端口
+        svr.listen("0.0.0.0", 8786); 
         });
 
-    // 主线程继续运行，等待用户输入以退出
+    // 主线程继续运行
     std::cout << "按回车键退出程序..." << std::endl;
     getchar();
 
@@ -370,14 +540,3 @@ int main()
 
     return 0;
 }
-
-// 运行程序: Ctrl + F5 或调试 >“开始执行(不调试)”菜单
-// 调试程序: F5 或调试 >“开始调试”菜单
-
-// 入门使用技巧: 
-//   1. 使用解决方案资源管理器窗口添加/管理文件
-//   2. 使用团队资源管理器窗口连接到源代码管理
-//   3. 使用输出窗口查看生成输出和其他消息
-//   4. 使用错误列表窗口查看错误
-//   5. 转到“项目”>“添加新项”以创建新的代码文件，或转到“项目”>“添加现有项”以将现有代码文件添加到项目
-//   6. 将来，若要再次打开此项目，请转到“文件”>“打开”>“项目”并选择 .sln 文件
