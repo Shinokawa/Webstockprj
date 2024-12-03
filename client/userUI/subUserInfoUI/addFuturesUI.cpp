@@ -13,7 +13,7 @@ addFuturesUI::addFuturesUI(const userManager &user): user(user) {
     newFuturesLabel->setStyleSheet("background: transparent; border: none; color: #333333; font-size: 14px;");
 
     newFuturesText = new QLineEdit();
-    newFuturesText->setPlaceholderText("请输入期货的ExchangedID");
+    newFuturesText->setPlaceholderText("请输入期货的InstrumentID");
     newFuturesText->setStyleSheet(
         "QLineEdit {"
         "    background-color: #ffffff;"
