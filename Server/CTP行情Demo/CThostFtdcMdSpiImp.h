@@ -6,56 +6,65 @@
 #include <memory>
 #include <mutex>
 #include <unordered_map>
-#include "include/httplib.h" // çº­î†»ç¹šé–å‘­æƒˆhttplibæ¾¶å­˜æƒæµ ï¿½
+#include "httplib.h"
 #include <unordered_set>
 #include <set>
 
-// ç›å±¾å„éç‰ˆåµç€›æ¨ºå
+// ĞĞÇéÊı¾İ´æ´¢
 extern std::mutex data_mutex;
 extern std::unordered_map<std::string, CThostFtdcDepthMarketDataField> market_data_map;
 
 using std::cout;
 using std::endl;
 
-
-// è­¦æŠ¥è®¾ç½®ç»“æ„
+// ¾¯±¨ÉèÖÃ½á¹¹
 struct AlertSettings {
-    std::string time_alert;          // æ ¼å¼ï¼š"HH:MM:SS"
-    double resistance_price;         // å‹åŠ›ä½ä»·æ ¼
-    double support_price;            // æ”¯æ’‘ä½ä»·æ ¼
+    std::string time_alert;          // ¸ñÊ½£º"HH:MM:SS"
+    double resistance_price;         // Ñ¹Á¦Î»¼Û¸ñ
+    double support_price;            // Ö§³ÅÎ»¼Û¸ñ
 };
 
-// è­¦æŠ¥çŠ¶æ€ç»“æ„
+// ¾¯±¨×´Ì¬½á¹¹
 struct AlertStatus {
     bool time_alert_triggered = false;
     bool resistance_alert_triggered = false;
     bool support_alert_triggered = false;
-    std::vector<std::string> alert_history; // æœ€è¿‘äº”æ¬¡è­¦æŠ¥çŠ¶æ€
+    std::vector<std::string> alert_history;
 };
 
-// å…¨å±€è­¦æŠ¥ç®¡ç†å˜é‡
+// È«¾Ö¾¯±¨¹ÜÀí±äÁ¿
 extern std::mutex alert_mutex;
 extern std::unordered_map<std::string, AlertSettings> client_alert_settings;
 extern std::unordered_map<std::string, AlertStatus> client_alert_status;
 extern std::unordered_map<std::string, std::unordered_set<std::string>> client_subscriptions;
+extern std::unordered_map<std::string, std::string> user_emails; // uuid -> email
+extern std::mutex emails_mutex;
+extern std::string sender_email;    
+extern std::string sender_password; 
+extern std::mutex email_config_mutex;
+
+int sendEmail(const std::string& user_account,
+    const std::string& user_passwd,
+    const std::vector<std::string>& dest_account,
+    const std::string& content);
 
 
-//è¡Œæƒ…ç±»
+//ĞĞÇéÀà
 class CSimpleMdHandler : public CThostFtdcMdSpi
 {
 public:
-    // é‹å‹¯ï¿½çŠ²åš±éå¸®ç´é—‡ï¿½ç‘•ä½·ç«´æ¶“î…æ¹éå ¢æ®‘é¸å›§æ‚œCThostFtdcMduserApiç€¹ç‚°ç·¥é¨å‹¬å¯šé–½ï¿½
+    // ¹¹Ôìº¯Êı£¬ĞèÒªÒ»¸öÓĞĞ§µÄÖ¸ÏòCThostFtdcMduserApiÊµÀıµÄÖ¸Õë
     CSimpleMdHandler()
     {
-        /// é’æ¶˜ç¼“api
+        /// ´´½¨api
         m_pUserMdApi = CThostFtdcMdApi::CreateFtdcMdApi();
         if (m_pUserMdApi)
         {
-            /// å¨‰ã„¥å”½spi
+            /// ×¢²áspi
             m_pUserMdApi->RegisterSpi(this);
-            /// å¨‰ã„¥å”½é“å¶‡ç–†
+            /// ×¢²áÇ°ÖÃ
             m_pUserMdApi->RegisterFront(const_cast<char*>("tcp://180.168.146.187:10211"));
-            /// é’æ¿†îé–ï¿½
+            /// ³õÊ¼»¯
             m_pUserMdApi->Init();
         }
         else
@@ -102,16 +111,16 @@ public:
         printf("</OnHeartBeatWarning>\n");
     }
 
-    // è¤°æ’³î…¹é´é£î¬æ¶“åºæ°¦é„æ’´å¢­ç» ï¼„éƒ´ç¼ç†¼ï¿½æ°«ä¿Šæ©ç‚´å¸´é‚î…ç´‘éƒè®¹ç´ç’‡ãƒ¦æŸŸå¨‰æ›¡î¦ç’‹å†ªæ•¤
+    // µ±¿Í»§¶ËÓë½»Ò×ÍĞ¹ÜÏµÍ³Í¨ĞÅÁ¬½Ó¶Ï¿ªÊ±£¬¸Ã·½·¨±»µ÷ÓÃ
     virtual void OnFrontDisconnected(int nReason)
     {
-        // è¤°æ’³å½‚é¢ç†»ç¹–æ¶“î…å„éé›æ‚—é”›å­‰PIæµ¼æ°³åšœé”ã„©å™¸é‚æ‹Œç¹›éºãƒ¯ç´ç€¹ãˆ¡åŸ›ç»”îˆšå½²æ¶“å¶…ä»›æ¾¶å‹­æ‚Š
+        // µ±·¢ÉúÕâ¸öÇé¿öºó£¬API»á×Ô¶¯ÖØĞÂÁ¬½Ó£¬¿Í»§¶Ë¿É²»×ö´¦Àí
         printf("<OnFrontDisconnected>\n");
         printf("\tnReason= = [%d]", nReason);
         printf("</OnFrontDisconnected>\n");
     }
 
-    // è¤°æ’³î…¹é´é£î¬é™æˆåš­é§è¯²ç¶ç’‡é”‹çœ°æ¶”å¬ªæ‚—é”›å²ƒî‡šé‚è§„ç¡¶æµ¼æ°³î¦ç’‹å†ªæ•¤é”›å²„ï¿½æ°±ç…¡ç€¹ãˆ¡åŸ›ç»”îˆœæ«¥è¤°æ›Ÿæ§¸éšï¸½åšé”ï¿½
+    // µ±¿Í»§¶Ë·¢³öµÇÂ¼ÇëÇóÖ®ºó£¬¸Ã·½·¨»á±»µ÷ÓÃ£¬Í¨Öª¿Í»§¶ËµÇÂ¼ÊÇ·ñ³É¹¦
     virtual void OnRspUserLogin(CThostFtdcRspUserLoginField* pRspUserLogin,
         CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
@@ -141,7 +150,7 @@ public:
         printf("\tbIsLast [%d]\n", bIsLast);
         printf("</OnRspUserLogin>\n");
         if (pRspInfo->ErrorID != 0) {
-            // ç»”îˆœæ«¥æ¾¶è¾«è§¦é”›å±½î…¹é´é£î¬é—‡ï¿½æ©æ¶œî”‘é–¿æ¬’î‡¤æ¾¶å‹­æ‚Š
+            // ¶ËµÇÊ§°Ü£¬¿Í»§¶ËĞè½øĞĞ´íÎó´¦Àí
             printf("\tFailed to login, errorcode=%d errormsg=%s requestid=%d chain = %d",
                 pRspInfo->ErrorID, pRspInfo->ErrorMsg, nRequestID, bIsLast);
             std::cin.get();
@@ -150,7 +159,7 @@ public:
         }
     }
 
-    ///é§è¯²åš­ç’‡é”‹çœ°éå¶…ç°²
+    ///µÇ³öÇëÇóÏìÓ¦
     virtual void OnRspUserLogout(CThostFtdcUserLogoutField* pUserLogout, CThostFtdcRspInfoField* pRspInfo, int nRequestID, bool bIsLast)
     {
         printf("<OnRspUserLogout>\n");
@@ -184,7 +193,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->UnSubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "ç’ãˆ¤æ§„ç›å±¾å„ç’‡é”‹çœ°......é™æˆ¦ï¿½ä½¹åšé”ç„…n" : "ç’ãˆ¤æ§„ç›å±¾å„ç’‡é”‹çœ°......é™æˆ¦ï¿½ä½¸ã‘ç’ãƒ¯ç´é–¿æ¬’î‡¤æ´å¿“å½¿=[%d]\n", nResult);
+            printf((nResult == 0) ? "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍ³É¹¦\n" : "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍÊ§°Ü£¬´íÎóĞòºÅ=[%d]\n", nResult);
         }
     }
 
@@ -205,7 +214,7 @@ public:
         printf("</OnRspUnSubMarketData>\n");
     };
 
-    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//é€æƒ°î”‘é¯ï¿½
+    void SubscribeMarketData(const std::vector<std::string>& vecInstrumentID)//ÊÕĞĞÇé
     {
         int nIndexReal = 0;
         int nLoopStep = 500;
@@ -219,7 +228,7 @@ public:
                 nIndexReal++;
             }
             int nResult = m_pUserMdApi->SubscribeMarketData(ppInstrumentID.get(), nCurrLoopNum);
-            printf((nResult == 0) ? "ç’ãˆ¤æ§„ç›å±¾å„ç’‡é”‹çœ°......é™æˆ¦ï¿½ä½¹åšé”ç„…n" : "ç’ãˆ¤æ§„ç›å±¾å„ç’‡é”‹çœ°......é™æˆ¦ï¿½ä½¸ã‘ç’ãƒ¯ç´é–¿æ¬’î‡¤æ´å¿“å½¿=[%d]\n", nResult);
+            printf((nResult == 0) ? "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍ³É¹¦\n" : "¶©ÔÄĞĞÇéÇëÇó......·¢ËÍÊ§°Ü£¬´íÎóĞòºÅ=[%d]\n", nResult);
         }
     }
 
@@ -240,7 +249,7 @@ public:
         printf("</OnRspSubMarketData>\n");
     };
 
-    ///å¨£åå®³ç›å±¾å„é–«æ°±ç…¡
+    ///Éî¶ÈĞĞÇéÍ¨Öª
     virtual void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField* pDepthMarketData)
     {
         if (pDepthMarketData)
@@ -249,13 +258,11 @@ public:
             market_data_map[pDepthMarketData->InstrumentID] = *pDepthMarketData;
         }
 
-        // è·å–ç³»ç»Ÿæ—¶é—´
-
+        // »ñÈ¡ÏµÍ³Ê±¼ä
         auto tmNow = std::chrono::system_clock::now();
         std::time_t time_now = std::chrono::system_clock::to_time_t(tmNow);
         std::tm local_tm;
         if (localtime_s(&local_tm, &time_now) != 0) {
-            // å¤„ç†é”™è¯¯
             std::cerr << "Failed to convert time using localtime_s." << std::endl;
             return;
         }
@@ -263,7 +270,7 @@ public:
         std::strftime(current_time, sizeof(current_time), "%H:%M:%S", &local_tm);
         std::string current_time_str(current_time);
 
-        // æ£€æŸ¥æ‰€æœ‰ç”¨æˆ·çš„è­¦æŠ¥
+        // ¼ì²éËùÓĞÓÃ»§µÄ¾¯±¨
         std::lock_guard<std::mutex> lock(alert_mutex);
         for (auto& [uuid, settings] : client_alert_settings)
         {
@@ -271,7 +278,7 @@ public:
             bool alert_triggered = false;
             std::string alert_message;
 
-            // æ—¶é—´è­¦æŠ¥
+            // Ê±¼ä¾¯±¨
             if (!settings.time_alert.empty() && !status.time_alert_triggered && current_time_str == settings.time_alert)
             {
                 status.time_alert_triggered = true;
@@ -279,13 +286,13 @@ public:
                 alert_message += "Time alert triggered at " + settings.time_alert + "; ";
             }
 
-            // æ£€æŸ¥ç”¨æˆ·æ˜¯å¦è®¢é˜…äº†å½“å‰Instrument
+            // ¼ì²éÓÃ»§ÊÇ·ñ¶©ÔÄÁËµ±Ç°Instrument
             if (client_subscriptions.find(uuid) != client_subscriptions.end() &&
                 client_subscriptions[uuid].find(pDepthMarketData->InstrumentID) != client_subscriptions[uuid].end())
             {
                 double last_price = pDepthMarketData->LastPrice;
 
-                // å‹åŠ›ä½è­¦æŠ¥
+                // Ñ¹Á¦Î»¾¯±¨
                 if (settings.resistance_price > 0 && !status.resistance_alert_triggered && last_price >= settings.resistance_price)
                 {
                     status.resistance_alert_triggered = true;
@@ -293,7 +300,7 @@ public:
                     alert_message += "Resistance price alert triggered at " + std::to_string(settings.resistance_price) + "; ";
                 }
 
-                // æ”¯æ’‘ä½è­¦æŠ¥
+                // Ö§³ÅÎ»¾¯±¨
                 if (settings.support_price > 0 && !status.support_alert_triggered && last_price <= settings.support_price)
                 {
                     status.support_alert_triggered = true;
@@ -304,20 +311,36 @@ public:
 
             if (alert_triggered)
             {
-                // è®°å½•è­¦æŠ¥å†å²ï¼Œä¿æŒäº”æ¬¡
+                // ¼ÇÂ¼¾¯±¨ÀúÊ·
                 if (status.alert_history.size() >= 5)
                 {
                     status.alert_history.erase(status.alert_history.begin());
                 }
                 status.alert_history.push_back(alert_message);
                 printf("Alert for UUID [%s]: %s\n", uuid.c_str(), alert_message.c_str());
+
+                // »ñÈ¡ÓÃ»§ÓÊÏä
+                std::string user_email;
+                {
+                    std::lock_guard<std::mutex> lock(emails_mutex);
+                    auto email_it = user_emails.find(uuid);
+                    if (email_it != user_emails.end()) {
+                        user_email = email_it->second;
+                    }
+                }
+
+                if (!user_email.empty()) {
+                    std::string email_content = "¾¯±¨´¥·¢: " + alert_message;
+                    // ·¢ËÍÓÊ¼ş
+                    sendEmail(sender_email, sender_password, { user_email }, email_content);
+                }
             }
         }
 
         std::tm rtnTimeInfo;
         auto&& timeTemp = std::chrono::system_clock::to_time_t(tmNow);
         localtime_s(&rtnTimeInfo, &timeTemp);
-        printf("%02d:%02d:%02d.%03lld\t",
+        /*printf("%02d:%02d:%02d.%03lld\t",
             rtnTimeInfo.tm_hour,
             rtnTimeInfo.tm_min,
             rtnTimeInfo.tm_sec,
@@ -371,10 +394,10 @@ public:
             printf("\tAveragePrice [%.8lf]\n", (pDepthMarketData->AveragePrice > 10000000) ? 0 : pDepthMarketData->AveragePrice);
         }
         printf("</OnRtnDepthMarketData>\n");
-        
+        */
     };
 
 private:
-    // é¸å›§æ‚œCThostFtdcMduserApiç€¹ç‚°ç·¥é¨å‹¬å¯šé–½ï¿½
+    // Ö¸ÏòCThostFtdcMduserApiÊµÀıµÄÖ¸Õë
     CThostFtdcMdApi* m_pUserMdApi;
 };
