@@ -62,7 +62,7 @@ FuturesUI::FuturesUI(const userManager& user, const Futures &Ftrs): user(user), 
     sell4 = new QLabel();
     sell5 = new QLabel();
 
-    initQLabelData();
+    initQLabelData(this->Ftrs);
 
     gridLayout = new QGridLayout();
 
@@ -224,19 +224,6 @@ FuturesUI::FuturesUI(const userManager& user, const Futures &Ftrs): user(user), 
 
     connect(this->cfgFtrUI->okButton,&QPushButton::clicked,this,doConfigOKButton);
     connect(this->editButton,QPushButton::clicked,this,doEditButton);
-
-    /*
-    // 启动定时器，每5秒钟获取一次聊天数据
-    auto *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &FuturesUI::fetchFuturesData);
-    timer->start(5000); // 每5000毫秒（即5秒）执行一次 fetchChatData
-
-    // 异步调用，使用lambda表达式来包装成员函数
-    // ReSharper disable once CppNoDiscardExpression
-    QtConcurrent::run([this] {
-        this->fetchFuturesData(); // 在后台线程调用fetchFuturesData
-    });
-    */
 }
 
 FuturesUI::~FuturesUI() = default;
@@ -252,26 +239,26 @@ string FuturesUI::InitHttpQReq() const {
     return data;
 }
 
-void FuturesUI::initQLabelData() const {
+void FuturesUI::initQLabelData(const Futures& Ftrs1) const {
     //最新价
-    lastPrice->setText(QString::number(Ftrs.LastPrice,'f',2));
+    lastPrice->setText(QString::number(Ftrs1.LastPrice,'f',2));
     //涨跌金额
-    double amount = Ftrs.LastPrice - Ftrs.PreClosePrice;
+    double amount = Ftrs1.LastPrice - Ftrs1.PreClosePrice;
     increaseAmount->setText(QString::number(amount,'f',2));
     //涨跌幅
-    amount = (amount / Ftrs.PreClosePrice) * 100.0;
+    amount = (amount / Ftrs1.PreClosePrice) * 100.0;
     increaseRange->setText(QString::number(amount,'f',2) + "%");
     //最高价
-    auto str = "高\t" + QString::number(Ftrs.HighestPrice,'f',2);
+    auto str = "高\t" + QString::number(Ftrs1.HighestPrice,'f',2);
     highPrice->setText(str);
     //最低价
-    str = "低\t" + QString::number(Ftrs.LowestPrice,'f',2);
+    str = "低\t" + QString::number(Ftrs1.LowestPrice,'f',2);
     lowPrice->setText(str);
     //开盘价
-    str = "开\t" + QString::number(Ftrs.OpenPrice,'f',2);
+    str = "开\t" + QString::number(Ftrs1.OpenPrice,'f',2);
     OpenPrice->setText(str);
     //市值
-    amount = Ftrs.LastPrice * Ftrs.OpenInterest;
+    amount = Ftrs1.LastPrice * Ftrs1.OpenInterest;
     if (amount / 10000.0 >= 1) {
         amount /= 10000.0;
         if (amount / 10000.0 >= 1) {
@@ -287,19 +274,19 @@ void FuturesUI::initQLabelData() const {
     }
     marketValue->setText(str);
     //昨虚实度
-    str = "昨虚\t" + QString::number(Ftrs.PreDelta,'f',2);
+    str = "昨虚\t" + QString::number(Ftrs1.PreDelta,'f',2);
     preDelta->setText(str);
     //今虚实度
-    str = "今虚\t" + QString::number(Ftrs.CurrDelta,'f',2);
+    str = "今虚\t" + QString::number(Ftrs1.CurrDelta,'f',2);
     currDelta->setText(str);
     //涨停板价
-    str = "涨停\t" + QString::number(Ftrs.UpperLimitPrice,'f',2);
+    str = "涨停\t" + QString::number(Ftrs1.UpperLimitPrice,'f',2);
     upLimitPrice->setText(str);
     //跌停板价
-    str = "跌停\t" + QString::number(Ftrs.LowerLimitPrice,'f',2);
+    str = "跌停\t" + QString::number(Ftrs1.LowerLimitPrice,'f',2);
     lowLimitPrice->setText(str);
     //成交金额
-    amount = Ftrs.LastPrice * Ftrs.Volume;
+    amount = Ftrs1.LastPrice * Ftrs1.Volume;
     if (amount / 10000.0 >= 1) {
         amount /= 10000.0;
         if (amount / 10000.0 >= 1) {
@@ -315,45 +302,29 @@ void FuturesUI::initQLabelData() const {
     }
     transactionNumber->setText(str);
     //最近五个买入
-    str = "买一\t" + QString::number(Ftrs.BidPrice1,'f',2) + "\t" + QString::number(Ftrs.BidVolume1);
+    str = "买一\t" + QString::number(Ftrs1.BidPrice1,'f',2) + "\t" + QString::number(Ftrs1.BidVolume1);
     buy1->setText(str);
-    str = "买二\t" + QString::number(Ftrs.BidPrice2,'f',2) + "\t" + QString::number(Ftrs.BidVolume2);
+    str = "买二\t" + QString::number(Ftrs1.BidPrice2,'f',2) + "\t" + QString::number(Ftrs1.BidVolume2);
     buy2->setText(str);
-    str = "买三\t" + QString::number(Ftrs.BidPrice3,'f',2) + "\t" + QString::number(Ftrs.BidVolume3);
+    str = "买三\t" + QString::number(Ftrs1.BidPrice3,'f',2) + "\t" + QString::number(Ftrs1.BidVolume3);
     buy3->setText(str);
-    str = "买四\t" + QString::number(Ftrs.BidPrice4,'f',2) + "\t" + QString::number(Ftrs.BidVolume4);
+    str = "买四\t" + QString::number(Ftrs1.BidPrice4,'f',2) + "\t" + QString::number(Ftrs1.BidVolume4);
     buy4->setText(str);
-    str = "买五\t" + QString::number(Ftrs.BidPrice5,'f',2) + "\t" + QString::number(Ftrs.BidVolume5);
+    str = "买五\t" + QString::number(Ftrs1.BidPrice5,'f',2) + "\t" + QString::number(Ftrs1.BidVolume5);
     buy5->setText(str);
     //最近五个卖出
-    str = "卖一\t" + QString::number(Ftrs.AskPrice1,'f',2) + "\t" + QString::number(Ftrs.AskVolume1);
+    str = "卖一\t" + QString::number(Ftrs1.AskPrice1,'f',2) + "\t" + QString::number(Ftrs1.AskVolume1);
     sell1->setText(str);
-    str = "卖二\t" + QString::number(Ftrs.AskPrice2,'f',2) + "\t" + QString::number(Ftrs.AskVolume2);
+    str = "卖二\t" + QString::number(Ftrs1.AskPrice2,'f',2) + "\t" + QString::number(Ftrs1.AskVolume2);
     sell2->setText(str);
-    str = "卖三\t" + QString::number(Ftrs.AskPrice3,'f',2) + "\t" + QString::number(Ftrs.AskVolume3);
+    str = "卖三\t" + QString::number(Ftrs1.AskPrice3,'f',2) + "\t" + QString::number(Ftrs1.AskVolume3);
     sell3->setText(str);
-    str = "卖四\t" + QString::number(Ftrs.AskPrice4,'f',2) + "\t" + QString::number(Ftrs.AskVolume4);
+    str = "卖四\t" + QString::number(Ftrs1.AskPrice4,'f',2) + "\t" + QString::number(Ftrs1.AskVolume4);
     sell4->setText(str);
-    str = "卖五\t" + QString::number(Ftrs.AskPrice5,'f',2) + "\t" + QString::number(Ftrs.AskVolume5);
+    str = "卖五\t" + QString::number(Ftrs1.AskPrice5,'f',2) + "\t" + QString::number(Ftrs1.AskVolume5);
     sell5->setText(str);
 }
 
-void FuturesUI::fetchFuturesData() const {
-    // 在后台线程中执行网络请求
-    string url = "127.0.0.1:8786/marketdata?uuid=user-1234";
-
-    auto data = this->user.getServer()->GetFromURL(url);
-    data += QDateTime::currentDateTime().toString().toStdString();
-
-    // 使用信号更新UI，信号会在主线程中执行
-    emit updateFuturesUI(data);
-
-}
-
-void FuturesUI::updateFuturesUI(const string &data) const {
-    // 在UI线程中更新标签的文本
-   // info->setText(data.c_str());
-}
 
 void FuturesUI::doEditButton() const {
     this->stackedWidget->setCurrentWidget(this->cfgFtrUI);

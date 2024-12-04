@@ -2,9 +2,12 @@
 #include <QLabel>
 #include "../myServer.h"
 #include <QHBoxLayout>  // 新增
+#include <QJsonDocument>
 #include <QStackedWidget>
 #include <QListWidget>
 #include <QPushButton>
+#include <QTimer>
+#include <QtConcurrent/qtconcurrentrun.h>
 
 #include "../mainwindow.h"
 #include "subUserFuturesUI/FuturesUI.h"
@@ -94,6 +97,17 @@ userFutures::userFutures(const userManager& user): user(user) {
     });
 
     this->setLayout(mainWindow);
+
+    // 启动定时器，每5秒钟获取一次聊天数据
+    auto *timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &userFutures::fetchFuturesData);
+    timer->start(2000); // 每2000毫秒（即5秒）执行一次 fetchChatData
+
+    // 异步调用，使用lambda表达式来包装成员函数
+    // ReSharper disable once CppNoDiscardExpression
+    QtConcurrent::run([this] {
+        this->fetchFuturesData(); // 在后台线程调用fetchFuturesData
+    });
 }
 
 userFutures::~userFutures() = default;
@@ -156,6 +170,39 @@ void userFutures::flashFuturesList(const Futures &newFutures) {
 
     FuturesUIList.emplace_back(newFuturesUI);
     stackedWidget->addWidget(newFuturesUI);
+}
+
+void userFutures::fetchFuturesData() const {
+    auto data = user.getServer()->GetStarInfo();
+
+    // 使用信号更新UI，信号会在主线程中执行
+    emit updateFuturesUI(data);
+}
+
+void userFutures::updateFuturesUI(const string &data) const{
+    // 将字符串解析为 QJsonArray
+    QJsonDocument doc = QJsonDocument::fromJson(QString::fromStdString(data).toUtf8());
+    QJsonArray jsonArray = doc.array();
+
+    // 创建一个新的 QJsonObject
+    QJsonObject futuresObject;
+    futuresObject["Futures"] = jsonArray;  // 将原始 JSON 数组赋给 "Futures" 键
+
+    // 将 QJsonObject 转换为 JSON 字符串
+    QJsonDocument newDoc(futuresObject);
+    QString newJsonString = newDoc.toJson(QJsonDocument::Compact);
+
+    auto FtrsArray = userManager::ParseJsonToArray(newJsonString.toStdString(), "Futures");
+
+    for (auto Ftrs : FtrsArray) {
+        auto FtrJson = Ftrs.toObject();
+        auto futures = Futures(FtrJson);
+        for (auto FtrsUI : FuturesUIList) {
+            if (futures.InstrumentID == FtrsUI->Ftrs.InstrumentID) {
+                FtrsUI->initQLabelData(futures);
+            }
+        }
+    }
 }
 
 void userFutures::doListWidget(int row) const {

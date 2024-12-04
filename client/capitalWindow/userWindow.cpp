@@ -1,16 +1,21 @@
 #include "userWindow.h"
 
+#include <QJsonDocument>
 #include <QLineEdit>
 #include <QListWidget>
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QSplitter>
+#include <QTimer>
 #include <QVBoxLayout>
+#include <QtConcurrent/qtconcurrentrun.h>
+
 #include "../mainwindow.h"
 #include "../userUI/userFutures.h"
 #include "../userUI/userEmail.h"
 #include "../userUI/userMassage.h"
 #include "../userUI/userInfo.h"
+#include "../userUI/subUserFuturesUI/FuturesUI.h"
 #include "../userUI/subUserInfoUI/addFuturesUI.h"
 #include "../userUI/subUserInfoUI/friendAddUI.h"
 
@@ -86,9 +91,65 @@ userWindow::userWindow(const userManager& thisUser): user(thisUser) {
     connect(listWidget, &QListWidget::itemClicked, this, &userWindow::doListWidget);
     connect(userInfo->friendAddUI->okButton,&QPushButton::clicked,this,&userWindow::doAddFriendButton);
     connect(userInfo->addFuturesUI->okButton,&QPushButton::clicked,this,&userWindow::doAddFuturesButton);
+
+    //异步
+    // 启动定时器，每5秒钟获取一次聊天数据
+    auto *timer = new QTimer(this);
+    connect(timer, &QTimer::timeout, this, &userWindow::fetchIsAlert);
+    timer->start(1000);  // 每1000毫秒（即1秒）执行一次 fetchIsAlert
+
+    // 异步调用，使用lambda表达式来包装成员函数
+    // ReSharper disable once CppNoDiscardExpression
+    QtConcurrent::run([this] {
+        this->fetchIsAlert();  // 在后台线程调用fetchIsAlert
+    });
 }
 
 userWindow::~userWindow() = default;
+
+void userWindow::fetchIsAlert() const {
+    emit(updateAlertInfo());
+}
+
+void userWindow::updateAlertInfo() const {
+
+    for (auto ftrsUI : userFutures->FuturesUIList) {
+        double price = ftrsUI->Ftrs.LastPrice;
+        double highPrice = ftrsUI->Ftrs.highPriceWarning;
+        double lowPrice = ftrsUI->Ftrs.lowPriceWarning;
+        QString instrumentID = QString::fromStdString(ftrsUI->Ftrs.InstrumentID);
+
+        if (price > highPrice || price < lowPrice) {
+            QString message = "价格不在限定值里，请到客服处查看详情";
+            QString title = "警告";
+
+            // 使用 QTimer::singleShot 将 popInfoMessage 调度到主线程
+            QTimer::singleShot(0, [title, message]() {
+                MainWindow::popInfoMessage(title.toStdString(), message.toStdString());
+            });
+
+            QString data;
+            if (price > highPrice) {
+                data = QString(R"({
+                "sendName": "我的客服",
+                "sendMessage": "%1"
+            })").arg(instrumentID + "的价格超过了设定的最高价格");
+                ftrsUI->Ftrs.highPriceWarning = 200000;
+            }
+            else {
+                data = QString(R"({
+                "sendName": "我的客服",
+                "sendMessage": "%1"
+            })").arg(instrumentID + "的价格低于了设定的最低价格");
+                ftrsUI->Ftrs.lowPriceWarning = 200000;
+            }
+
+            QJsonObject jsonObj = QJsonDocument::fromJson(data.toUtf8()).object();
+            userMassage->updateOfficialChatData(jsonObj);
+        }
+
+    }
+}
 
 void userWindow::doListWidget(const QListWidgetItem *item) const {
     string option = item->text().toStdString();
@@ -119,7 +180,8 @@ void userWindow::doAddFriendButton() {
 
 void userWindow::doAddFuturesButton() {
     string InstrumentID = userInfo->addFuturesUI->newFuturesText->text().toStdString();
-    auto newFutures = user.addNewFutures(InstrumentID);
+    auto newFutures = user.addNewFutures(InstrumentID,0,0);
     userFutures->flashFuturesList(newFutures);
     MainWindow::popInfoMessage("成功",InstrumentID + "添加成功");
 }
+

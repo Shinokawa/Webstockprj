@@ -61,12 +61,9 @@ public:
     ~FuturesUI() override;
 
     [[nodiscard]] string InitHttpQReq() const;
-    void initQLabelData() const;
-
-    void fetchFuturesData() const;  //异步获取期货信息
+    void initQLabelData(const Futures &Ftrs) const;
 
 private slots:
-    void updateFuturesUI(const std::string &data) const;   //更新UI的方法
 
     void doEditButton() const;
     void doConfigOKButton();

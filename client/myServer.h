@@ -26,6 +26,12 @@ public:
     string GetFromURL(const string &url);
     string GetChatData();
     void PostMessage(const QJsonObject &data);
+
+    void PostStarInfo(const QJsonObject &starInfo);
+
+    string GetStarInfo();
+
+    void PostSetEmail(const string &EmailAdress);
 };
 
 #endif //MYSERVER_H
