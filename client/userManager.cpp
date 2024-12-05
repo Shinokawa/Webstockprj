@@ -23,14 +23,14 @@ userManager::userManager(const string &userName, const string &password, const s
         "starInfo": [
             {
               "InstrumentID": "m2501",
-              "lowPriceWarning": "1500",
-              "highPriceWarning": "1600",
+              "lowPriceWarning": 1500,
+              "highPriceWarning": 1600,
               "alertTime": "24:00:00"
             },
             {
               "InstrumentID": "m2505",
-              "lowPriceWarning": "2000",
-              "highPriceWarning": "3000",
+              "lowPriceWarning": 2000,
+              "highPriceWarning": 3000,
               "alertTime": "24:00:00"
     	    }
     ]})";
@@ -150,8 +150,8 @@ Friend userManager::addNewFriend(const string& friendName) {
 Futures userManager::addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning, const string &alertTime) {
     QString starInfo = QString(R"({
             "InstrumentID": "%1",
-            "lowPriceWarning": "%2",
-            "highPriceWarning": "%3",
+            "lowPriceWarning": %2,
+            "highPriceWarning": %3,
             "alertTime": "%4"
         })").arg(QString::fromStdString(InstrumentID)).arg(lowPriceWarning).arg(highPriceWarning).arg(QString::fromStdString(alertTime));
     starInfoList.emplace_back(starInfo.toStdString());
@@ -194,14 +194,14 @@ void userManager::flashStarInfo(const string &starInfo) {
         QJsonArray instrumentsArray;
 
         auto InstrumentID = starJson.toObject()["InstrumentID"].toString();
-        auto lowPriceWarning = starJson.toObject()["lowPriceWarning"].toString();
-        auto highPriceWarning = starJson.toObject()["highPriceWarning"].toString();
+        double lowPriceWarning = starJson.toObject()["lowPriceWarning"].toDouble();
+        double highPriceWarning = starJson.toObject()["highPriceWarning"].toDouble();
         auto alertTime = starJson.toObject()["alertTime"].toString();
 
         QString FuturesItem = QString(R"({
             "InstrumentID": "%1",
-            "lowPriceWarning": "%2",
-            "highPriceWarning": "%3",
+            "lowPriceWarning": %2,
+            "highPriceWarning": %3,
             "alertTime": "%4"
         })").arg(InstrumentID).arg(lowPriceWarning).arg(highPriceWarning).arg(alertTime);
         // 将 FuturesItem 字符串解析为 JSON 对象

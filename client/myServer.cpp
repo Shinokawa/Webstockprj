@@ -88,5 +88,10 @@ string myServer::GetStarInfo() {
 
 void myServer::PostSetEmail(const string &EmailAdress) {
 	string PostURL = "http://127.0.0.1:8786/set_email";
-	PostFromURL(PostURL, EmailAdress);
+	QString PostData = QString(R"({
+		"uuid": "user-1234",
+		"email": "%1"
+	}
+	)").arg(QString::fromStdString(EmailAdress));
+	PostFromURL(PostURL, PostData.toStdString());
 }

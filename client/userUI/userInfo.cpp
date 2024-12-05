@@ -7,6 +7,8 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QListWidgetItem>
+
+#include "../myServer.h"
 #include "subUserInfoUI/infoUI.h"
 #include "subUserInfoUI/changeInfoUI.h"
 #include "subUserInfoUI/changePasswordUI.h"
@@ -128,6 +130,7 @@ void userInfo::ci_doOKButton() {
     if (newEmailAdress != user.getEmailAdress()) {
         this->user.setEmailAdress(newEmailAdress);
         MainWindow::popInfoMessage("成功", "邮箱成功修改成" + newEmailAdress);
+        this->user.getServer()->PostSetEmail(newEmailAdress);
     }
 
     flashInfoUI();
