@@ -18,6 +18,7 @@ signupWindow::signupWindow(QWidget *parent) : QWidget(parent) {
     usernameLabel = new QLabel("账号");
     passwordLabel = new QLabel("密码");
     confirmLabel = new QLabel("确认密码");
+    EmailAdressLabel = new QLabel("邮箱");
     usernameLineEdit = new QLineEdit();
     usernameLineEdit->setPlaceholderText("请输入账号");
     passwordLineEdit = new QLineEdit();
@@ -26,6 +27,8 @@ signupWindow::signupWindow(QWidget *parent) : QWidget(parent) {
     confirmLineEdit = new QLineEdit();
     confirmLineEdit->setEchoMode(QLineEdit::Password);
     confirmLineEdit->setPlaceholderText("请确认您的密码");
+    EmailAdressEdit = new QLineEdit();
+    EmailAdressEdit->setPlaceholderText("请输入你的邮箱地址");
     okButton = new QPushButton("确定");
     cancelButton = new QPushButton("取消");
 
@@ -60,12 +63,23 @@ signupWindow::signupWindow(QWidget *parent) : QWidget(parent) {
         background-position: left center;
         background-size: 20px 20px;
     })");
+    EmailAdressEdit->setStyleSheet(R"(
+    QLineEdit {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 5px;
+        padding-left: 30px;
+        background-image: url(:/image/resources/images/user-icon.png);
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-size: 20px 20px;
+    })");
     okButton->setStyleSheet("background-color: #5CACEE; color: white; border-radius: 5px; padding: 5px;");
     cancelButton->setStyleSheet("background-color: #FF6347; color: white; border-radius: 5px; padding: 5px;");
 
     usernameLabel->setStyleSheet("color: blue; font-size: 18px;");
     passwordLabel->setStyleSheet("color: blue; font-size: 18px;");
     confirmLabel->setStyleSheet("color: blue; font-size: 18px;");
+    EmailAdressLabel->setStyleSheet("color: blue; font-size: 18px;");
 
     // 布局
     auto signupLayout = new QGridLayout();
@@ -77,6 +91,9 @@ signupWindow::signupWindow(QWidget *parent) : QWidget(parent) {
 
     signupLayout->addWidget(confirmLabel, 2, 0);
     signupLayout->addWidget(confirmLineEdit, 2, 1);
+
+    signupLayout->addWidget(EmailAdressLabel,3,0);
+    signupLayout->addWidget(EmailAdressEdit,3,1);
 
     // 按钮布局
     auto buttonHBox = new QHBoxLayout();
@@ -124,11 +141,14 @@ void signupWindow::resizeEvent(QResizeEvent *event) {
     usernameLabel->setFont(font);
     passwordLabel->setFont(font);
     confirmLabel->setFont(font);
+    EmailAdressLabel->setFont(font);
     usernameLineEdit->setFont(font);
     passwordLineEdit->setFont(font);
     confirmLineEdit->setFont(font);
+    EmailAdressEdit->setFont(font);
     okButton->setFont(font);
     cancelButton->setFont(font);
 }
 
 signupWindow::~signupWindow() = default;
+

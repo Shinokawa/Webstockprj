@@ -14,9 +14,6 @@ class myServer;
 
 class userManager {
 
-public:
-    string testFu;
-
 private:
     string userName;
     string Password;
@@ -24,11 +21,12 @@ private:
     vector<Friend> friendList;
     vector<Email> EmailList;
     vector<Futures> FuturesList;
+    vector<string> starInfoList;
 
     myServer *server;
 
 public:
-    userManager(const string &userName, const string &password);
+    userManager(const string &userName, const string &password, const string &EmailAdress);
     ~userManager();
     string getUserName();
     string getPassword();
@@ -36,17 +34,22 @@ public:
     vector<Friend> getFriendList();
     vector<Email> getEmailList();
     vector<Futures> getFuturesList();
-    myServer* getServer() const;
+    [[nodiscard]] myServer* getServer() const;
     void printUser() const;
     void setPassword(const string &newPassword);
     void setUsername(const string &newUsername);
     void setEmailAdress(const string &newEmailAdress);
     void initFriend();
     void initEmail();
-    void initFutures();
     Friend addNewFriend(const string& friendName);
-    Futures addNewFutures(const string& InstrumentID);
+    Futures addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning, const string &alertTime);
     static QJsonArray ParseJsonToArray(const string &info, const string &title);
+
+    void flashStarInfo(const string &starInfo);
+
+    void flashFutures(const QJsonObject &FuturesItem);
+
+    string FromVectorStringToJsonString();
 };
 
 #endif //USERMANAGER_H

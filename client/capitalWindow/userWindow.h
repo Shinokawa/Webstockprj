@@ -33,11 +33,14 @@ public:
     explicit userWindow(const userManager& thisUser);
     ~userWindow() override;
 
+    void fetchIsAlert() const;  //异步获取是否警报
+
 private slots:
     void doListWidget(const QListWidgetItem *item) const;
 
     void doAddFriendButton();
     void doAddFuturesButton();
+    void updateAlertInfo() const;   //更新数据
 };
 
 #endif //USERWINDOW_H

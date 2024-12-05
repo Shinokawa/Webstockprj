@@ -7,17 +7,34 @@
 #include <QJsonObject>
 #include <QJsonValue>
 #include <QJsonArray>
+#include <qthread.h>
 
 using namespace std;
 
-userManager::userManager(const string &userName, const string &password){
+userManager::userManager(const string &userName, const string &password, const string &EmailAdress){
     this->userName = userName;
     this->Password = password;
-    this->EmailAdress = "无";
+    this->EmailAdress = EmailAdress;
+    this->server = new myServer(*this);
     initFriend();
     initEmail();
-    initFutures();
-    this->server = new myServer(*this);
+    server->PostSetEmail(EmailAdress);
+    string starInfo = R"({
+        "starInfo": [
+            {
+              "InstrumentID": "m2501",
+              "lowPriceWarning": "1500",
+              "highPriceWarning": "1600",
+              "alertTime": "24:00:00"
+            },
+            {
+              "InstrumentID": "m2505",
+              "lowPriceWarning": "2000",
+              "highPriceWarning": "3000",
+              "alertTime": "24:00:00"
+    	    }
+    ]})";
+    flashStarInfo(starInfo); //包含了对期货的初始化
 }
 
 userManager::~userManager() = default;
@@ -72,8 +89,7 @@ void userManager::initFriend() {
         {
             "friendName": "我的客服",
             "dialogue": [
-                {"sendName": "我的客服", "sendMessage": "测试"},
-                {"sendName": "我", "sendMessage": "测试测试"}
+                {"sendName": "我的客服", "sendMessage": "你好"}
             ]
         },
         {
@@ -100,14 +116,8 @@ void userManager::initEmail() {
         {
             "From": "anon1664044536@163.com",
             "To" : "1664044536@qq.com",
-            "Subject" : "紧急通知1",
-            "Body" : "我让你加仓你二龙嘛？"
-        },
-        {
-            "From": "anon1664044536@outlook.com",
-            "To" : "1664044536@qq.com",
-            "Subject" : "紧急通知2",
-            "Body" : "我让你加仓了吗？"
+            "Subject" : "感谢您的注册",
+            "Body" : "感谢你使用本Webstock的软件"
         }
     ]
     })";
@@ -117,127 +127,6 @@ void userManager::initEmail() {
         auto Eml = Email(EmailJson.toObject());
         EmailList.emplace_back(Eml);
     }
-}
-
-void userManager::initFutures() {
-    string FuturesInfo = R"({
-    "Futures": [
-        {
-          "TradingDay": 20241130,
-          "reserve1": "some_value",
-          "ExchangeID": "SHFE",
-          "reserve2": "some_value",
-          "LastPrice": 3400.50,
-          "PreSettlementPrice": 3395.80,
-          "PreClosePrice": 3390.20,
-          "PreOpenInterest": 100000,
-          "OpenPrice": 3405.00,
-          "HighestPrice": 3420.00,
-          "LowestPrice": 3380.00,
-          "Volume": 50000,
-          "Turnover": 170000000,
-          "OpenInterest": 120000,
-          "ClosePrice": 3410.00,
-          "SettlementPrice": 3405.50,
-          "UpperLimitPrice": 3450.00,
-          "LowerLimitPrice": 3350.00,
-          "PreDelta": 0.05,
-          "CurrDelta": 0.02,
-          "UpdateTime": 144500,
-          "UpdateMillisec": 250,
-          "BidPrice1": 3400.00,
-          "BidVolume1": 100,
-          "AskPrice1": 3401.00,
-          "AskVolume1": 150,
-          "BidPrice2": 3399.00,
-          "BidVolume2": 120,
-          "AskPrice2": 3402.00,
-          "AskVolume2": 130,
-          "BidPrice3": 3398.00,
-          "BidVolume3": 90,
-          "AskPrice3": 3403.00,
-          "AskVolume3": 110,
-          "BidPrice4": 3397.00,
-          "BidVolume4": 80,
-          "AskPrice4": 3404.00,
-          "AskVolume4": 100,
-          "BidPrice5": 3396.00,
-          "BidVolume5": 70,
-          "AskPrice5": 3405.00,
-          "AskVolume5": 90,
-          "AveragePrice": 3403.50,
-          "ActionDay": 20241130,
-          "InstrumentID": "M1901",
-          "ExchangeInstID": "M1901.SHFE",
-          "BandingUpperPrice": 3500.00,
-          "BandingLowerPrice": 3300.00,
-          "lowPriceWarning": 1500,
-          "highPriceWarning": 1600
-        },
-        {
-          "TradingDay": 20241201,
-          "reserve1": "some_value_2",
-          "ExchangeID": "CME",
-          "reserve2": "some_value_2",
-          "LastPrice": 1561.30,
-          "PreSettlementPrice": 2550.00,
-          "PreClosePrice": 2542.20,
-          "PreOpenInterest": 150000,
-          "OpenPrice": 2548.10,
-          "HighestPrice": 2570.00,
-          "LowestPrice": 2530.00,
-          "Volume": 75000,
-          "Turnover": 190000000,
-          "OpenInterest": 135000,
-          "ClosePrice": 2560.50,
-          "SettlementPrice": 2552.00,
-          "UpperLimitPrice": 2600.00,
-          "LowerLimitPrice": 2500.00,
-          "PreDelta": 0.03,
-          "CurrDelta": 0.04,
-          "UpdateTime": 150000,
-          "UpdateMillisec": 300,
-          "BidPrice1": 2545.00,
-          "BidVolume1": 200,
-          "AskPrice1": 2546.50,
-          "AskVolume1": 250,
-          "BidPrice2": 2544.00,
-          "BidVolume2": 180,
-          "AskPrice2": 2547.00,
-          "AskVolume2": 230,
-          "BidPrice3": 2543.50,
-          "BidVolume3": 150,
-          "AskPrice3": 2548.00,
-          "AskVolume3": 200,
-          "BidPrice4": 2543.00,
-          "BidVolume4": 130,
-          "AskPrice4": 2549.00,
-          "AskVolume4": 170,
-          "BidPrice5": 2542.50,
-          "BidVolume5": 110,
-          "AskPrice5": 2550.00,
-          "AskVolume5": 160,
-          "AveragePrice": 2547.00,
-          "ActionDay": 20241201,
-          "InstrumentID": "ESZ20",
-          "ExchangeInstID": "ESZ20.CME",
-          "BandingUpperPrice": 2650.00,
-          "BandingLowerPrice": 2450.00,
-          "lowPriceWarning": 2000,
-          "highPriceWarning": 3000
-    }
-    ]
-    })";
-    //string url = "http://www.shakouzu.top:8786/marketdata/m2501";
-    //auto data = server->GetFromURL(url);
-    //testFu = data;
-    auto FuturesArray = ParseJsonToArray( FuturesInfo, "Futures");
-
-    for(auto FuturesJson : FuturesArray) {
-        auto Ftrs = Futures(FuturesJson.toObject());
-        FuturesList.emplace_back(Ftrs);
-    }
-
 }
 
 Friend userManager::addNewFriend(const string& friendName) {
@@ -258,67 +147,24 @@ Friend userManager::addNewFriend(const string& friendName) {
     return newFriend;
 }
 
-Futures userManager::addNewFutures(const string &InstrumentID) {
-    QString FuturesInfo = QString(R"({
-        "TradingDay": 20241201,
-        "reserve1": "new_value",
-        "ExchangeID": "DCE",
-        "reserve2": "new_value",
-        "LastPrice": 4500.75,
-        "PreSettlementPrice": 4490.50,
-        "PreClosePrice": 4485.00,
-        "PreOpenInterest": 120000,
-        "OpenPrice": 4502.00,
-        "HighestPrice": 4520.00,
-        "LowestPrice": 4480.00,
-        "Volume": 60000,
-        "Turnover": 270000000,
-        "OpenInterest": 140000,
-        "ClosePrice": 4510.00,
-        "SettlementPrice": 4508.50,
-        "UpperLimitPrice": 4550.00,
-        "LowerLimitPrice": 4450.00,
-        "PreDelta": 0.04,
-        "CurrDelta": 0.03,
-        "UpdateTime": 145000,
-        "UpdateMillisec": 500,
-        "BidPrice1": 4500.00,
-        "BidVolume1": 150,
-        "AskPrice1": 4501.00,
-        "AskVolume1": 200,
-        "BidPrice2": 4499.00,
-        "BidVolume2": 130,
-        "AskPrice2": 4502.00,
-        "AskVolume2": 180,
-        "BidPrice3": 4498.00,
-        "BidVolume3": 100,
-        "AskPrice3": 4503.00,
-        "AskVolume3": 150,
-        "BidPrice4": 4497.00,
-        "BidVolume4": 90,
-        "AskPrice4": 4504.00,
-        "AskVolume4": 120,
-        "BidPrice5": 4496.00,
-        "BidVolume5": 80,
-        "AskPrice5": 4505.00,
-        "AskVolume5": 100,
-        "AveragePrice": 4504.25,
-        "ActionDay": 20241201,
-        "InstrumentID": "%1",
-        "ExchangeInstID": "M1902.DCE",
-        "BandingUpperPrice": 4600.00,
-        "BandingLowerPrice": 4400.00,
-        "lowPriceWarning": 2000,
-        "highPriceWarning": 2100
-    })").arg(QString::fromStdString(InstrumentID));
+Futures userManager::addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning, const string &alertTime) {
+    QString starInfo = QString(R"({
+            "InstrumentID": "%1",
+            "lowPriceWarning": "%2",
+            "highPriceWarning": "%3",
+            "alertTime": "%4"
+        })").arg(QString::fromStdString(InstrumentID)).arg(lowPriceWarning).arg(highPriceWarning).arg(QString::fromStdString(alertTime));
+    starInfoList.emplace_back(starInfo.toStdString());
+    auto newInfo = FromVectorStringToJsonString();
+    flashStarInfo(newInfo);
 
-    auto jsonData = FuturesInfo.toUtf8();
-    auto jsonDoc = QJsonDocument::fromJson(jsonData);
+    for (const auto& futures : FuturesList) {
+        if (futures.InstrumentID == InstrumentID) {
+            return futures;
+        }
+    }
 
-    auto newFuturesJson = jsonDoc.object();
-    auto newFutures = Futures(newFuturesJson);
-    FuturesList.emplace_back(newFutures);
-    return newFutures;
+    throw runtime_error("Futures not found");
 }
 
 QJsonArray userManager::ParseJsonToArray(const string &info, const string &title) {
@@ -336,4 +182,126 @@ QJsonArray userManager::ParseJsonToArray(const string &info, const string &title
     // 获取 friend 数组
     auto Array = messageJson[title.c_str()].toArray();
     return Array;
+}
+
+void userManager::flashStarInfo(const string &starInfo) {
+    auto starArray = ParseJsonToArray(starInfo,"starInfo");
+
+    QJsonObject FuturesJson;
+    QJsonArray FuturesArray;
+    auto newStarList = vector<string>();
+    for (auto starJson : starArray) {
+        QJsonArray instrumentsArray;
+
+        auto InstrumentID = starJson.toObject()["InstrumentID"].toString();
+        auto lowPriceWarning = starJson.toObject()["lowPriceWarning"].toString();
+        auto highPriceWarning = starJson.toObject()["highPriceWarning"].toString();
+        auto alertTime = starJson.toObject()["alertTime"].toString();
+
+        QString FuturesItem = QString(R"({
+            "InstrumentID": "%1",
+            "lowPriceWarning": "%2",
+            "highPriceWarning": "%3",
+            "alertTime": "%4"
+        })").arg(InstrumentID).arg(lowPriceWarning).arg(highPriceWarning).arg(alertTime);
+        // 将 FuturesItem 字符串解析为 JSON 对象
+        QJsonDocument doc = QJsonDocument::fromJson(FuturesItem.toUtf8());
+        QJsonObject futuresItemObj = doc.object();  // 转换为 QJsonObject
+        // 将 JSON 对象添加到 QJsonArray 中
+        FuturesArray.append(futuresItemObj);
+        instrumentsArray.append(InstrumentID);
+        newStarList.emplace_back(FuturesItem.toStdString());
+
+        QJsonObject postDataObject;
+        postDataObject["uuid"] = "user-1234";
+        postDataObject["instruments"] = instrumentsArray;
+        postDataObject["time_alert"] = alertTime;
+        postDataObject["resistance_price"] = highPriceWarning;
+        postDataObject["support_price"] = lowPriceWarning;
+
+        server->PostStarInfo(postDataObject);   //更新订阅
+    }
+    starInfoList = newStarList;
+    FuturesJson["Futures"] = FuturesArray;
+
+    flashFutures(FuturesJson);
+}
+
+void userManager::flashFutures(const QJsonObject &FuturesItem) {
+    QThread::msleep(2000);
+    // 获取 FuturesInfo 数据
+    auto FuturesInfo = server->GetStarInfo();
+
+    // 解析 FuturesInfo 和 FuturesItem
+    QJsonDocument doc1 = QJsonDocument::fromJson(QString::fromStdString(FuturesInfo).toUtf8());
+    QJsonArray futuresArray1 = doc1.array();  // 获取 FuturesInfo 中的数组
+
+    // 解析 FuturesItem 数据
+    QJsonDocument doc2(FuturesItem);
+    QJsonArray futuresArray2 = doc2.object()["Futures"].toArray();  // 获取 FuturesItem 中的 Futures 数组
+
+    // 遍历 FuturesItem，将对应的高低价警告信息合并到 FuturesInfo 中
+    for (auto && i : futuresArray2) {
+        QJsonObject item2 = i.toObject();
+        QString instrumentID = item2["InstrumentID"].toString();
+
+        // 在 FuturesInfo 中找到对应的 InstrumentID
+        for (auto && j : futuresArray1) {
+            QJsonObject item1 = j.toObject();
+            if (item1["InstrumentID"].toString() == instrumentID) {
+                // 合并高低价警告信息
+                item1["highPriceWarning"] = item2["highPriceWarning"];
+                item1["lowPriceWarning"] = item2["lowPriceWarning"];
+                item1["alertTime"] = item2["alertTime"];
+                j = item1;  // 更新 FuturesInfo 中的对象
+                break;
+            }
+        }
+    }
+
+    // 创建一个新的 QJsonObject 来存放合并后的数据
+    QJsonObject mergedFuturesJson;
+    mergedFuturesJson["Futures"] = futuresArray1;  // 更新后的 Futures 数组
+
+    // 将合并后的 QJsonObject 转换为 JSON 字符串
+    QJsonDocument mergedDoc(mergedFuturesJson);
+    QString mergedJsonString = mergedDoc.toJson(QJsonDocument::Compact);
+
+    auto FuturesArray = ParseJsonToArray(mergedJsonString.toStdString(), "Futures");
+
+    auto newFuturesList = vector<Futures>();
+    for(auto FuturesJson : FuturesArray) {
+        QJsonObject FuturesObj = FuturesJson.toObject();
+
+        if (!FuturesObj.isEmpty()) {
+            newFuturesList.emplace_back(FuturesObj);
+        }
+    }
+    FuturesList = newFuturesList;
+}
+
+string userManager::FromVectorStringToJsonString() {
+    QJsonArray starInfoArray;
+
+    // 遍历 starInfoList 中的每个 JSON 字符串
+    for (const auto& item : starInfoList) {
+        // 将每个字符串转换为 QJsonObject
+        QString jsonStr = QString::fromStdString(item);
+        QJsonDocument doc = QJsonDocument::fromJson(jsonStr.toUtf8());
+        if (doc.isObject()) {
+            QJsonObject jsonObj = doc.object();
+            // 将该对象添加到 starInfoArray 中
+            starInfoArray.append(jsonObj);
+        }
+    }
+
+    // 构造最终的 JSON 对象，包含 "starInfo" 数组
+    QJsonObject finalObject;
+    finalObject["starInfo"] = starInfoArray;
+
+    // 转换为 JSON 字符串
+    QJsonDocument finalDoc(finalObject);
+    QString finalJsonStr = finalDoc.toJson(QJsonDocument::Compact);
+
+    return finalJsonStr.toStdString();  // 返回最终的 JSON 字符串
 }

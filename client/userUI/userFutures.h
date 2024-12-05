@@ -30,10 +30,13 @@ public:
     static QListWidgetItem* initListItem(const Futures &Ftrs);
     void flashFuturesList(const Futures &newFutures);
 
+    void fetchFuturesData() const;  //异步获取期货信息
+
 private slots:
     void doListWidget(int row) const;
     void doExitButton() const;
     void doDeleteButton(const FuturesUI* FtrsUI) const;
+    void updateFuturesUI(const string &data) const;   //更新UI的方法
 };
 
 #endif //USERFUTURES_H

@@ -30,12 +30,13 @@ public:
     ~userMassage() override;void
     flashFriendList(Friend frd);
 
+    void updateOfficialChatData(const QJsonObject &dataJson);
+
     void fetchChatData();   //异步获取服务器聊天数据
 
 private slots:
     void doListWidget(int row) const;
 
     static void updateFriendChatData(const friendUI* frdUI, const QJsonObject& dataJson); //异步的槽函数
-
 };
 #endif //USERMASSAGE_H

@@ -74,7 +74,7 @@ userMassage::userMassage(const userManager& user): user(user) {
     // 启动定时器，每5秒钟获取一次聊天数据
     auto *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &userMassage::fetchChatData);
-    timer->start(3000);  // 每3000毫秒（即3秒）执行一次 fetchChatData
+    timer->start(10000);  // 每3000毫秒（即3秒）执行一次 fetchChatData
 
     // 异步调用，使用lambda表达式来包装成员函数
     // ReSharper disable once CppNoDiscardExpression
@@ -99,7 +99,8 @@ void userMassage::flashFriendList(Friend frd) {
 }
 
 void userMassage::fetchChatData() {
-    //string data = user.getServer()->GetChatData();
+    string data = user.getServer()->GetChatData();
+    /*
     string data = R"({
     "friend": [
         {
@@ -118,6 +119,7 @@ void userMassage::fetchChatData() {
         }
     ]
     })";
+    */
     auto friendArray = userManager::ParseJsonToArray(data,"friend");   //把string变成jsonArray
     for(auto frdMsg : friendArray) {        //遍历每一个好友的对话
         auto frdJson = frdMsg.toObject();         //把对话的JsonValueRef变成JsonObject
@@ -136,4 +138,12 @@ void userMassage::fetchChatData() {
 void userMassage::updateFriendChatData(const friendUI* frdUI, const QJsonObject& dataJson) {
     frdUI->frd.flashMessage(dataJson);   //添加到好友的对话List里 
     frdUI->fromJsonLineToLabel(dataJson);
+}
+
+void userMassage::updateOfficialChatData(const QJsonObject& dataJson) {
+    for (auto frdUI : friendUIList) {
+        if (frdUI->frd.getUsername() == "我的客服") {
+            frdUI->fromJsonLineToLabel(dataJson);
+        }
+    }
 }

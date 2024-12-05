@@ -34,64 +34,6 @@ string myServer::PostFromURL(const string &url, const string &data) {
 	return replyData.toStdString();
 }
 
-/*
-string myServer::PostFromURL(const string &url, const string &data) {
-	// 创建 QNetworkRequest 对象并设置 URL
-	QNetworkRequest request(QUrl(QString::fromStdString(url)));
-	request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-	request.setHeader(QNetworkRequest::UserAgentHeader,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0");
-
-	// 发送 POST 请求
-	QNetworkReply *reply = m_manager->post(request, QString::fromStdString(data).toUtf8());
-
-	// 使用 QEventLoop 阻塞当前线程，直到请求完成
-	QEventLoop loop;
-	connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
-	loop.exec(); // 等待请求完成
-
-	// 处理结果
-	QString response;
-	if (reply->error() == QNetworkReply::NoError) {
-		response = QString::fromUtf8(reply->readAll());
-	}
-	else {
-		response = "Error: " + reply->errorString();
-	}
-
-	reply->deleteLater(); // 清理资源
-	return response.toStdString();      // 返回结果
-}
-*/
-
-/*
-string myServer::GetFromURL(const string &url) {
-	// 创建 QNetworkRequest 对象并设置 URL
-	QNetworkRequest request(QUrl(QString::fromStdString(url)));
-	//request.setHeader(QNetworkRequest::ContentTypeHeader, "application/json");
-	request.setHeader(QNetworkRequest::UserAgentHeader,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0");
-
-	// 发送 POST 请求
-	QNetworkReply *reply = m_manager->get(request);
-
-	// 使用 QEventLoop 阻塞当前线程，直到请求完成
-	QEventLoop loop;
-	connect(reply, &QNetworkReply::finished, &loop, &QEventLoop::quit);
-	loop.exec(); // 等待请求完成
-
-	// 处理结果
-	QString response;
-	if (reply->error() == QNetworkReply::NoError) {
-		response = QString::fromUtf8(reply->readAll());
-	}
-	else {
-		response = "Error: " + reply->errorString();
-	}
-
-	reply->deleteLater(); // 清理资源
-	return response.toStdString();  // 返回结果
-}
-*/
-
 string myServer::GetFromURL(const string &url) {
 	auto qurl = QString::fromStdString(url);
  	assert(!qurl.isEmpty());
@@ -120,7 +62,31 @@ string myServer::GetChatData() {
 }
 
 void myServer::PostMessage(const QJsonObject &data) {
-	string url = "127.0.0.1/8786";
+	string url = "http://127.0.0.1:8786/message";
 	QJsonDocument doc(data);
 	PostFromURL(url,doc.toJson(QJsonDocument::Indented).toStdString());
+}
+
+void myServer::PostStarInfo(const QJsonObject &starInfo) {
+	string PostURL = "http://127.0.0.1:8786/subscribe";
+	QJsonDocument doc(starInfo);
+	auto infoString = doc.toJson(QJsonDocument::Indented).toStdString();
+	/*
+	string PostData = R"({
+        "uuid" : "user-1234",
+        "instruments" : ["m2501", "m2502", "m2503","m2504","m2505", "m2506", "m2507","m2508"];
+    })";
+    */
+	PostFromURL(PostURL, infoString);
+}
+
+string myServer::GetStarInfo() {
+	string url = "http://127.0.0.1:8786/marketdata?uuid=user-1234";
+	auto data = GetFromURL(url);
+	return data;
+}
+
+void myServer::PostSetEmail(const string &EmailAdress) {
+	string PostURL = "http://127.0.0.1:8786/set_email";
+	PostFromURL(PostURL, EmailAdress);
 }

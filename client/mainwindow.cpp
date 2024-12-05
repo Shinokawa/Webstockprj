@@ -82,9 +82,10 @@ void MainWindow::doOKButton() const {    //注册事件
     const string inputUserName = signupWindow->usernameLineEdit->text().toStdString();
     const string inputPassword = signupWindow->passwordLineEdit->text().toStdString();
     const string inputConfirm = signupWindow->confirmLineEdit->text().toStdString();
+    const string inputEmailAdress = signupWindow->EmailAdressEdit->text().toStdString();
 
     if(inputConfirm == inputPassword) {
-        const auto newUser = userManager(inputUserName,inputPassword);
+        const auto newUser = userManager(inputUserName, inputPassword, inputEmailAdress);
         dataManager->addUser(newUser);
 
         loginWindow->usernameLineEdit->setText(QString::fromStdString(inputUserName));
@@ -97,7 +98,6 @@ void MainWindow::doOKButton() const {    //注册事件
     else {
         popErrorMessage("输入错误", "输入的两次密码不同");
     }
-
 }
 
 void MainWindow::doSignCancelButton() const {

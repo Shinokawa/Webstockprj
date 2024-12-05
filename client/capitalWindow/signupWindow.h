@@ -17,9 +17,11 @@ public:
     QLabel *usernameLabel;
     QLabel *passwordLabel;
     QLabel *confirmLabel;
+    QLabel *EmailAdressLabel;
     QLineEdit *usernameLineEdit;
     QLineEdit *passwordLineEdit;
     QLineEdit *confirmLineEdit;
+    QLineEdit *EmailAdressEdit;
     QPushButton *okButton;
     QPushButton *cancelButton;
     QPalette palette;
