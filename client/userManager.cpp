@@ -18,7 +18,6 @@ userManager::userManager(const string &userName, const string &password, const s
     this->server = new myServer(*this);
     initFriend();
     initEmail();
-    server->PostSetEmail(EmailAdress);
     string starInfo = R"({
         "starInfo": [
             {
@@ -35,6 +34,7 @@ userManager::userManager(const string &userName, const string &password, const s
     	    }
     ]})";
     flashStarInfo(starInfo); //包含了对期货的初始化
+    server->PostSetEmail(EmailAdress);
 }
 
 userManager::~userManager() = default;
