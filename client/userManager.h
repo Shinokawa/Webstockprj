@@ -42,7 +42,7 @@ public:
     void initFriend();
     void initEmail();
     Friend addNewFriend(const string& friendName);
-    Futures addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning);
+    Futures addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning, const string &alertTime);
     static QJsonArray ParseJsonToArray(const string &info, const string &title);
 
     void flashStarInfo(const string &starInfo);

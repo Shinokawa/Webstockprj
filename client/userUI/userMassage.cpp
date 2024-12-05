@@ -99,7 +99,8 @@ void userMassage::flashFriendList(Friend frd) {
 }
 
 void userMassage::fetchChatData() {
-    //string data = user.getServer()->GetChatData();
+    string data = user.getServer()->GetChatData();
+    /*
     string data = R"({
     "friend": [
         {
@@ -118,6 +119,7 @@ void userMassage::fetchChatData() {
         }
     ]
     })";
+    */
     auto friendArray = userManager::ParseJsonToArray(data,"friend");   //把string变成jsonArray
     for(auto frdMsg : friendArray) {        //遍历每一个好友的对话
         auto frdJson = frdMsg.toObject();         //把对话的JsonValueRef变成JsonObject

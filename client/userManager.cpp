@@ -23,13 +23,15 @@ userManager::userManager(const string &userName, const string &password, const s
         "starInfo": [
             {
               "InstrumentID": "m2501",
-              "lowPriceWarning": 1500,
-              "highPriceWarning": 1600
+              "lowPriceWarning": "1500",
+              "highPriceWarning": "1600",
+              "alertTime": "24:00:00"
             },
             {
               "InstrumentID": "m2505",
-              "lowPriceWarning": 2000,
-              "highPriceWarning": 3000
+              "lowPriceWarning": "2000",
+              "highPriceWarning": "3000",
+              "alertTime": "24:00:00"
     	    }
     ]})";
     flashStarInfo(starInfo); //包含了对期货的初始化
@@ -87,8 +89,7 @@ void userManager::initFriend() {
         {
             "friendName": "我的客服",
             "dialogue": [
-                {"sendName": "我的客服", "sendMessage": "测试"},
-                {"sendName": "我", "sendMessage": "测试测试"}
+                {"sendName": "我的客服", "sendMessage": "你好"}
             ]
         },
         {
@@ -115,14 +116,8 @@ void userManager::initEmail() {
         {
             "From": "anon1664044536@163.com",
             "To" : "1664044536@qq.com",
-            "Subject" : "紧急通知1",
-            "Body" : "我让你加仓你二龙嘛？"
-        },
-        {
-            "From": "anon1664044536@outlook.com",
-            "To" : "1664044536@qq.com",
-            "Subject" : "紧急通知2",
-            "Body" : "我让你加仓了吗？"
+            "Subject" : "感谢您的注册",
+            "Body" : "感谢你使用本Webstock的软件"
         }
     ]
     })";
@@ -152,12 +147,13 @@ Friend userManager::addNewFriend(const string& friendName) {
     return newFriend;
 }
 
-Futures userManager::addNewFutures(const string &InstrumentID, const double &highPriceWarning = 0, const double &lowPriceWarning = 0) {
+Futures userManager::addNewFutures(const string &InstrumentID, const double &highPriceWarning, const double &lowPriceWarning, const string &alertTime) {
     QString starInfo = QString(R"({
             "InstrumentID": "%1",
             "lowPriceWarning": "%2",
-            "highPriceWarning": "%3"
-        })").arg(QString::fromStdString(InstrumentID)).arg(lowPriceWarning).arg(highPriceWarning);
+            "highPriceWarning": "%3",
+            "alertTime": "%4"
+        })").arg(QString::fromStdString(InstrumentID)).arg(lowPriceWarning).arg(highPriceWarning).arg(QString::fromStdString(alertTime));
     starInfoList.emplace_back(starInfo.toStdString());
     auto newInfo = FromVectorStringToJsonString();
     flashStarInfo(newInfo);
@@ -191,20 +187,23 @@ QJsonArray userManager::ParseJsonToArray(const string &info, const string &title
 void userManager::flashStarInfo(const string &starInfo) {
     auto starArray = ParseJsonToArray(starInfo,"starInfo");
 
-    QJsonArray instrumentsArray;
     QJsonObject FuturesJson;
     QJsonArray FuturesArray;
     auto newStarList = vector<string>();
     for (auto starJson : starArray) {
+        QJsonArray instrumentsArray;
+
         auto InstrumentID = starJson.toObject()["InstrumentID"].toString();
-        auto lowPriceWarning = starJson.toObject()["lowPriceWarning"].toDouble();
-        auto highPriceWarning = starJson.toObject()["highPriceWarning"].toDouble();
+        auto lowPriceWarning = starJson.toObject()["lowPriceWarning"].toString();
+        auto highPriceWarning = starJson.toObject()["highPriceWarning"].toString();
+        auto alertTime = starJson.toObject()["alertTime"].toString();
 
         QString FuturesItem = QString(R"({
             "InstrumentID": "%1",
             "lowPriceWarning": "%2",
-            "highPriceWarning": "%3"
-        })").arg(InstrumentID).arg(lowPriceWarning).arg(highPriceWarning);
+            "highPriceWarning": "%3",
+            "alertTime": "%4"
+        })").arg(InstrumentID).arg(lowPriceWarning).arg(highPriceWarning).arg(alertTime);
         // 将 FuturesItem 字符串解析为 JSON 对象
         QJsonDocument doc = QJsonDocument::fromJson(FuturesItem.toUtf8());
         QJsonObject futuresItemObj = doc.object();  // 转换为 QJsonObject
@@ -212,15 +211,19 @@ void userManager::flashStarInfo(const string &starInfo) {
         FuturesArray.append(futuresItemObj);
         instrumentsArray.append(InstrumentID);
         newStarList.emplace_back(FuturesItem.toStdString());
+
+        QJsonObject postDataObject;
+        postDataObject["uuid"] = "user-1234";
+        postDataObject["instruments"] = instrumentsArray;
+        postDataObject["time_alert"] = alertTime;
+        postDataObject["resistance_price"] = highPriceWarning;
+        postDataObject["support_price"] = lowPriceWarning;
+
+        server->PostStarInfo(postDataObject);   //更新订阅
     }
     starInfoList = newStarList;
     FuturesJson["Futures"] = FuturesArray;
 
-    QJsonObject postDataObject;
-    postDataObject["uuid"] = "user-1234";
-    postDataObject["instruments"] = instrumentsArray;
-
-    server->PostStarInfo(postDataObject);   //更新订阅
     flashFutures(FuturesJson);
 }
 
@@ -249,6 +252,7 @@ void userManager::flashFutures(const QJsonObject &FuturesItem) {
                 // 合并高低价警告信息
                 item1["highPriceWarning"] = item2["highPriceWarning"];
                 item1["lowPriceWarning"] = item2["lowPriceWarning"];
+                item1["alertTime"] = item2["alertTime"];
                 j = item1;  // 更新 FuturesInfo 中的对象
                 break;
             }

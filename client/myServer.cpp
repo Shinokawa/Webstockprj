@@ -62,7 +62,7 @@ string myServer::GetChatData() {
 }
 
 void myServer::PostMessage(const QJsonObject &data) {
-	string url = "127.0.0.1/8786";
+	string url = "http://127.0.0.1:8786/message";
 	QJsonDocument doc(data);
 	PostFromURL(url,doc.toJson(QJsonDocument::Indented).toStdString());
 }
@@ -71,10 +71,12 @@ void myServer::PostStarInfo(const QJsonObject &starInfo) {
 	string PostURL = "http://127.0.0.1:8786/subscribe";
 	QJsonDocument doc(starInfo);
 	auto infoString = doc.toJson(QJsonDocument::Indented).toStdString();
+	/*
 	string PostData = R"({
         "uuid" : "user-1234",
         "instruments" : ["m2501", "m2502", "m2503","m2504","m2505", "m2506", "m2507","m2508"];
     })";
+    */
 	PostFromURL(PostURL, infoString);
 }
 

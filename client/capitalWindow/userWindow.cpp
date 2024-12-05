@@ -134,14 +134,14 @@ void userWindow::updateAlertInfo() const {
                 "sendName": "我的客服",
                 "sendMessage": "%1"
             })").arg(instrumentID + "的价格超过了设定的最高价格");
-                ftrsUI->Ftrs.highPriceWarning = 200000;
+                ftrsUI->Ftrs.highPriceWarning = INT64_MAX;
             }
             else {
                 data = QString(R"({
                 "sendName": "我的客服",
                 "sendMessage": "%1"
             })").arg(instrumentID + "的价格低于了设定的最低价格");
-                ftrsUI->Ftrs.lowPriceWarning = 200000;
+                ftrsUI->Ftrs.lowPriceWarning = -1;
             }
 
             QJsonObject jsonObj = QJsonDocument::fromJson(data.toUtf8()).object();
@@ -180,8 +180,10 @@ void userWindow::doAddFriendButton() {
 
 void userWindow::doAddFuturesButton() {
     string InstrumentID = userInfo->addFuturesUI->newFuturesText->text().toStdString();
-    auto newFutures = user.addNewFutures(InstrumentID,0,0);
+    double highPrice = userInfo->addFuturesUI->highPriceText->text().toDouble();
+    double lowPrice = userInfo->addFuturesUI->lowPriceText->text().toDouble();
+    string alertTime = userInfo->addFuturesUI->AlertTimeText->text().toStdString();
+    auto newFutures = user.addNewFutures(InstrumentID, highPrice, lowPrice, alertTime);
     userFutures->flashFuturesList(newFutures);
     MainWindow::popInfoMessage("成功",InstrumentID + "添加成功");
 }
-
